@@ -1,0 +1,306 @@
+.page {
+  min-height: 100vh;
+  background: #f6faf6;
+  box-sizing: border-box;
+}
+
+.intro {
+  padding: 48rpx 32rpx;
+}
+
+.intro-title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #1e2a22;
+  line-height: 1.35;
+}
+
+.intro-desc {
+  display: block;
+  margin-top: 24rpx;
+  font-size: 26rpx;
+  color: #6a786f;
+  line-height: 1.6;
+}
+
+.btn-main {
+  margin-top: 48rpx;
+  background: #4d6a53;
+  color: #fff;
+}
+
+.btn-ghost {
+  margin-top: 20rpx;
+  background: #fff;
+  color: #4d6a53;
+  border: 1px solid #dbe8dd;
+}
+
+.prog {
+  padding: 16rpx 24rpx 0;
+}
+
+.prog-t {
+  display: block;
+  text-align: right;
+  font-size: 22rpx;
+  color: #6a786f;
+  margin-top: 8rpx;
+}
+
+.preview-row {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 24rpx;
+  font-size: 24rpx;
+  color: #4d6a53;
+}
+
+.preview-icon {
+  margin-right: 12rpx;
+}
+
+.q-scroll {
+  height: calc(100vh - 280rpx);
+  padding: 0 16rpx 16rpx;
+  box-sizing: border-box;
+}
+
+.q-card {
+  background: #fff;
+  border: 1px solid #dbe8dd;
+  border-radius: 18rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.q-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #6a786f;
+  margin-bottom: 12rpx;
+}
+
+.q-text {
+  font-size: 28rpx;
+  line-height: 1.55;
+  color: #1e2a22;
+}
+
+.q-opt {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 16rpx;
+  padding: 20rpx;
+  border: 1px solid #dbe8dd;
+  border-radius: 14rpx;
+  background: #fff;
+}
+
+.q-opt.active {
+  border-color: #5b7a62;
+  background: #f8fcf9;
+}
+
+.q-code {
+  font-weight: bold;
+  color: #4d6a53;
+  margin-right: 12rpx;
+  flex-shrink: 0;
+}
+
+.q-label {
+  flex: 1;
+  font-size: 26rpx;
+  line-height: 1.45;
+}
+
+.foot {
+  padding: 16rpx 24rpx 32rpx;
+  background: #f6faf6;
+}
+
+.hint {
+  display: block;
+  font-size: 22rpx;
+  color: #6a786f;
+  margin-bottom: 12rpx;
+}
+
+.btn-submit {
+  background: #4d6a53;
+  color: #fff;
+}
+
+.r-scroll {
+  height: 100vh;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.r-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.r-picbox {
+  background: #fff;
+  border: 1px solid #dbe8dd;
+  border-radius: 18rpx;
+  padding: 20rpx;
+}
+
+.r-pic {
+  width: 100%;
+  height: 400rpx;
+}
+
+.r-cap {
+  display: block;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #6a786f;
+  line-height: 1.6;
+}
+
+.r-textbox {
+  background: #fff;
+  border: 1px solid #dbe8dd;
+  border-radius: 18rpx;
+  padding: 24rpx;
+}
+
+.r-kicker {
+  font-size: 22rpx;
+  color: #4d6a53;
+}
+
+.r-name {
+  display: block;
+  font-size: 44rpx;
+  font-weight: bold;
+  margin-top: 8rpx;
+}
+
+.r-badge {
+  display: inline-block;
+  margin-top: 16rpx;
+  padding: 8rpx 16rpx;
+  background: #edf6ef;
+  border: 1px solid #dbe8dd;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  color: #4d6a53;
+}
+
+.r-sub {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #6a786f;
+}
+
+.r-desc {
+  display: block;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 1.65;
+  color: #304034;
+}
+
+.r-sec {
+  margin-top: 20rpx;
+  padding: 16rpx;
+  background: #f5f5f5;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+}
+
+.r-sec-t {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.r-block {
+  margin-top: 24rpx;
+  background: #fff;
+  border: 1px solid #dbe8dd;
+  border-radius: 18rpx;
+  padding: 20rpx;
+}
+
+.r-h {
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.dim {
+  border: 1px solid #dbe8dd;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  margin-bottom: 12rpx;
+}
+
+.dim-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+
+.dim-name {
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.dim-lv {
+  font-size: 24rpx;
+  color: #4d6a53;
+  font-weight: bold;
+}
+
+.dim-ex {
+  font-size: 24rpx;
+  color: #6a786f;
+  line-height: 1.55;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx;
+  border: 1px solid #eee;
+  border-radius: 12rpx;
+  margin-bottom: 12rpx;
+}
+
+.top-name {
+  display: block;
+  font-weight: bold;
+}
+
+.top-sub {
+  display: block;
+  font-size: 22rpx;
+  color: #888;
+  margin-top: 6rpx;
+}
+
+.top-pct {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #4d6a53;
+}
+
+.r-note {
+  margin: 24rpx 0;
+  font-size: 24rpx;
+  color: #6a786f;
+  line-height: 1.55;
+}

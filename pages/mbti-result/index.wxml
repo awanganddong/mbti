@@ -1,0 +1,109 @@
+<scroll-view scroll-y class="scroll" wx:if="{{loaded}}">
+  <view class="head">
+    <text class="type">{{group.type}}</text>
+    <image class="pic" src="{{imageSrc}}" mode="aspectFit" />
+    <text class="epithet">{{group.epithet}}</text>
+  </view>
+
+  <block wx:for="{{descParts}}" wx:key="*this">
+    <text class="paragraph">{{item}}</text>
+  </block>
+
+  <view class="section-title">荣格功能偏好排序</view>
+  <view class="table">
+    <view class="tr">
+      <text class="th">主导功能</text>
+      <text class="td">{{group.jungianFunctionalPreference.dominant}}</text>
+    </view>
+    <view class="tr">
+      <text class="th">辅助功能</text>
+      <text class="td">{{group.jungianFunctionalPreference.auxiliary}}</text>
+    </view>
+    <view class="tr">
+      <text class="th">第三功能</text>
+      <text class="td">{{group.jungianFunctionalPreference.tertiary}}</text>
+    </view>
+    <view class="tr">
+      <text class="th">劣势功能</text>
+      <text class="td">{{group.jungianFunctionalPreference.inferior}}</text>
+    </view>
+  </view>
+
+  <view class="section-title">{{group.type}} 总体特质</view>
+  <block wx:for="{{group.generalTraits}}" wx:key="*this">
+    <text class="list-item">· {{item}}</text>
+  </block>
+
+  <view class="section-title">人际关系优点</view>
+  <block wx:for="{{group.relationshipStrengths}}" wx:key="*this">
+    <text class="list-item">· {{item}}</text>
+  </block>
+
+  <view class="section-title">人际关系不足</view>
+  <block wx:for="{{group.relationshipWeaknesses}}" wx:key="*this">
+    <text class="list-item">· {{item}}</text>
+  </block>
+
+  <view class="section-title">成功定义</view>
+  <block wx:for="{{successParts}}" wx:key="*this">
+    <text class="paragraph">{{item}}</text>
+  </block>
+
+  <view class="section-title">优势</view>
+  <block wx:for="{{group.strengths}}" wx:key="*this">
+    <text class="list-item">· {{item}}</text>
+  </block>
+
+  <view class="section-title">特殊天赋</view>
+  <block wx:for="{{group.gifts}}" wx:key="*this">
+    <text class="list-item">· {{item}}</text>
+  </block>
+
+  <view class="section-title">潜在问题领域</view>
+  <block wx:if="{{potentialProblemSingle}}">
+    <block wx:for="{{potentialProblemParts}}" wx:key="*this">
+      <text class="paragraph">{{item}}</text>
+    </block>
+  </block>
+  <block wx:else>
+    <block wx:for="{{potentialProblemList}}" wx:key="*this">
+      <text class="list-item">· {{item}}</text>
+    </block>
+  </block>
+
+  <view class="section-title">问题解释</view>
+  <block wx:for="{{explanationParts}}" wx:key="*this">
+    <text class="paragraph">{{item}}</text>
+  </block>
+
+  <view class="section-title">解决方案</view>
+  <block wx:for="{{solutionsParts}}" wx:key="*this">
+    <text class="paragraph">{{item}}</text>
+  </block>
+
+  <view class="section-title">快乐生活小提示</view>
+  <block wx:for="{{livingParts}}" wx:key="*this">
+    <text class="paragraph">{{item}}</text>
+  </block>
+
+  <block wx:if="{{hasSuggestions && suggestionSingle}}">
+    <view class="section-title">具体建议</view>
+    <block wx:for="{{suggestionParts}}" wx:key="*this">
+      <text class="paragraph">{{item}}</text>
+    </block>
+  </block>
+  <block wx:if="{{hasSuggestions && !suggestionSingle}}">
+    <view class="section-title">具体建议</view>
+    <block wx:for="{{suggestionList}}" wx:key="*this">
+      <text class="list-item">· {{item}}</text>
+    </block>
+  </block>
+
+  <view class="section-title">实现成功的生活十则</view>
+  <block wx:for="{{group.tenRulesToLive}}" wx:key="*this">
+    <text class="list-item">· {{item}}</text>
+  </block>
+
+  <button class="home-btn" bindtap="onGoHome">返回首页</button>
+  <view class="bottom-space" />
+</scroll-view>

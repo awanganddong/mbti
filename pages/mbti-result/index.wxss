@@ -1,0 +1,70 @@
+.scroll {
+  height: 100vh;
+  padding: 24rpx 32rpx 80rpx;
+  box-sizing: border-box;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 32rpx;
+}
+
+.type {
+  display: block;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4298ff;
+  margin-bottom: 24rpx;
+}
+
+.pic {
+  width: 360rpx;
+  height: 360rpx;
+  margin: 0 auto;
+}
+
+.epithet {
+  display: block;
+  font-size: 44rpx;
+  font-weight: bold;
+  margin-top: 24rpx;
+}
+
+.table {
+  background: #fff;
+  border-radius: 12rpx;
+  border: 1px solid #eee;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+
+.tr {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx;
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.th {
+  width: 200rpx;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.td {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.home-btn {
+  margin-top: 48rpx;
+  background: #4298ff;
+  color: #fff;
+}
+
+.bottom-space {
+  height: 40rpx;
+}

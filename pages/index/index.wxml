@@ -1,0 +1,17 @@
+<view class="wrap">
+  <view class="hero">
+    <text class="title">性格测试</text>
+    <text class="sub">MBTI 与 SBTI（娱乐向）</text>
+  </view>
+  <navigator url="/pages/mbti-test/index" open-type="navigate" class="card primary">
+    <text class="card-title">MBTI 测试</text>
+    <text class="card-desc">经典四字母类型与详细解读</text>
+  </navigator>
+  <navigator url="/pages/sbti/index" open-type="navigate" class="card card-sbti" hover-class="none">
+    <text class="card-title">SBTI 测试</text>
+    <text class="card-desc">十五维度 · 趣味人格库</text>
+  </navigator>
+  <navigator url="/pages/mbti-history/index" open-type="navigate" class="card ghost">
+    <text class="card-title">MBTI 测试历史</text>
+  </navigator>
+</view>

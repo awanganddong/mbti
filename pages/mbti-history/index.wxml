@@ -1,0 +1,20 @@
+<view class="page">
+  <block wx:if="{{list.length === 0}}">
+    <text class="empty">暂无记录</text>
+  </block>
+  <block wx:else>
+    <view
+      class="row"
+      wx:for="{{list}}"
+      wx:key="timestamp"
+      data-ts="{{item.timestamp}}"
+      bindtap="onOpen"
+    >
+      <view class="row-main">
+        <text class="type">{{item.type}}</text>
+        <text class="sub">{{item.epithet}}</text>
+      </view>
+      <text class="time">{{item.timeText}}</text>
+    </view>
+  </block>
+</view>

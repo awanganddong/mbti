@@ -1,0 +1,21 @@
+<view class="page" wx:if="{{current}}">
+  <view class="progress-wrap">
+    <progress percent="{{progress}}" stroke-width="6" activeColor="#4298ff" backgroundColor="#e3effb" />
+    <text class="progress-text">{{index + 1}} / {{total}}</text>
+  </view>
+  <view class="q-num">#{{index + 1}}</view>
+  <text class="question">{{current.question}}</text>
+  <view class="opts">
+    <view
+      class="opt"
+      wx:for="{{current.answerOptions}}"
+      wx:key="type"
+      data-type="{{item.type}}"
+      bindtap="onSelect"
+    >
+      <text class="opt-label">{{item.type}}.</text>
+      <text class="opt-text">{{item.answer}}</text>
+    </view>
+  </view>
+  <button class="btn-prev" bindtap="onPrev" disabled="{{index === 0}}">上一题</button>
+</view>

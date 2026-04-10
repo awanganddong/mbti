@@ -1,0 +1,5 @@
+var letters = ["A", "B", "C", "D"];
+function code(i) {
+  return letters[i] || String(i + 1);
+}
+module.exports.code = code;

@@ -1,0 +1,100 @@
+<wxs src="./letters.wxs" module="letters" />
+
+<view class="page">
+  <block wx:if="{{step === 'intro'}}">
+    <view class="intro">
+      <text class="intro-title">MBTI已经过时，SBTI来了。</text>
+      <text class="intro-desc">题目与计分参考开源项目 SBTI-test，结果仅供娱乐。</text>
+      <button class="btn-main" bindtap="onStart">开始测试</button>
+      <button class="btn-ghost" bindtap="onHome">返回首页</button>
+    </view>
+  </block>
+
+  <block wx:if="{{step === 'test'}}">
+    <view class="prog">
+      <progress percent="{{progressPercent}}" stroke-width="4" activeColor="#5b7a62" backgroundColor="#edf3ee" />
+      <text class="prog-t">{{progressDone}} / {{progressTotal}}</text>
+    </view>
+    <view class="preview-row" bindtap="togglePreview">
+      <text class="preview-icon">{{previewMode ? '☑' : '☐'}}</text>
+      <text>显示维度名称（剧透）</text>
+    </view>
+    <scroll-view scroll-y class="q-scroll">
+      <block wx:for="{{visibleList}}" wx:key="id" wx:for-item="q">
+        <view class="q-card">
+          <view class="q-meta">
+            <text>第 {{index + 1}} 题</text>
+            <text>{{q.metaLabel}}</text>
+          </view>
+          <text class="q-text">{{q.text}}</text>
+          <view
+            class="q-opt {{q.selected === opt.value ? 'active' : ''}}"
+            wx:for="{{q.options}}"
+            wx:for-item="opt"
+            wx:for-index="oi"
+            wx:key="value"
+            data-qid="{{q.id}}"
+            data-value="{{opt.value}}"
+            bindtap="onPick"
+          >
+            <text class="q-code">{{letters.code(oi)}}.</text>
+            <text class="q-label">{{opt.label}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="foot">
+      <text class="hint">{{canSubmit ? '可以提交了' : '请答完所有题目'}}</text>
+      <button class="btn-submit" disabled="{{!canSubmit}}" bindtap="onSubmit">提交并查看结果</button>
+    </view>
+  </block>
+
+  <block wx:if="{{step === 'result'}}">
+    <scroll-view scroll-y class="r-scroll" wx:if="{{result}}">
+      <view class="r-top">
+        <view class="r-picbox" wx:if="{{resultImage}}">
+          <image class="r-pic" src="{{resultImage}}" mode="aspectFit" />
+          <text class="r-cap">{{result.finalType.intro}}</text>
+        </view>
+        <view class="r-textbox">
+          <text class="r-kicker">{{result.modeKicker}}</text>
+          <text class="r-name">{{result.finalType.code}}（{{result.finalType.cn}}）</text>
+          <text class="r-badge">{{result.badge}}</text>
+          <text class="r-sub">{{result.sub}}</text>
+          <text class="r-desc">{{result.finalType.desc}}</text>
+          <view wx:if="{{result.secondaryType}}" class="r-sec">
+            <text class="r-sec-t">若未触发隐藏人格，最接近：</text>
+            <text>{{result.secondaryType.code}}（{{result.secondaryType.cn}}）· {{result.secondaryType.similarity}}%</text>
+          </view>
+        </view>
+      </view>
+      <view class="r-block">
+        <text class="r-h">十五维度</text>
+        <block wx:for="{{dimRows}}" wx:key="dim">
+          <view class="dim">
+            <view class="dim-top">
+              <text class="dim-name">{{item.name}}</text>
+              <text class="dim-lv">{{item.level}} / {{item.score}}分</text>
+            </view>
+            <text class="dim-ex">{{item.explain}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="r-block">
+        <text class="r-h">标准人格库 Top 3</text>
+        <block wx:for="{{top3}}" wx:key="code">
+          <view class="top">
+            <view>
+              <text class="top-name">{{item.code}}（{{item.cn}}）</text>
+              <text class="top-sub">距离 {{item.distance}} · 命中 {{item.exact}}/15</text>
+            </view>
+            <text class="top-pct">{{item.similarity}}%</text>
+          </view>
+        </block>
+      </view>
+      <view class="r-note">{{note}}</view>
+      <button class="btn-main" bindtap="onRestart">重新测试</button>
+      <button class="btn-ghost" bindtap="onHome">回到首页</button>
+    </scroll-view>
+  </block>
+</view>

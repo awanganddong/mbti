@@ -1,0 +1,46 @@
+{
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "mbti-sbti",
+  "setting": {
+    "es6": true,
+    "enhance": false,
+    "minified": false,
+    "postcss": true,
+    "minifyWXSS": false,
+    "minifyWXML": false,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [
+      ".git/**",
+      ".idea/**",
+      ".cursor/**",
+      ".next/**",
+      "node_modules/**",
+      "*.tsbuildinfo",
+      "next-env.d.ts",
+      "README.md",
+      "package.json",
+      "assets/**"
+    ],
+    "include": []
+  },
+  "editorSetting": {}
+}

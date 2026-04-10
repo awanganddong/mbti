@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mbti-test/index",
+    "pages/mbti-result/index",
+    "pages/mbti-history/index",
+    "pages/sbti/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "MBTI / SBTI",
+    "navigationBarBackgroundColor": "#4298ff",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#f5f5f5"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

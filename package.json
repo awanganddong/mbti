@@ -1,0 +1,9 @@
+{
+  "name": "甜甜mbti人格测试",
+  "version": "2.0.0",
+  "private": true,
+  "description": "mbti和sbti人格测试，查看你是不是恋爱脑，以及和ta的暧昧程度。",
+  "scripts": {
+    "fix:pagejson": "node scripts/strip-invalid-page-share-keys.js"
+  }
+}
