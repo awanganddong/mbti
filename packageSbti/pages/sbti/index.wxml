@@ -1,0 +1,55 @@
+<view class="test-page">
+  <view class="container" wx:if="{{currentQuestion}}">
+    <view class="topbar">
+      <view class="topbar-row">
+        <text class="question-number">第 {{currentQuestionIndex + 1}} / {{totalQuestions}} 题</text>
+        <text class="progress-text">{{progressText}}</text>
+      </view>
+      <view class="progress-track">
+        <view class="progress-fill" style="width: {{progress}}%"></view>
+      </view>
+    </view>
+
+    <view class="question-card">
+      <text class="question">{{currentQuestion.text}}</text>
+    </view>
+
+    <view class="options">
+      <view
+        class="option {{selectedOptionIndex === index ? 'option-selected' : ''}}"
+        hover-class="option-hover"
+        wx:for="{{currentQuestion.options}}"
+        wx:key="value"
+        data-index="{{index}}"
+        bindtap="selectOption"
+      >
+        <view class="option-left">
+          <view class="option-badge">{{index + 1}}</view>
+        </view>
+        <view class="option-main">
+          <text class="option-text">{{item.label}}</text>
+        </view>
+        <view class="option-right">
+          <view class="check" wx:if="{{selectedOptionIndex === index}}"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="actions">
+      <button
+        class="action-btn action-secondary"
+        bindtap="previousQuestion"
+        disabled="{{currentQuestionIndex === 0}}"
+      >
+        上一题
+      </button>
+      <button
+        class="action-btn action-primary"
+        bindtap="nextQuestion"
+        disabled="{{selectedOptionIndex === -1}}"
+      >
+        {{isLastQuestion ? '提交并查看结果' : '下一题'}}
+      </button>
+    </view>
+  </view>
+</view>

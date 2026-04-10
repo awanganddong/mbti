@@ -1,0 +1,18 @@
+<view class="container">
+  <text class="page-title">测试历史</text>
+  
+  <view wx:if="{{history.length === 0}}" class="empty-history">
+    <text>暂无测试记录</text>
+    <button class="btn btn-primary" bindtap="goTest">开始测试</button>
+  </view>
+  
+  <view wx:else class="history-list">
+    <view wx:for="{{history}}" wx:key="{{index}}" class="history-item">
+      <text class="history-date">{{formatDate(item.timestamp)}}</text>
+      <text class="history-result">{{item.type}}型</text>
+      <button class="btn btn-default" bindtap="viewResult" data-type="{{item.type}}" data-scores="{{item.scores}}">
+        查看详情
+      </button>
+    </view>
+  </view>
+</view>

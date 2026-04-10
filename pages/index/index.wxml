@@ -1,0 +1,55 @@
+<view class="home-page">
+<view class="container">
+  <view class="card-grid">
+    <view class="test-card card-{{card.id}}" wx:for="{{testCatalog}}" wx:for-item="card" wx:key="id">
+      <view class="test-card-header">
+        <text class="test-card-title">{{card.title}}</text>
+        <text class="test-card-desc" wx:if="{{card.description}}">{{card.description}}</text>
+        <view class="tag-row" wx:if="{{card.tags && card.tags.length}}">
+          <text class="tag" wx:for="{{card.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+        </view>
+      </view>
+
+      <view class="subcard-list">
+        <view
+          class="subcard subcard-latest"
+          hover-class="subcard-hover"
+          wx:if="{{card.id === 'mbti' && latestResult}}"
+          data-url="{{latestResultUrl}}"
+          bindtap="handleSubCardTap"
+        >
+          <view class="subcard-main">
+            <text class="subcard-title">最近一次结果</text>
+            <text class="subcard-desc">{{latestResult.type}}</text>
+          </view>
+
+          <view class="subcard-meta">
+            <text class="subcard-arrow">›</text>
+          </view>
+        </view>
+
+        <view
+          class="subcard"
+          hover-class="subcard-hover"
+          wx:for="{{card.subCards}}"
+          wx:for-item="sub"
+          wx:key="id"
+          data-url="{{sub.url}}"
+          bindtap="handleSubCardTap"
+        >
+          <view class="subcard-main">
+            <text class="subcard-title">{{sub.title}}</text>
+            <text class="subcard-desc" wx:if="{{sub.description}}">{{sub.description}}</text>
+          </view>
+
+          <view class="subcard-meta">
+            <text class="subcard-badge" wx:if="{{sub.badge}}">{{sub.badge}}</text>
+            <text class="subcard-time" wx:if="{{sub.estimatedMinutes}}">{{sub.estimatedMinutes}} 分钟</text>
+            <text class="subcard-arrow">›</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/index",
+    "pages/test/result/index",
+    "pages/test/result/history/index",
+    "pages/love/index",
+    "pages/love/result/index",
+    "pages/man/index",
+    "pages/man/result/index",
+    "pages/shady/index",
+    "pages/shady/result/index"
+  ],
+  "subPackages": [
+    {
+      "root": "packageSbti",
+      "name": "sbti",
+      "pages": [
+        "pages/sbti/index",
+        "pages/sbti/result/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0B1220",
+    "navigationBarTitleText": "甜甜mbti人格测试",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

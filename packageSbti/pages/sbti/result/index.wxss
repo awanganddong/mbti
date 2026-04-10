@@ -1,0 +1,248 @@
+.result-page {
+  min-height: 100vh;
+  background: radial-gradient(900rpx 900rpx at 15% 0%, rgba(34, 197, 94, 0.20) 0%, rgba(11, 18, 32, 0) 60%),
+    radial-gradient(900rpx 900rpx at 85% 10%, rgba(168, 85, 247, 0.18) 0%, rgba(11, 18, 32, 0) 55%),
+    #0b1220;
+}
+
+.container {
+  padding: 28rpx;
+  box-sizing: border-box;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1rpx solid rgba(255, 255, 255, 0.10);
+  border-radius: 26rpx;
+  padding: 28rpx;
+  box-shadow: 0 20rpx 70rpx rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(10px);
+}
+
+.hero-kicker {
+  font-size: 24rpx;
+  color: rgba(34, 197, 94, 0.9);
+  margin-top: 12rpx;
+  display: block;
+  letter-spacing: 0.04em;
+}
+
+.match-badge {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(34, 197, 94, 0.12);
+  border: 1rpx solid rgba(34, 197, 94, 0.25);
+  padding: 12rpx 16rpx;
+  border-radius: 999rpx;
+  margin-top: 16rpx;
+  display: inline-block;
+  line-height: 1.45;
+}
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14rpx;
+}
+
+.hero-title {
+  font-size: 44rpx;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-badge {
+  font-size: 22rpx;
+  color: rgba(34, 197, 94, 0.95);
+  background: rgba(34, 197, 94, 0.14);
+  border: 1rpx solid rgba(34, 197, 94, 0.22);
+  padding: 8rpx 14rpx;
+  border-radius: 999rpx;
+}
+
+.hero-type-line {
+  font-size: 34rpx;
+  font-weight: 800;
+  color: rgba(34, 197, 94, 0.95);
+  margin-top: 16rpx;
+  display: block;
+  letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 10rpx;
+  display: block;
+}
+
+.section-label {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.poster-caption {
+  font-size: 28rpx;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 16rpx;
+  display: block;
+}
+
+.hero-desc {
+  margin-top: 22rpx;
+}
+
+.hero-image-wrap {
+  width: 100%;
+  margin-top: 20rpx;
+  border-radius: 22rpx;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+}
+
+.paragraph {
+  font-size: 28rpx;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.86);
+  margin-top: 16rpx;
+  display: block;
+}
+
+.section-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1rpx solid rgba(255, 255, 255, 0.10);
+  border-radius: 22rpx;
+  padding: 24rpx;
+  margin-top: 18rpx;
+  backdrop-filter: blur(10px);
+}
+
+.section-header {
+  margin-bottom: 16rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.dim-item {
+  border: 1rpx solid rgba(255, 255, 255, 0.1);
+  border-radius: 18rpx;
+  padding: 20rpx;
+  margin-bottom: 14rpx;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dim-item:last-child {
+  margin-bottom: 0;
+}
+
+.dim-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12rpx;
+  margin-bottom: 10rpx;
+}
+
+.dim-item-name {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  flex: 1;
+}
+
+.dim-item-score {
+  font-size: 26rpx;
+  font-weight: 800;
+  color: rgba(34, 197, 94, 0.95);
+  white-space: nowrap;
+}
+
+.dim-item-expl {
+  font-size: 26rpx;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.note-card .note-text {
+  margin-top: 0;
+}
+
+.result-empty {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48rpx;
+  gap: 32rpx;
+}
+
+.empty-text {
+  font-size: 30rpx;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
+.list-item {
+  display: flex;
+  gap: 12rpx;
+  padding: 12rpx 0;
+}
+
+.list-dot {
+  font-size: 26rpx;
+  color: rgba(34, 197, 94, 0.95);
+  width: 44rpx;
+  flex-shrink: 0;
+}
+
+.list-text {
+  font-size: 28rpx;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 18rpx;
+  margin-top: 22rpx;
+  padding-bottom: calc(22rpx + env(safe-area-inset-bottom));
+}
+
+.action-btn {
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 18rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  padding: 0;
+}
+
+.action-primary {
+  background: linear-gradient(90deg, #22c55e 0%, #3b82f6 60%, #a855f7 120%);
+  color: #ffffff;
+}
+
+.action-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  border: 1rpx solid rgba(255, 255, 255, 0.14);
+}

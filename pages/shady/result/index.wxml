@@ -1,0 +1,55 @@
+<view class="result-page">
+  <view class="container">
+    <view class="hero-card">
+      <view class="hero-header">
+        <view class="hero-title-row">
+          <text class="hero-title">暧昧指数</text>
+          <text class="hero-badge">{{score}} / {{maxScore}}</text>
+        </view>
+        <text class="hero-subtitle">{{resultTitle}}</text>
+      </view>
+
+      <view class="hero-desc">
+        <text class="paragraph" wx:for="{{resultDescriptionParagraphs}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="section-card" wx:if="{{traits && traits.length}}">
+      <view class="section-header">
+        <text class="section-title">特征</text>
+      </view>
+      <view class="list-item" wx:for="{{traits}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="section-card" wx:if="{{analysisParagraphs && analysisParagraphs.length}}">
+      <view class="section-header">
+        <text class="section-title">分析</text>
+      </view>
+      <text class="paragraph" wx:for="{{analysisParagraphs}}" wx:key="*this">{{item}}</text>
+    </view>
+
+    <view class="section-card" wx:if="{{suggestions && suggestions.length}}">
+      <view class="section-header">
+        <text class="section-title">建议</text>
+      </view>
+      <view class="list-item" wx:for="{{suggestions}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" bindtap="takeTestAgain">再测一次</button>
+      <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+    </view>
+  </view>
+</view>
+

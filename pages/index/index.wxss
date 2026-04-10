@@ -1,0 +1,241 @@
+.home-page {
+  min-height: 100vh;
+  background: radial-gradient(900rpx 900rpx at 10% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(11, 18, 32, 0) 55%),
+    radial-gradient(900rpx 900rpx at 90% 10%, rgba(255, 255, 255, 0.04) 0%, rgba(11, 18, 32, 0) 55%),
+    #0b1220;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.test-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1rpx solid rgba(255, 255, 255, 0.10);
+  border-radius: 20rpx;
+  padding: 28rpx;
+  box-shadow: 0 18rpx 60rpx rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.test-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10rpx;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.test-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900rpx 320rpx at 20% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+}
+
+.card-mbti::before {
+  background: linear-gradient(180deg, #8b5cf6 0%, #3b82f6 100%);
+}
+
+.card-love::before {
+  background: linear-gradient(180deg, #ec4899 0%, #f97316 100%);
+}
+
+.card-man::before {
+  background: linear-gradient(180deg, #3b82f6 0%, #22d3ee 100%);
+}
+
+.card-mbti::after {
+  background: radial-gradient(900rpx 320rpx at 20% 0%, rgba(139, 92, 246, 0.18) 0%, rgba(59, 130, 246, 0) 60%);
+}
+
+.card-love::after {
+  background: radial-gradient(900rpx 320rpx at 20% 0%, rgba(236, 72, 153, 0.16) 0%, rgba(249, 115, 22, 0) 60%);
+}
+
+.card-man::after {
+  background: radial-gradient(900rpx 320rpx at 20% 0%, rgba(59, 130, 246, 0.16) 0%, rgba(34, 211, 238, 0) 60%);
+}
+
+.test-card-header {
+  margin-bottom: 18rpx;
+}
+
+.test-card-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  display: block;
+}
+
+.test-card-desc {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.62);
+  margin-top: 8rpx;
+  display: block;
+}
+
+.tag-row {
+  display: flex;
+  gap: 12rpx;
+  flex-wrap: wrap;
+  margin-top: 14rpx;
+}
+
+.tag {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.10);
+  border: 1rpx solid rgba(255, 255, 255, 0.12);
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+}
+
+.card-mbti .tag {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.22);
+}
+
+.card-love .tag {
+  background: rgba(236, 72, 153, 0.14);
+  border-color: rgba(236, 72, 153, 0.22);
+}
+
+.card-man .tag {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.subcard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.subcard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1rpx solid rgba(255, 255, 255, 0.12);
+  border-radius: 16rpx;
+  padding: 22rpx;
+}
+
+.subcard-latest {
+  border-style: dashed;
+}
+
+.subcard-hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.40);
+}
+
+.card-mbti .subcard-hover {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.36);
+}
+
+.card-love .subcard-hover {
+  background: rgba(236, 72, 153, 0.12);
+  border-color: rgba(236, 72, 153, 0.36);
+}
+
+.card-man .subcard-hover {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.36);
+}
+
+.subcard-main {
+  min-width: 0;
+}
+
+.subcard-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.90);
+  display: block;
+}
+
+.subcard-desc {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.62);
+  margin-top: 8rpx;
+  display: block;
+}
+
+.subcard-meta {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  flex-shrink: 0;
+}
+
+.subcard-badge {
+  font-size: 22rpx;
+  color: rgba(34, 197, 94, 0.95);
+  background: rgba(34, 197, 94, 0.14);
+  border: 1rpx solid rgba(34, 197, 94, 0.18);
+  padding: 6rpx 12rpx;
+  border-radius: 999rpx;
+}
+
+.card-mbti .subcard-badge {
+  color: rgba(139, 92, 246, 0.95);
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.22);
+}
+
+.card-love .subcard-badge {
+  color: rgba(236, 72, 153, 0.95);
+  background: rgba(236, 72, 153, 0.14);
+  border-color: rgba(236, 72, 153, 0.22);
+}
+
+.card-man .subcard-badge {
+  color: rgba(59, 130, 246, 0.95);
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.card-shady::before {
+  background: linear-gradient(180deg, #ec4899 0%, #8b5cf6 100%);
+}
+
+.card-shady::after {
+  background: radial-gradient(900rpx 320rpx at 20% 0%, rgba(236, 72, 153, 0.14) 0%, rgba(139, 92, 246, 0) 60%);
+}
+
+.card-shady .tag {
+  background: rgba(236, 72, 153, 0.14);
+  border-color: rgba(236, 72, 153, 0.22);
+}
+
+.card-shady .subcard-hover {
+  background: rgba(236, 72, 153, 0.10);
+  border-color: rgba(236, 72, 153, 0.32);
+}
+
+.card-shady .subcard-badge {
+  color: rgba(236, 72, 153, 0.95);
+  background: rgba(236, 72, 153, 0.14);
+  border-color: rgba(236, 72, 153, 0.22);
+}
+
+.subcard-time {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.subcard-arrow {
+  font-size: 40rpx;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1;
+}

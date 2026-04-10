@@ -1,0 +1,55 @@
+<view class="test-page">
+  <view class="container">
+    <view class="topbar">
+      <view class="topbar-row">
+        <text class="question-number">第 {{currentQuestionIndex + 1}} / {{personalityTest.length}} 题</text>
+        <text class="progress-text">{{progressText}}</text>
+      </view>
+      <view class="progress-track">
+        <view class="progress-fill" style="width: {{progress}}%"></view>
+      </view>
+    </view>
+
+    <view class="question-card">
+      <text class="question">{{currentQuestion.question}}</text>
+    </view>
+
+    <view class="options">
+      <view
+        class="option {{selectedAnswer === item.type ? 'option-selected' : ''}}"
+        hover-class="option-hover"
+        wx:for="{{currentQuestion.answerOptions}}"
+        wx:key="type"
+        bindtap="selectAnswer"
+        data-type="{{item.type}}"
+      >
+        <view class="option-left">
+          <view class="option-badge">{{item.type}}</view>
+        </view>
+        <view class="option-main">
+          <text class="option-text">{{item.answer}}</text>
+        </view>
+        <view class="option-right">
+          <view class="check" wx:if="{{selectedAnswer === item.type}}"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="actions">
+      <button
+        class="action-btn action-secondary"
+        bindtap="previousQuestion"
+        disabled="{{currentQuestionIndex === 0}}"
+      >
+        上一题
+      </button>
+      <button
+        class="action-btn action-primary"
+        bindtap="nextQuestion"
+        disabled="{{!selectedAnswer}}"
+      >
+        {{isLastQuestion ? '查看结果' : '下一题'}}
+      </button>
+    </view>
+  </view>
+</view>

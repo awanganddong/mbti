@@ -1,0 +1,168 @@
+<view class="result-page">
+  <view class="container">
+    <view class="hero-card">
+      <view class="hero-header">
+        <view class="hero-title-row">
+          <text class="hero-type">{{personalityType}}</text>
+          <text class="hero-badge" wx:if="{{personalityData && personalityData.epithet}}">{{personalityData.epithet}}</text>
+        </view>
+        <text class="hero-subtitle">你的性格类型结果</text>
+      </view>
+
+      <image src="/public/images/mbti/{{personalityType}}.png" class="hero-image" mode="aspectFit" />
+
+      <view class="hero-desc">
+        <text class="paragraph" wx:for="{{personalityDescriptionParagraphs}}" wx:key="*this">{{item}}</text>
+      </view>
+
+      <view class="notice" wx:if="{{!hasFullProfile}}">
+        <text class="notice-text">该类型的完整版解析暂未内置，当前展示的是简版描述与得分。</text>
+      </view>
+    </view>
+
+    <view class="section-card">
+      <view class="section-header">
+        <text class="section-title">详细得分</text>
+      </view>
+      <view class="score-row" wx:for="{{scoreRows}}" wx:key="label">
+        <text class="score-label">{{item.label}}</text>
+        <text class="score-value">{{item.value}}</text>
+      </view>
+    </view>
+  
+  <!-- 荣格功能偏好排序 -->
+    <view class="section-card" wx:if="{{jungianRows && jungianRows.length}}">
+      <view class="section-header">
+        <text class="section-title">荣格功能偏好排序</text>
+      </view>
+      <view class="kv-row" wx:for="{{jungianRows}}" wx:key="label">
+        <text class="kv-label">{{item.label}}</text>
+        <text class="kv-value">{{item.value}}</text>
+      </view>
+    </view>
+  
+  <!-- 总体特质 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.generalTraits}}">
+      <view class="section-header">
+        <text class="section-title">{{personalityType}} 总体特质</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.generalTraits}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+  
+  <!-- 人际关系优点 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.relationshipStrengths}}">
+      <view class="section-header">
+        <text class="section-title">人际关系优点</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.relationshipStrengths}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+  
+  <!-- 人际关系不足 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.relationshipWeaknesses}}">
+      <view class="section-header">
+        <text class="section-title">人际关系不足</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.relationshipWeaknesses}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+  
+  <!-- 成功定义 -->
+    <view class="section-card" wx:if="{{successDefinitionParagraphs && successDefinitionParagraphs.length}}">
+      <view class="section-header">
+        <text class="section-title">成功定义</text>
+      </view>
+      <text class="paragraph" wx:for="{{successDefinitionParagraphs}}" wx:key="*this">{{item}}</text>
+    </view>
+  
+  <!-- 优势 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.strengths}}">
+      <view class="section-header">
+        <text class="section-title">优势</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.strengths}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+  
+  <!-- 特殊天赋 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.gifts}}">
+      <view class="section-header">
+        <text class="section-title">特殊天赋</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.gifts}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+  
+  <!-- 潜在问题领域 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.potentialProblemAreas}}">
+      <view class="section-header">
+        <text class="section-title">潜在问题领域</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.potentialProblemAreas}}" wx:key="*this">
+        <text class="list-dot">•</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+  
+  <!-- 问题解释 -->
+    <view class="section-card" wx:if="{{explanationOfProblemsParagraphs && explanationOfProblemsParagraphs.length}}">
+      <view class="section-header">
+        <text class="section-title">问题解释</text>
+      </view>
+      <text class="paragraph" wx:for="{{explanationOfProblemsParagraphs}}" wx:key="*this">{{item}}</text>
+    </view>
+  
+  <!-- 解决方案 -->
+    <view class="section-card" wx:if="{{solutionsParagraphs && solutionsParagraphs.length}}">
+      <view class="section-header">
+        <text class="section-title">解决方案</text>
+      </view>
+      <text class="paragraph" wx:for="{{solutionsParagraphs}}" wx:key="*this">{{item}}</text>
+    </view>
+  
+  <!-- 快乐生活小提示 -->
+    <view class="section-card" wx:if="{{livingHappilyTipsParagraphs && livingHappilyTipsParagraphs.length}}">
+      <view class="section-header">
+        <text class="section-title">快乐生活小提示</text>
+      </view>
+      <text class="paragraph" wx:for="{{livingHappilyTipsParagraphs}}" wx:key="*this">{{item}}</text>
+    </view>
+  
+  <!-- 实现成功的生活十则 -->
+    <view class="section-card" wx:if="{{personalityData && personalityData.tenRulesToLive}}">
+      <view class="section-header">
+        <text class="section-title">实现成功的生活十则</text>
+      </view>
+      <view class="list-item" wx:for="{{personalityData.tenRulesToLive}}" wx:key="*this">
+        <text class="list-dot">{{index + 1}}.</text>
+        <text class="list-text">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" bindtap="takeTestAgain">重新测试</button>
+      <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+    </view>
+  </view>
+</view>

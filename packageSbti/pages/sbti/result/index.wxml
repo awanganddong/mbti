@@ -1,0 +1,61 @@
+<view class="result-page" wx:if="{{!empty}}">
+  <view class="container">
+    <view class="hero-card">
+      <view class="hero-header">
+        <view class="hero-title-row">
+          <text class="hero-title">SBTI</text>
+        </view>
+        <text class="hero-kicker" wx:if="{{modeKicker}}">{{modeKicker}}</text>
+        <text class="hero-type-line" wx:if="{{resultTypeLine}}">{{resultTypeLine}}</text>
+        <text class="match-badge" wx:if="{{matchBadge}}">{{matchBadge}}</text>
+        <text class="hero-subtitle" wx:if="{{typeSub}}">{{typeSub}}</text>
+      </view>
+
+      <view class="hero-image-wrap">
+        <image class="hero-image" mode="widthFix" src="{{resultImageUrl}}"></image>
+      </view>
+
+      <text class="poster-caption" wx:if="{{posterCaption}}">{{posterCaption}}</text>
+
+      <view class="hero-desc">
+        <text class="section-label">该人格的简单解读</text>
+        <text class="paragraph" wx:for="{{resultDescriptionParagraphs}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="section-card">
+      <view class="section-header">
+        <text class="section-title">十五维度评分</text>
+      </view>
+      <view class="dim-item" wx:for="{{dimList}}" wx:key="name">
+        <view class="dim-item-top">
+          <text class="dim-item-name">{{item.name}}</text>
+          <text class="dim-item-score">{{item.level}} / {{item.raw}}分</text>
+        </view>
+        <text class="dim-item-expl">{{item.explanation}}</text>
+      </view>
+    </view>
+
+    <view class="section-card note-card">
+      <view class="section-header">
+        <text class="section-title">友情提示</text>
+      </view>
+      <text class="paragraph note-text">{{funNote}}</text>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" bindtap="takeTestAgain">重新测试</button>
+      <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+    </view>
+  </view>
+</view>
+
+<view class="result-empty" wx:if="{{empty}}">
+  <text class="empty-text">暂无新版测试结果，请重新答题。</text>
+  <button class="action-btn action-primary" bindtap="takeTestAgain">去测试</button>
+</view>
