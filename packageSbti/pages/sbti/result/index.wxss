@@ -1,7 +1,7 @@
 .result-page {
   min-height: 100vh;
-  background: radial-gradient(900rpx 900rpx at 15% 0%, rgba(34, 197, 94, 0.20) 0%, rgba(11, 18, 32, 0) 60%),
-    radial-gradient(900rpx 900rpx at 85% 10%, rgba(168, 85, 247, 0.18) 0%, rgba(11, 18, 32, 0) 55%),
+  background: radial-gradient(900rpx 900rpx at 15% 0%, rgba(217, 70, 239, 0.22) 0%, rgba(11, 18, 32, 0) 60%),
+    radial-gradient(900rpx 900rpx at 85% 10%, rgba(163, 230, 53, 0.14) 0%, rgba(11, 18, 32, 0) 55%),
     #0b1220;
 }
 
@@ -21,7 +21,7 @@
 
 .hero-kicker {
   font-size: 24rpx;
-  color: rgba(34, 197, 94, 0.9);
+  color: rgba(232, 121, 249, 0.95);
   margin-top: 12rpx;
   display: block;
   letter-spacing: 0.04em;
@@ -30,8 +30,8 @@
 .match-badge {
   font-size: 24rpx;
   color: rgba(255, 255, 255, 0.88);
-  background: rgba(34, 197, 94, 0.12);
-  border: 1rpx solid rgba(34, 197, 94, 0.25);
+  background: rgba(56, 189, 248, 0.10);
+  border: 1rpx solid rgba(163, 230, 53, 0.28);
   padding: 12rpx 16rpx;
   border-radius: 999rpx;
   margin-top: 16rpx;
@@ -54,9 +54,9 @@
 
 .hero-badge {
   font-size: 22rpx;
-  color: rgba(34, 197, 94, 0.95);
-  background: rgba(34, 197, 94, 0.14);
-  border: 1rpx solid rgba(34, 197, 94, 0.22);
+  color: rgba(163, 230, 53, 0.98);
+  background: rgba(217, 70, 239, 0.14);
+  border: 1rpx solid rgba(163, 230, 53, 0.28);
   padding: 8rpx 14rpx;
   border-radius: 999rpx;
 }
@@ -64,7 +64,7 @@
 .hero-type-line {
   font-size: 34rpx;
   font-weight: 800;
-  color: rgba(34, 197, 94, 0.95);
+  color: rgba(217, 70, 239, 0.98);
   margin-top: 16rpx;
   display: block;
   letter-spacing: 0.02em;
@@ -169,7 +169,7 @@
 .dim-item-score {
   font-size: 26rpx;
   font-weight: 800;
-  color: rgba(34, 197, 94, 0.95);
+  color: rgba(163, 230, 53, 0.95);
   white-space: nowrap;
 }
 
@@ -207,7 +207,7 @@
 
 .list-dot {
   font-size: 26rpx;
-  color: rgba(34, 197, 94, 0.95);
+  color: rgba(56, 189, 248, 0.95);
   width: 44rpx;
   flex-shrink: 0;
 }
@@ -237,7 +237,7 @@
 }
 
 .action-primary {
-  background: linear-gradient(90deg, #22c55e 0%, #3b82f6 60%, #a855f7 120%);
+  background: linear-gradient(90deg, #d946ef 0%, #38bdf8 45%, #a3e635 120%);
   color: #ffffff;
 }
 

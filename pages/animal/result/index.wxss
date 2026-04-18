@@ -1,7 +1,7 @@
 .result-page {
   min-height: 100vh;
-  background: radial-gradient(900rpx 900rpx at 15% 0%, rgba(236, 72, 153, 0.24) 0%, rgba(11, 18, 32, 0) 60%),
-    radial-gradient(900rpx 900rpx at 85% 10%, rgba(99, 102, 241, 0.22) 0%, rgba(11, 18, 32, 0) 55%),
+  background: radial-gradient(900rpx 900rpx at 15% 0%, rgba(234, 88, 12, 0.24) 0%, rgba(11, 18, 32, 0) 60%),
+    radial-gradient(900rpx 900rpx at 85% 10%, rgba(132, 204, 22, 0.16) 0%, rgba(11, 18, 32, 0) 55%),
     #0b1220;
 }
 
@@ -34,9 +34,9 @@
 
 .hero-badge {
   font-size: 22rpx;
-  color: rgba(96, 165, 250, 0.95);
-  background: rgba(96, 165, 250, 0.14);
-  border: 1rpx solid rgba(96, 165, 250, 0.22);
+  color: rgba(251, 146, 60, 0.98);
+  background: rgba(234, 88, 12, 0.14);
+  border: 1rpx solid rgba(251, 146, 60, 0.30);
   padding: 8rpx 14rpx;
   border-radius: 999rpx;
 }
@@ -93,7 +93,7 @@
 }
 
 .action-primary {
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 60%, #22c55e 120%);
+  background: linear-gradient(90deg, #ea580c 0%, #f97316 45%, #84cc16 120%);
   color: #ffffff;
 }
 

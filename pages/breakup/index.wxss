@@ -1,7 +1,7 @@
 .test-page {
   min-height: 100vh;
-  background: radial-gradient(800rpx 800rpx at 20% 10%, rgba(236, 72, 153, 0.22) 0%, rgba(11, 18, 32, 0) 60%),
-    radial-gradient(900rpx 900rpx at 80% 0%, rgba(99, 102, 241, 0.22) 0%, rgba(11, 18, 32, 0) 55%),
+  background: radial-gradient(800rpx 800rpx at 20% 10%, rgba(71, 85, 105, 0.32) 0%, rgba(11, 18, 32, 0) 60%),
+    radial-gradient(900rpx 900rpx at 80% 0%, rgba(148, 163, 184, 0.16) 0%, rgba(11, 18, 32, 0) 55%),
     #0b1220;
 }
 
@@ -45,7 +45,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 50%, #22c55e 100%);
+  background: linear-gradient(90deg, #64748b 0%, #475569 50%, #78716c 100%);
   border-radius: 999rpx;
   transition: width 0.25s ease;
 }
@@ -85,13 +85,13 @@
 
 .option-hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(236, 72, 153, 0.45);
+  border-color: rgba(148, 163, 184, 0.50);
 }
 
 .option-selected {
-  background: rgba(236, 72, 153, 0.12);
-  border-color: rgba(236, 72, 153, 0.55);
-  box-shadow: 0 12rpx 40rpx rgba(236, 72, 153, 0.16);
+  background: rgba(71, 85, 105, 0.22);
+  border-color: rgba(148, 163, 184, 0.55);
+  box-shadow: 0 12rpx 40rpx rgba(71, 85, 105, 0.22);
 }
 
 .option-left {
@@ -137,8 +137,8 @@
   width: 22rpx;
   height: 22rpx;
   border-radius: 999rpx;
-  background: #22c55e;
-  box-shadow: 0 0 0 6rpx rgba(34, 197, 94, 0.22);
+  background: #94a3b8;
+  box-shadow: 0 0 0 6rpx rgba(148, 163, 184, 0.28);
 }
 
 .actions {
@@ -158,7 +158,7 @@
 }
 
 .action-primary {
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 60%, #22c55e 120%);
+  background: linear-gradient(90deg, #64748b 0%, #475569 55%, #94a3b8 120%);
   color: #ffffff;
 }
 

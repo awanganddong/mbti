@@ -1,7 +1,7 @@
 .test-page {
   min-height: 100vh;
-  background: radial-gradient(800rpx 800rpx at 20% 10%, rgba(236, 72, 153, 0.22) 0%, rgba(11, 18, 32, 0) 60%),
-    radial-gradient(900rpx 900rpx at 80% 0%, rgba(99, 102, 241, 0.22) 0%, rgba(11, 18, 32, 0) 55%),
+  background: radial-gradient(800rpx 800rpx at 20% 10%, rgba(234, 179, 8, 0.18) 0%, rgba(11, 18, 32, 0) 60%),
+    radial-gradient(900rpx 900rpx at 80% 0%, rgba(225, 29, 72, 0.16) 0%, rgba(11, 18, 32, 0) 55%),
     #0b1220;
 }
 
@@ -13,9 +13,9 @@
 .round-tag {
   font-size: 26rpx;
   font-weight: 700;
-  color: rgba(251, 191, 36, 0.95);
-  background: rgba(251, 191, 36, 0.12);
-  border: 1rpx solid rgba(251, 191, 36, 0.35);
+  color: rgba(251, 191, 36, 0.98);
+  background: rgba(225, 29, 72, 0.10);
+  border: 1rpx solid rgba(234, 179, 8, 0.38);
   border-radius: 999rpx;
   padding: 12rpx 22rpx;
   margin-bottom: 18rpx;
@@ -23,8 +23,8 @@
 }
 
 .instruction-card {
-  background: rgba(251, 191, 36, 0.08);
-  border: 1rpx solid rgba(251, 191, 36, 0.28);
+  background: rgba(234, 179, 8, 0.08);
+  border: 1rpx solid rgba(225, 29, 72, 0.26);
   border-radius: 18rpx;
   padding: 18rpx 22rpx;
   margin-bottom: 18rpx;
@@ -72,7 +72,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 50%, #22c55e 100%);
+  background: linear-gradient(90deg, #eab308 0%, #e11d48 48%, #f472b6 100%);
   border-radius: 999rpx;
   transition: width 0.25s ease;
 }
@@ -112,13 +112,13 @@
 
 .option-hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(236, 72, 153, 0.45);
+  border-color: rgba(234, 179, 8, 0.42);
 }
 
 .option-selected {
-  background: rgba(236, 72, 153, 0.12);
-  border-color: rgba(236, 72, 153, 0.55);
-  box-shadow: 0 12rpx 40rpx rgba(236, 72, 153, 0.16);
+  background: rgba(225, 29, 72, 0.12);
+  border-color: rgba(234, 179, 8, 0.48);
+  box-shadow: 0 12rpx 40rpx rgba(225, 29, 72, 0.14);
 }
 
 .option-left {
@@ -164,8 +164,8 @@
   width: 22rpx;
   height: 22rpx;
   border-radius: 999rpx;
-  background: #22c55e;
-  box-shadow: 0 0 0 6rpx rgba(34, 197, 94, 0.22);
+  background: #eab308;
+  box-shadow: 0 0 0 6rpx rgba(234, 179, 8, 0.28);
 }
 
 .actions {
@@ -185,7 +185,7 @@
 }
 
 .action-primary {
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 60%, #22c55e 120%);
+  background: linear-gradient(90deg, #eab308 0%, #e11d48 48%, #f472b6 120%);
   color: #ffffff;
 }
 
