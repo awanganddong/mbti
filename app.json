@@ -25,7 +25,9 @@
     "pages/ideal/index",
     "pages/ideal/result/index",
     "pages/coupleValues/index",
-    "pages/coupleValues/result/index"
+    "pages/coupleValues/result/index",
+    "pages/lovequirk/index",
+    "pages/lovequirk/result/index"
   ],
   "subPackages": [
     {

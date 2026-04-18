@@ -80,6 +80,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "loveQuirk",
+    title: "恋爱癖好测试",
+    description: "黏人仪式感贴贴互怼吃醋昵称，你更吃哪一口",
+    tags: ["恋爱", "趣味"],
+    subCards: [
+      {
+        id: "lovequirk-20",
+        title: "恋爱癖好（20题）",
+        description: "六种恋爱里的小偏好",
+        url: "/pages/lovequirk/index",
+        estimatedMinutes: 4,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "coupleValues",
     title: "情侣三观匹配测试",
     description: "五维三观画像 · 双人同一手机先后作答",
