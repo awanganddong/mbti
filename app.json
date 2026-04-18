@@ -13,7 +13,9 @@
     "pages/nen/index",
     "pages/nen/result/index",
     "pages/animal/index",
-    "pages/animal/result/index"
+    "pages/animal/result/index",
+    "pages/plant/index",
+    "pages/plant/result/index"
   ],
   "subPackages": [
     {

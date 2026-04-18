@@ -96,6 +96,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "plant",
+    title: "植物塑测试",
+    description: "测一测你是哪种植物系气质",
+    tags: ["趣味", "性格"],
+    subCards: [
+      {
+        id: "plant-20",
+        title: "植物塑（20题）",
+        description: "仙人掌向日葵苔藓多肉竹藤蔓",
+        url: "/pages/plant/index",
+        estimatedMinutes: 4,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "sbti",
     title: "SBTI 沙雕人格测试",
     description: "十五维向量匹配 · 原版算法",
