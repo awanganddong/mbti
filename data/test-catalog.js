@@ -80,6 +80,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "likeLevel",
+    title: "喜欢程度测试",
+    description: "想着心里那个人，测测你的喜欢有多深",
+    tags: ["恋爱", "趣味"],
+    subCards: [
+      {
+        id: "likeLevel-20",
+        title: "喜欢程度（20题）",
+        description: "好感 / 心动 / 上头 · 档位解读",
+        url: "/pages/likeLevel/index",
+        estimatedMinutes: 4,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "loveQuirk",
     title: "恋爱癖好测试",
     description: "黏人仪式感贴贴互怼吃醋昵称，你更吃哪一口",

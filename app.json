@@ -29,7 +29,9 @@
     "pages/lovequirk/index",
     "pages/lovequirk/result/index",
     "pages/breakup/index",
-    "pages/breakup/result/index"
+    "pages/breakup/result/index",
+    "pages/likeLevel/index",
+    "pages/likeLevel/result/index"
   ],
   "subPackages": [
     {
