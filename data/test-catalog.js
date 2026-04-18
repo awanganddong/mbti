@@ -64,6 +64,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "ideal",
+    title: "理想恋人测试",
+    description: "温柔成熟阳光高冷黏人并肩，你更吃哪一款",
+    tags: ["恋爱", "趣味"],
+    subCards: [
+      {
+        id: "ideal-20",
+        title: "理想恋人（20题）",
+        description: "六类恋人气质匹配",
+        url: "/pages/ideal/index",
+        estimatedMinutes: 4,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "man",
     title: "直男指数测试",
     description: "测一测你的直男指数有多高",

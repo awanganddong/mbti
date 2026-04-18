@@ -21,7 +21,9 @@
     "pages/jung8/index",
     "pages/jung8/result/index",
     "pages/ace/index",
-    "pages/ace/result/index"
+    "pages/ace/result/index",
+    "pages/ideal/index",
+    "pages/ideal/result/index"
   ],
   "subPackages": [
     {
