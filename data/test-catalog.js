@@ -64,6 +64,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "nen",
+    title: "年上年下倾向测试",
+    description: "测一测你更吃年上还是年下这一款",
+    tags: ["恋爱", "趣味"],
+    subCards: [
+      {
+        id: "nen-20",
+        title: "年上年下（20题）",
+        description: "约 4 分钟完成",
+        url: "/pages/nen/index",
+        estimatedMinutes: 4,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "sbti",
     title: "SBTI 沙雕人格测试",
     description: "十五维向量匹配 · 原版算法",
