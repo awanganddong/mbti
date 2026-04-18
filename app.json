@@ -23,7 +23,9 @@
     "pages/ace/index",
     "pages/ace/result/index",
     "pages/ideal/index",
-    "pages/ideal/result/index"
+    "pages/ideal/result/index",
+    "pages/coupleValues/index",
+    "pages/coupleValues/result/index"
   ],
   "subPackages": [
     {

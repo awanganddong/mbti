@@ -80,6 +80,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "coupleValues",
+    title: "情侣三观匹配测试",
+    description: "五维三观画像 · 双人同一手机先后作答",
+    tags: ["恋爱", "三观"],
+    subCards: [
+      {
+        id: "cv-22",
+        title: "三观匹配（22题×2）",
+        description: "先我后TA，生成匹配度",
+        url: "/pages/coupleValues/index",
+        estimatedMinutes: 12,
+        badge: "情侣",
+      },
+    ],
+  },
+  {
     id: "man",
     title: "直男指数测试",
     description: "测一测你的直男指数有多高",

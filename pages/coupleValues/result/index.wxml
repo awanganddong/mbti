@@ -1,0 +1,77 @@
+<view class="page-root">
+  <view class="result-page" wx:if="{{mode === 'self'}}">
+    <view class="container">
+      <view class="hero-card">
+        <view class="hero-title-row">
+          <text class="hero-title">你的三观画像</text>
+        </view>
+        <text class="hero-hint">五维为相对参考，满分条为 100%。接下来可让另一半在同一手机完成第二份。</text>
+
+        <view class="score-list">
+          <view class="score-row" wx:for="{{profileRows}}" wx:key="key">
+            <view class="score-row-head">
+              <text class="score-label">{{item.label}}</text>
+              <text class="score-num">{{item.value}}</text>
+            </view>
+            <view class="score-track">
+              <view class="score-fill" style="width: {{item.value}}%"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="actions">
+        <button class="action-btn action-primary" bindtap="goPartnerQuiz">下一步：另一半答题</button>
+      </view>
+      <view class="actions">
+        <button class="action-btn action-secondary" bindtap="resetAll">清空并重测</button>
+        <button class="action-btn action-secondary" bindtap="goHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="result-page" wx:if="{{mode === 'match'}}">
+    <view class="container">
+      <view class="hero-card">
+        <view class="hero-title-row">
+          <text class="hero-title">三观匹配度</text>
+          <text class="hero-badge">{{overall}} 分</text>
+        </view>
+        <text class="hero-subtitle">选项一致度 {{choiceAvg}} · 五维接近度 {{dimAvg}}</text>
+        <text class="hero-hint">综合分由选项相似与五维差异加权估算，仅供参考。</text>
+      </view>
+
+      <view class="hero-card hero-card-flat">
+        <text class="section-title">各维度契合度</text>
+        <view class="dim-row" wx:for="{{dimensionRows}}" wx:key="label">
+          <view class="dim-head">
+            <text class="dim-label">{{item.label}}</text>
+            <text class="dim-sim">{{item.similarity}}%</text>
+          </view>
+          <view class="dim-pair">
+            <text class="dim-mini">你 {{item.you}}</text>
+            <text class="dim-mini dim-mini-ta">TA {{item.ta}}</text>
+          </view>
+          <view class="score-track">
+            <view class="score-fill score-fill-dim" style="width: {{item.similarity}}%"></view>
+          </view>
+        </view>
+      </view>
+
+      <view class="hero-card hero-card-flat">
+        <text class="section-title">解读</text>
+        <text class="narrative">{{narrative}}</text>
+      </view>
+
+      <view class="disclaimer-card">
+        <text class="disclaimer-title">说明</text>
+        <text class="disclaimer-body">{{disclaimerText}}</text>
+      </view>
+
+      <view class="actions">
+        <button class="action-btn action-secondary" bindtap="resetAll">清空并重测</button>
+        <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+</view>
