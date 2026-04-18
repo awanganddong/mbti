@@ -16,6 +16,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "jung8",
+    title: "荣格八维人格测试",
+    description: "Ne Ni Se Si Te Ti Fe Fi 认知功能倾向",
+    tags: ["性格", "MBTI"],
+    subCards: [
+      {
+        id: "jung8-32",
+        title: "荣格八维（32题）",
+        description: "八维排序与类型参考",
+        url: "/pages/jung8/index",
+        estimatedMinutes: 8,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "love",
     title: "恋爱脑指数测试",
     description: "30道题测测你是不是恋爱脑",

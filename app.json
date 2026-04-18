@@ -17,7 +17,9 @@
     "pages/plant/index",
     "pages/plant/result/index",
     "pages/sds/index",
-    "pages/sds/result/index"
+    "pages/sds/result/index",
+    "pages/jung8/index",
+    "pages/jung8/result/index"
   ],
   "subPackages": [
     {
