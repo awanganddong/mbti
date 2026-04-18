@@ -11,7 +11,9 @@
     "pages/shady/index",
     "pages/shady/result/index",
     "pages/nen/index",
-    "pages/nen/result/index"
+    "pages/nen/result/index",
+    "pages/animal/index",
+    "pages/animal/result/index"
   ],
   "subPackages": [
     {

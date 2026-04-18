@@ -80,6 +80,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "animal",
+    title: "动物塑测试",
+    description: "测一测你是哪种动物系气质",
+    tags: ["趣味", "性格"],
+    subCards: [
+      {
+        id: "animal-20",
+        title: "动物塑（20题）",
+        description: "猫犬狐兔狼鹿，看看你的主塑",
+        url: "/pages/animal/index",
+        estimatedMinutes: 4,
+        badge: "NEW",
+      },
+    ],
+  },
+  {
     id: "sbti",
     title: "SBTI 沙雕人格测试",
     description: "十五维向量匹配 · 原版算法",
