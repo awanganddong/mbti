@@ -96,6 +96,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "breakup",
+    title: "分手原因倾向测试",
+    description: "你在关系里更容易被哪类问题消耗",
+    tags: ["恋爱", "情绪"],
+    subCards: [
+      {
+        id: "breakup-20",
+        title: "分手原因（20题）",
+        description: "沟通·信任·现实·三观等",
+        url: "/pages/breakup/index",
+        estimatedMinutes: 5,
+        badge: "自测",
+      },
+    ],
+  },
+  {
     id: "coupleValues",
     title: "情侣三观匹配测试",
     description: "五维三观画像 · 双人同一手机先后作答",

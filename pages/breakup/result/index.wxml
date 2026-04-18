@@ -1,0 +1,34 @@
+<view class="result-page">
+  <view class="container">
+    <view class="hero-card">
+      <view class="hero-header">
+        <view class="hero-title-row">
+          <text class="hero-title">分手原因倾向</text>
+          <text class="hero-badge">主倾向 {{score}} / {{maxScore}}</text>
+        </view>
+        <text class="hero-subtitle">测试结果：{{resultTitle}}</text>
+        <text class="hero-hint" wx:if="{{secondaryLabel}}">{{secondaryLabel}}</text>
+        <text class="hero-hint hero-hint-sub">主倾向为得分最高者；同分以沟通→信任→现实→三观→淡化→边界顺序优先。</text>
+      </view>
+
+      <view class="hero-desc">
+        <text class="paragraph" wx:for="{{resultDescriptionParagraphs}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="disclaimer-card">
+      <text class="disclaimer-title">说明</text>
+      <text class="disclaimer-body">{{disclaimerText}}</text>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" bindtap="takeTestAgain">再测一次</button>
+      <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+    </view>
+  </view>
+</view>
