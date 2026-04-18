@@ -112,6 +112,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "sds",
+    title: "抑郁自评 SDS",
+    description: "Zung 氏抑郁自评量表 · 20 题",
+    tags: ["健康", "情绪"],
+    subCards: [
+      {
+        id: "sds-20",
+        title: "SDS（20题）",
+        description: "粗分与标准分（抑郁指数）",
+        url: "/pages/sds/index",
+        estimatedMinutes: 5,
+        badge: "筛查",
+      },
+    ],
+  },
+  {
     id: "sbti",
     title: "SBTI 沙雕人格测试",
     description: "十五维向量匹配 · 原版算法",

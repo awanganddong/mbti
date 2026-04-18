@@ -1,0 +1,33 @@
+<view class="result-page">
+  <view class="container">
+    <view class="hero-card">
+      <view class="hero-header">
+        <view class="hero-title-row">
+          <text class="hero-title">SDS 结果</text>
+          <text class="hero-badge">标准分 {{standardScore}} / {{standardMax}}</text>
+        </view>
+        <text class="hero-subtitle">粗分 {{rawScore}} / {{rawMax}} · {{resultTitle}}</text>
+        <text class="hero-hint">标准分（抑郁指数）= 粗分 × 1.25，分值越高提示抑郁症状可能越明显。</text>
+      </view>
+
+      <view class="hero-desc">
+        <text class="paragraph" wx:for="{{resultDescriptionParagraphs}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="disclaimer-card">
+      <text class="disclaimer-title">重要说明</text>
+      <text class="disclaimer-body">{{disclaimerText}}</text>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" bindtap="takeTestAgain">再测一次</button>
+      <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+    </view>
+  </view>
+</view>

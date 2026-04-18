@@ -15,7 +15,9 @@
     "pages/animal/index",
     "pages/animal/result/index",
     "pages/plant/index",
-    "pages/plant/result/index"
+    "pages/plant/result/index",
+    "pages/sds/index",
+    "pages/sds/result/index"
   ],
   "subPackages": [
     {
