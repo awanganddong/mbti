@@ -32,6 +32,22 @@ export const testCatalog = [
     ],
   },
   {
+    id: "ace",
+    title: "无性恋性取向自测",
+    description: "性吸引维度 · 无性恋谱系专业参考",
+    tags: ["性取向", "科普"],
+    subCards: [
+      {
+        id: "ace-24",
+        title: "无性恋取向（24题）",
+        description: "灰色无性、半无性等谱系参考",
+        url: "/pages/ace/index",
+        estimatedMinutes: 6,
+        badge: "专业",
+      },
+    ],
+  },
+  {
     id: "love",
     title: "恋爱脑指数测试",
     description: "30道题测测你是不是恋爱脑",

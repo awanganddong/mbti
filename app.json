@@ -19,7 +19,9 @@
     "pages/sds/index",
     "pages/sds/result/index",
     "pages/jung8/index",
-    "pages/jung8/result/index"
+    "pages/jung8/result/index",
+    "pages/ace/index",
+    "pages/ace/result/index"
   ],
   "subPackages": [
     {
