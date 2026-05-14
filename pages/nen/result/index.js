@@ -1,9 +1,9 @@
-import { nenTest } from '../../../data/nen';
+import { fetchQuizConfig } from '../../../services/quizBackend';
 
 Page({
   data: {
     score: 0,
-    maxScore: nenTest.maxScore,
+    maxScore: 0,
     resultTitle: '',
     resultDescriptionParagraphs: [],
     currentTestResultId: ''
@@ -18,30 +18,48 @@ Page({
     this.setData({
       currentTestResultId: testResultId || ''
     });
-    const history = wx.getStorageSync('nenTestHistory') || [];
-    let record = null;
-    if (testResultId) {
-      record = history.find(item => item.timestamp.toString() === testResultId) || null;
-    } else {
-      record = history.length > 0 ? history[0] : null;
-    }
+    fetchQuizConfig('nen')
+      .then((cfg) => {
+        const maxScore = Number(cfg.maxScore || cfg.max_score || 0);
+        this.setData({ maxScore });
 
-    if (!record) {
-      const fallback = nenTest.results[0];
-      this.setData({
-        score: 0,
-        resultTitle: fallback.title,
-        resultDescriptionParagraphs: this.splitIntoParagraphs(fallback.description),
+        const history = wx.getStorageSync('nenTestHistory') || [];
+        let record = null;
+        if (testResultId) {
+          record = history.find(item => item.timestamp.toString() === testResultId) || null;
+        } else {
+          record = history.length > 0 ? history[0] : null;
+        }
+
+        if (!record) {
+          const results = cfg && Array.isArray(cfg.results) ? cfg.results : [];
+          const fallback = results.length > 0 ? results[0] : null;
+          this.setData({
+            score: 0,
+            resultTitle: fallback ? fallback.title : '',
+            resultDescriptionParagraphs: this.splitIntoParagraphs(fallback ? fallback.description : ''),
+          });
+          return;
+        }
+
+        this.setData({
+          score: record.score,
+          resultTitle: record.resultTitle,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
+        });
+      })
+      .catch(() => {
+        const history = wx.getStorageSync('nenTestHistory') || [];
+        const record = history.length > 0 ? history[0] : null;
+        if (record) {
+          this.setData({
+            score: record.score,
+            resultTitle: record.resultTitle,
+            resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          });
+        }
       });
-      return;
-    }
-
-    this.setData({
-      score: record.score,
-      resultTitle: record.resultTitle,
-      resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
-      currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
-    });
   },
 
   onShareAppMessage() {

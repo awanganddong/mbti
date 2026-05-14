@@ -1,0 +1,524 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "当别人语气突然变冲，你的第一反应更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少换位思考，先顾自己感受",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "能理解对方但表达生硬",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "能换位并用合适方式回应",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "先稳住情绪再照顾双方感受",
+          "score": "4"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "朋友向你倾诉烦恼时，你更倾向于：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "容易打断或急于给建议",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "认真听但较少反馈感受",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "复述感受并适度提问",
+          "score": "4"
+        },
+        {
+          "type": "D",
+          "answer": "倾听、共情并一起梳理情绪",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "自己心情低落时，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "憋在心里或迁怒他人",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "分散注意力熬过去",
+          "score": "4"
+        },
+        {
+          "type": "C",
+          "answer": "找信任的人聊一聊",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "识别情绪来源并自我调节",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "在会议上被当众质疑，你更可能：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "当场反驳或冷脸",
+          "score": "4"
+        },
+        {
+          "type": "B",
+          "answer": "简短回应事后消化",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "先澄清事实再表达观点",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "感谢提问并理性展开",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "伴侣没回消息，你更容易：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "反复追问或冷战",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "暗示不满等对方察觉",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "直接表达担心与需求",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "说明感受并约定沟通方式",
+          "score": "4"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "看到他人尴尬出糗，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "移开视线或笑过去",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "陪笑缓解但心里不适",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "自然帮对方台阶下",
+          "score": "4"
+        },
+        {
+          "type": "D",
+          "answer": "轻描淡写转移焦点保护对方",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "收到批评反馈时，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "辩解或情绪低落很久",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "表面接受内心不服",
+          "score": "4"
+        },
+        {
+          "type": "C",
+          "answer": "分辨有用部分再改进",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "感谢并制定可执行调整",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "团队合作出现分歧，你更愿意：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "坚持己见直到说服",
+          "score": "4"
+        },
+        {
+          "type": "B",
+          "answer": "退让避免冲突",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "寻找共同目标折中",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "引导各方表达再整合方案",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "等待结果很焦虑时，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不停刷信息或胡思乱想",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "找事做转移注意",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "深呼吸或运动放松",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "写下可控步骤并执行",
+          "score": "4"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "别人误解你时，你更想：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "立刻长篇解释澄清",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "等对方冷静再说",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "先确认对方具体误解点",
+          "score": "4"
+        },
+        {
+          "type": "D",
+          "answer": "用例子与事实温和说明",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "遇到突发坏消息，你更先：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "大脑一片空白或抱怨",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "先处理最紧急事项",
+          "score": "4"
+        },
+        {
+          "type": "C",
+          "answer": "找人商量获取支持",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "拆分问题列出应对清单",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "与不熟的人寒暄，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "尽快结束对话",
+          "score": "4"
+        },
+        {
+          "type": "B",
+          "answer": "礼貌应付找话题",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "观察对方兴趣点延伸",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "自然提问让对方多说一点",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "发现自己说错话，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "装作没发生",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "私下道歉",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "当场简短致歉",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "承认并补救或解释原因",
+          "score": "4"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "他人炫耀让你不舒服时，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "暗讽或疏远对方",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "减少接触",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "承认嫉妒并调整心态",
+          "score": "4"
+        },
+        {
+          "type": "D",
+          "answer": "真诚称赞对方具体优点",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "需要拒绝别人请求时，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "编造理由推脱",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "生硬说不",
+          "score": "4"
+        },
+        {
+          "type": "C",
+          "answer": "说明困难并给替代方案",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "坦诚边界与可行帮助",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "question": "被安排做不擅长的事，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "抱怨或拖延",
+          "score": "4"
+        },
+        {
+          "type": "B",
+          "answer": "硬扛到截止",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "请求资源或培训",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "拆分任务寻求协作",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "question": "看到别人哭泣，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不知所措走开",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "递纸巾沉默陪伴",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "轻声询问需要什么",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "陪伴并尊重对方节奏",
+          "score": "4"
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "question": "网络争论让你生气时，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "继续对线证明自己",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "拉黑不再看",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "暂停回复冷静后再看",
+          "score": "4"
+        },
+        {
+          "type": "D",
+          "answer": "表达观点并设边界后退出",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 19,
+      "question": "承诺太多感到压力时，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "咬牙全部做完",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "临时找借口推脱",
+          "score": "4"
+        },
+        {
+          "type": "C",
+          "answer": "优先完成最重要的",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "协商延期或重新分工",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "question": "庆祝他人成功时，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "表面祝贺心里不舒服",
+          "score": "4"
+        },
+        {
+          "type": "B",
+          "answer": "简单点赞",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "具体夸奖对方努力",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "真心祝贺并询问经验",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

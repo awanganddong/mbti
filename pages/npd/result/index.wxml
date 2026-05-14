@@ -1,0 +1,24 @@
+<view class="npdr-page">
+  <view class="npdr-bg"></view>
+  <view class="npdr-inner">
+    <view class="npdr-hero">
+      <text class="npdr-label">自恋型人格倾向 · 15题筛查</text>
+      <text class="npdr-tier">{{tierLabel}}</text>
+      <text class="npdr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="npdr-note">自测筛查 · 不构成医学诊断</text>
+    </view>
+    <view class="npdr-card">
+      <text class="npdr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="npdr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="npdr-btn npdr-btn-primary" bindtap="goRetest">
+        <text class="npdr-btn-text">再测一次</text>
+      </view>
+      <view class="npdr-btn npdr-btn-ghost" bindtap="goHome">
+        <text class="npdr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

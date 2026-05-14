@@ -1,0 +1,75 @@
+<view class="result-page">
+  <view class="container">
+    <view class="hero-card">
+      <view class="hero-header">
+        <view class="hero-title-row">
+          <text class="hero-title">你的塔罗牌</text>
+          <text class="hero-badge">{{orientation}}</text>
+        </view>
+        <text class="hero-subtitle">{{cardTitle}}</text>
+        <text class="hero-hint" wx:if="{{keywords}}">{{keywords}}</text>
+        <view class="hero-q" wx:if="{{question}}">
+          <text class="hero-q-label">你问：</text>
+          <text class="hero-q-text">{{question}}</text>
+        </view>
+      </view>
+
+      <view class="hero-desc" wx:if="{{!showAiOnly}}">
+        <view wx:if="{{sections.length > 0}}">
+          <view class="section" wx:for="{{sections}}" wx:key="title">
+            <text class="section-title" wx:if="{{item.title}}">{{item.title}}</text>
+            <text class="section-text">{{item.text}}</text>
+          </view>
+        </view>
+        <view wx:else>
+          <text class="paragraph" wx:for="{{meaningParagraphs}}" wx:key="*this">{{item}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="ai-card">
+      <view class="ai-head">
+        <text class="ai-title">详情解读</text>
+      </view>
+
+      <view wx:if="{{aiSections.length > 0}}">
+        <view class="section" wx:for="{{aiSections}}" wx:key="title">
+          <text class="section-title" wx:if="{{item.title}}">{{item.title}}</text>
+          <text class="section-text">{{item.text}}</text>
+        </view>
+      </view>
+
+      <view class="ai-status" wx:elif="{{aiLoading}}">
+        <view class="ai-loading">
+          <view class="ai-loading-card"></view>
+          <view class="ai-loading-lines">
+            <view class="ai-loading-line"></view>
+            <view class="ai-loading-line short"></view>
+            <view class="ai-loading-line"></view>
+          </view>
+        </view>
+        <text class="ai-status-text">{{aiLoadingTip || '正在帮你组织更好读的解读…'}}</text>
+      </view>
+
+      <view class="ai-status" wx:elif="{{aiError}}">
+        <text class="ai-status-text">{{aiError}}</text>
+        <button class="mini-btn" bindtap="fetchAiInterpretation">重试</button>
+      </view>
+
+      <view class="ai-status" wx:else>
+        <text class="ai-status-text">点击下方按钮生成完整解读</text>
+        <button class="mini-btn mini-btn-cta" bindtap="fetchAiInterpretation">查看详情解读</button>
+      </view>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" open-type="share">分享好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-secondary" bindtap="drawAgain">再抽一次</button>
+      <button class="action-btn action-primary" bindtap="goHome">返回首页</button>
+    </view>
+  </view>
+</view>

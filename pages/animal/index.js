@@ -1,12 +1,13 @@
-import { animalSuuTest, computeAnimalResult } from '../../data/animal';
+import { fetchQuizConfig } from '../../services/quizBackend';
+import { tallyTypeAnswers } from '../../services/quizCompute';
 
 Page({
   data: {
     currentQuestionIndex: 0,
     selectedOptionIndex: -1,
     answers: [],
-    currentQuestion: animalSuuTest.questions[0],
-    totalQuestions: animalSuuTest.questions.length,
+    currentQuestion: null,
+    totalQuestions: 0,
     progress: 0,
     progressText: '0%',
     isLastQuestion: false,
@@ -17,7 +18,22 @@ Page({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
-    this.setQuestion(0, []);
+    wx.showLoading({ title: '加载中', mask: true });
+    fetchQuizConfig('animal')
+      .then((cfg) => {
+        const questions = cfg && Array.isArray(cfg.questions) ? cfg.questions : [];
+        if (questions.length === 0) throw new Error('题库为空');
+        this._quizConfig = cfg;
+        wx.hideLoading();
+        this.setQuestion(0, []);
+      })
+      .catch((err) => {
+        wx.hideLoading();
+        wx.showToast({
+          title: err && err.message ? err.message : '题库加载失败',
+          icon: 'none'
+        });
+      });
   },
 
   onShareAppMessage() {
@@ -37,11 +53,12 @@ Page({
   },
 
   setQuestion(questionIndex, answers) {
-    const total = animalSuuTest.questions.length;
+    const list = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions : [];
+    const total = list.length;
     const percent = total <= 1 ? 100 : Math.round((questionIndex / (total - 1)) * 100);
     this.setData({
       currentQuestionIndex: questionIndex,
-      currentQuestion: animalSuuTest.questions[questionIndex],
+      currentQuestion: list[questionIndex],
       answers,
       selectedOptionIndex: typeof answers[questionIndex] === 'number' ? answers[questionIndex] : -1,
       totalQuestions: total,
@@ -70,7 +87,8 @@ Page({
     const nextAnswers = [...this.data.answers];
     nextAnswers[this.data.currentQuestionIndex] = this.data.selectedOptionIndex;
 
-    if (this.data.currentQuestionIndex === animalSuuTest.questions.length - 1) {
+    const total = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions.length : 0;
+    if (this.data.currentQuestionIndex === total - 1) {
       this.finish(nextAnswers);
       return;
     }
@@ -79,16 +97,21 @@ Page({
   },
 
   finish(answers) {
-    const computed = computeAnimalResult(answers);
+    const cfg = this._quizConfig || {};
+    const t = tallyTypeAnswers(cfg, answers);
+    const meta = cfg.results ? cfg.results[t.bestType] : null;
+    const secondaryLabel = (t.secondType && t.secondScore > 0 && cfg.typeLabels && cfg.typeLabels[t.secondType])
+      ? `副塑：${cfg.typeLabels[t.secondType]}（${t.secondScore} 分）`
+      : '';
     const timestamp = Date.now();
 
     const history = wx.getStorageSync('animalSuuTestHistory') || [];
     history.unshift({
       timestamp,
-      score: computed.score,
-      resultTitle: computed.resultTitle,
-      resultDescription: computed.resultDescription,
-      secondaryLabel: computed.secondaryLabel || '',
+      score: t.bestScore,
+      resultTitle: meta ? meta.title : '',
+      resultDescription: meta ? meta.description : '',
+      secondaryLabel,
     });
     wx.setStorageSync('animalSuuTestHistory', history);
 

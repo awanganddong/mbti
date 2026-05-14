@@ -1,12 +1,15 @@
-import { loveTest } from '../../data/love';
+import { fetchQuizConfig } from '../../services/quizBackend';
+import { pickRangeResult, sumScoreAnswers } from '../../services/quizCompute';
+
+const LOVE_DRAFT_KEY = 'loveQuizDraft';
 
 Page({
   data: {
     currentQuestionIndex: 0,
     selectedOptionIndex: -1,
     answers: [],
-    currentQuestion: loveTest.questions[0],
-    totalQuestions: loveTest.questions.length,
+    currentQuestion: null,
+    totalQuestions: 0,
     progress: 0,
     progressText: '0%',
     isLastQuestion: false,
@@ -17,7 +20,61 @@ Page({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
-    this.setQuestion(0, []);
+    wx.showLoading({ title: '加载中', mask: true });
+    fetchQuizConfig('love')
+      .then((cfg) => {
+        const questions = cfg && Array.isArray(cfg.questions) ? cfg.questions : [];
+        if (questions.length === 0) throw new Error('题库为空');
+        this._quizConfig = cfg;
+        wx.hideLoading();
+        const total = questions.length;
+        const draft = wx.getStorageSync(LOVE_DRAFT_KEY);
+        const canResume =
+          draft &&
+          Number(draft.total) === total &&
+          Array.isArray(draft.answers) &&
+          typeof draft.currentQuestionIndex === 'number' &&
+          draft.currentQuestionIndex > 0 &&
+          draft.currentQuestionIndex < total;
+
+        if (canResume) {
+          wx.showModal({
+            title: '继续答题',
+            content: `检测到未完成的进度（第 ${draft.currentQuestionIndex + 1} / ${total} 题），是否继续？`,
+            confirmText: '继续',
+            cancelText: '重新开始',
+            success: (res) => {
+              if (res.confirm) {
+                this.setQuestion(draft.currentQuestionIndex, draft.answers);
+              } else {
+                try {
+                  wx.removeStorageSync(LOVE_DRAFT_KEY);
+                } catch (e) {
+                  // ignore
+                }
+                this.setQuestion(0, []);
+              }
+            },
+          });
+          return;
+        }
+
+        if (draft) {
+          try {
+            wx.removeStorageSync(LOVE_DRAFT_KEY);
+          } catch (e) {
+            // ignore
+          }
+        }
+        this.setQuestion(0, []);
+      })
+      .catch((err) => {
+        wx.hideLoading();
+        wx.showToast({
+          title: err && err.message ? err.message : '题库加载失败',
+          icon: 'none'
+        });
+      });
   },
 
   onShareAppMessage() {
@@ -37,11 +94,12 @@ Page({
   },
 
   setQuestion(questionIndex, answers) {
-    const total = loveTest.questions.length;
+    const list = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions : [];
+    const total = list.length;
     const percent = total <= 1 ? 100 : Math.round((questionIndex / (total - 1)) * 100);
     this.setData({
       currentQuestionIndex: questionIndex,
-      currentQuestion: loveTest.questions[questionIndex],
+      currentQuestion: list[questionIndex],
       answers,
       selectedOptionIndex: typeof answers[questionIndex] === 'number' ? answers[questionIndex] : -1,
       totalQuestions: total,
@@ -70,31 +128,48 @@ Page({
     const nextAnswers = [...this.data.answers];
     nextAnswers[this.data.currentQuestionIndex] = this.data.selectedOptionIndex;
 
-    if (this.data.currentQuestionIndex === loveTest.questions.length - 1) {
+    const total = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions.length : 0;
+    if (this.data.currentQuestionIndex === total - 1) {
+      try {
+        wx.removeStorageSync(LOVE_DRAFT_KEY);
+      } catch (e) {
+        // ignore
+      }
       this.finish(nextAnswers);
       return;
     }
 
-    this.setQuestion(this.data.currentQuestionIndex + 1, nextAnswers);
+    const nextIdx = this.data.currentQuestionIndex + 1;
+    this.setQuestion(nextIdx, nextAnswers);
+    try {
+      wx.setStorageSync(LOVE_DRAFT_KEY, {
+        total,
+        answers: nextAnswers,
+        currentQuestionIndex: nextIdx,
+        ts: Date.now(),
+      });
+    } catch (e) {
+      // ignore
+    }
   },
 
   finish(answers) {
-    const score = loveTest.questions.reduce((acc, q, idx) => {
-      const optionIndex = answers[idx];
-      if (typeof optionIndex !== 'number') return acc;
-      const option = q.options[optionIndex];
-      return acc + (option ? option.score : 0);
-    }, 0);
-
-    const result = loveTest.results.find(r => score >= r.min && score <= r.max) || loveTest.results[loveTest.results.length - 1];
+    try {
+      wx.removeStorageSync(LOVE_DRAFT_KEY);
+    } catch (e) {
+      // ignore
+    }
+    const cfg = this._quizConfig || {};
+    const score = sumScoreAnswers(cfg, answers);
+    const result = pickRangeResult(cfg.results, score);
     const timestamp = Date.now();
 
     const history = wx.getStorageSync('loveTestHistory') || [];
     history.unshift({
       timestamp,
       score,
-      resultTitle: result.title,
-      resultDescription: result.description,
+      resultTitle: result ? result.title : '',
+      resultDescription: result ? result.description : '',
     });
     wx.setStorageSync('loveTestHistory', history);
 

@@ -1,9 +1,9 @@
-import { plantSuuTest } from '../../../data/plant';
+import { fetchQuizConfig } from '../../../services/quizBackend';
 
 Page({
   data: {
     score: 0,
-    maxScore: plantSuuTest.maxScore,
+    maxScore: 0,
     resultTitle: '',
     resultDescriptionParagraphs: [],
     secondaryLabel: '',
@@ -19,32 +19,52 @@ Page({
     this.setData({
       currentTestResultId: testResultId || ''
     });
-    const history = wx.getStorageSync('plantSuuTestHistory') || [];
-    let record = null;
-    if (testResultId) {
-      record = history.find(item => item.timestamp.toString() === testResultId) || null;
-    } else {
-      record = history.length > 0 ? history[0] : null;
-    }
+    fetchQuizConfig('plant')
+      .then((cfg) => {
+        const maxScore = Number(cfg.maxScore || cfg.max_score || 0);
+        this.setData({ maxScore });
 
-    if (!record) {
-      const fallback = plantSuuTest.results.cactus;
-      this.setData({
-        score: 0,
-        resultTitle: fallback.title,
-        resultDescriptionParagraphs: this.splitIntoParagraphs(fallback.description),
-        secondaryLabel: '',
+        const history = wx.getStorageSync('plantSuuTestHistory') || [];
+        let record = null;
+        if (testResultId) {
+          record = history.find(item => item.timestamp.toString() === testResultId) || null;
+        } else {
+          record = history.length > 0 ? history[0] : null;
+        }
+
+        if (!record) {
+          const results = cfg && cfg.results && typeof cfg.results === 'object' ? cfg.results : null;
+          const firstKey = results ? Object.keys(results)[0] : '';
+          const fallback = results ? (results.cactus || results[firstKey]) : null;
+          this.setData({
+            score: 0,
+            resultTitle: fallback ? fallback.title : '',
+            resultDescriptionParagraphs: this.splitIntoParagraphs(fallback ? fallback.description : ''),
+            secondaryLabel: '',
+          });
+          return;
+        }
+
+        this.setData({
+          score: record.score,
+          resultTitle: record.resultTitle,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          secondaryLabel: record.secondaryLabel || '',
+          currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
+        });
+      })
+      .catch(() => {
+        const history = wx.getStorageSync('plantSuuTestHistory') || [];
+        const record = history.length > 0 ? history[0] : null;
+        if (record) {
+          this.setData({
+            score: record.score,
+            resultTitle: record.resultTitle,
+            resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+            secondaryLabel: record.secondaryLabel || '',
+          });
+        }
       });
-      return;
-    }
-
-    this.setData({
-      score: record.score,
-      resultTitle: record.resultTitle,
-      resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
-      secondaryLabel: record.secondaryLabel || '',
-      currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
-    });
   },
 
   onShareAppMessage() {

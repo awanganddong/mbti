@@ -1,0 +1,33 @@
+<view class="test-page holland-page">
+  <view class="test-bg holland-bg"></view>
+  <view class="test-inner">
+    <view wx:if="{{loading}}" class="test-loading">
+      <text class="test-loading-text">加载题目…</text>
+    </view>
+    <block wx:else>
+      <view class="test-head">
+        <text class="test-progress">{{progressText}}</text>
+        <view class="test-bar">
+          <view class="test-bar-fill holland-bar-fill" style="width: {{percent}}%;"></view>
+        </view>
+      </view>
+      <view class="test-card">
+        <text class="test-q">{{current.question}}</text>
+        <view class="test-opts">
+          <view
+            class="test-opt"
+            wx:for="{{current.answerOptions}}"
+            wx:for-item="opt"
+            wx:key="type"
+            hover-class="test-opt-hover"
+            data-score="{{opt.score}}"
+            bindtap="onPickOption"
+          >
+            <text class="test-opt-type">{{opt.type}}</text>
+            <text class="test-opt-answer">{{opt.answer}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

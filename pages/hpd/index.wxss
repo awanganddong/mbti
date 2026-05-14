@@ -1,0 +1,20 @@
+@import "../bpd/index.wxss";
+
+.hpd-page .test-bg.hpd-bg {
+  background:
+    radial-gradient(720rpx 320rpx at 8% 0%, rgba(236, 72, 153, 0.18) 0%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(640rpx 300rpx at 100% 16%, rgba(168, 85, 247, 0.12) 0%, rgba(255, 255, 255, 0) 55%);
+}
+
+.hpd-page .hpd-bar-fill {
+  background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
+}
+
+.hpd-page .test-opt-type {
+  color: #be185d;
+}
+
+.hpd-page .test-opt-hover {
+  border-color: #fbcfe8;
+  background: #fdf2f8;
+}

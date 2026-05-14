@@ -1,55 +1,194 @@
-<view class="home-page">
-<view class="container">
-  <view class="card-grid">
-    <view class="test-card card-{{card.id}}" wx:for="{{testCatalog}}" wx:for-item="card" wx:key="id">
-      <view class="test-card-header">
-        <text class="test-card-title">{{card.title}}</text>
-        <text class="test-card-desc" wx:if="{{card.description}}">{{card.description}}</text>
-        <view class="tag-row" wx:if="{{card.tags && card.tags.length}}">
-          <text class="tag" wx:for="{{card.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+<view class="explore-page">
+  <view class="explore-bg"></view>
+
+  <view class="container">
+    <view class="topbar">
+      <view class="topbar-left">
+        <view class="topbar-brand-row">
+          <view class="topbar-sparkle">
+            <text class="topbar-sparkle-core">✦</text>
+          </view>
+          <text class="topbar-title">人格探索</text>
+        </view>
+        <text class="topbar-sub">探索真实的自己</text>
+      </view>
+    </view>
+
+    <view class="tabs-row">
+      <scroll-view class="tabs" scroll-x enhanced show-scrollbar="false">
+        <view class="tabs-inner">
+          <view
+            class="tab {{activeTab === tab ? 'tab-active' : ''}}"
+            wx:for="{{tabs}}"
+            wx:for-item="tab"
+            wx:key="*this"
+            data-tab="{{tab}}"
+            bindtap="setTab"
+          >
+            <text class="tab-text">{{tab}}</text>
+            <view class="tab-underline" wx:if="{{activeTab === tab}}"></view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class="hero" bindtap="handleHeroStart">
+      <view class="hero-bg"></view>
+      <view class="hero-stars">
+        <view class="hero-star s1"></view>
+        <view class="hero-star s2"></view>
+        <view class="hero-star s3"></view>
+      </view>
+      <view class="hero-badge">
+        <text class="hero-badge-emoji">🔥</text>
+        <text class="hero-badge-text">{{hero.kicker}}</text>
+      </view>
+
+      <view class="hero-main">
+        <view class="hero-left">
+          <text class="hero-title">
+            <text class="hero-title-plain">{{hero.titlePrefix}}</text>
+            <text class="hero-title-accent">{{hero.titleAccent}}</text>
+            <text class="hero-title-plain">{{hero.titleSuffix}}</text>
+          </text>
+          <text class="hero-subtitle">{{hero.subtitle}}</text>
+
+          <view class="hero-foot">
+            <view class="avatar-group">
+              <view class="avatar-dot ad1"></view>
+              <view class="avatar-dot ad2"></view>
+              <view class="avatar-dot ad3"></view>
+              <view class="avatar-dot ad4"></view>
+            </view>
+            <text class="hero-people">{{hero.peopleText}}</text>
+            <text class="hero-people-chev">›</text>
+          </view>
+        </view>
+
+        <view class="hero-right">
+          <view class="float-tag ft-main">
+            <text class="ft-code">{{hero.floatingMain}}</text>
+            <text class="ft-sub">{{hero.floatingSub}}</text>
+          </view>
+          <view class="float-tag ft-a">
+            <text class="ft-mini">{{hero.floatingAltA}}</text>
+          </view>
+          <view class="float-tag ft-b">
+            <text class="ft-mini">{{hero.floatingAltB}}</text>
+          </view>
         </view>
       </view>
 
-      <view class="subcard-list">
-        <view
-          class="subcard subcard-latest"
-          hover-class="subcard-hover"
-          wx:if="{{card.id === 'mbti' && latestResult}}"
-          data-url="{{latestResultUrl}}"
-          bindtap="handleSubCardTap"
-        >
-          <view class="subcard-main">
-            <text class="subcard-title">最近一次结果</text>
-            <text class="subcard-desc">{{latestResult.type}}</text>
-          </view>
-
-          <view class="subcard-meta">
-            <text class="subcard-arrow">›</text>
-          </view>
+      <view class="hero-footer">
+        <view class="hero-dots">
+          <view class="hero-dot hero-dot-on"></view>
+          <view class="hero-dot"></view>
+          <view class="hero-dot"></view>
         </view>
+        <view class="hero-cta">
+          <text class="hero-cta-text">{{hero.ctaText}}</text>
+          <text class="hero-cta-arrow">→</text>
+        </view>
+      </view>
+    </view>
 
+    <view class="section">
+      <view class="section-head">
+        <view class="section-title">
+          <text class="section-emoji">🔥</text>
+          <text class="section-title-text">热门测试</text>
+        </view>
+      </view>
+
+      <view class="hot-grid">
         <view
-          class="subcard"
-          hover-class="subcard-hover"
-          wx:for="{{card.subCards}}"
-          wx:for-item="sub"
+          class="hot-card hot-{{item.art}}"
+          wx:for="{{hotCards}}"
+          wx:for-item="item"
           wx:key="id"
-          data-url="{{sub.url}}"
-          bindtap="handleSubCardTap"
+          hover-class="hot-card-hover"
+          data-url="{{item.url}}"
+          bindtap="handleNavigate"
         >
-          <view class="subcard-main">
-            <text class="subcard-title">{{sub.title}}</text>
-            <text class="subcard-desc" wx:if="{{sub.description}}">{{sub.description}}</text>
-          </view>
+            <view class="hot-badge hot-badge-{{item.badgeStyle}}">
+              <text class="hot-badge-text">{{item.badgeText}}</text>
+            </view>
 
-          <view class="subcard-meta">
-            <text class="subcard-badge" wx:if="{{sub.badge}}">{{sub.badge}}</text>
-            <text class="subcard-time" wx:if="{{sub.estimatedMinutes}}">{{sub.estimatedMinutes}} 分钟</text>
-            <text class="subcard-arrow">›</text>
+            <text class="hot-title">{{item.title}}</text>
+            <view class="hot-tags">
+              <text class="hot-tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+            </view>
+            <text class="hot-sub">{{item.info}}</text>
+
+            <view class="hot-foot">
+              <text class="hot-people">{{item.people}} 人测过</text>
+              <text class="hot-arrow">›</text>
+            </view>
+
+            <view class="hot-art"></view>
+          </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-head">
+        <view class="section-title">
+          <text class="section-emoji">💗</text>
+          <text class="section-title-text">猜你喜欢</text>
+        </view>
+        <view class="section-more section-more-shuffle" bindtap="handleShuffleGuess">
+          <text class="section-more-text">换一换</text>
+          <text class="shuffle-icon">🔄</text>
+        </view>
+      </view>
+
+      <view class="guess-empty" wx:if="{{(activeTab === '职场' || activeTab === '性格') && guessCards.length === 0}}">
+        <text class="guess-empty-text">{{activeTab === '职场' ? '职场类测试筹备中' : '性格类测试筹备中'}}</text>
+      </view>
+
+      <view class="guess-list" wx:else>
+        <view
+          class="guess-card"
+          wx:for="{{guessCards}}"
+          wx:for-item="g"
+          wx:key="id"
+          hover-class="guess-card-hover"
+          data-url="{{g.url}}"
+          bindtap="handleNavigate"
+        >
+          <view class="guess-thumb guess-{{g.art}}"></view>
+          <view class="guess-main">
+            <view class="guess-topline">
+              <text class="guess-pill">{{g.pill}}</text>
+              <text class="guess-title">{{g.title}}</text>
+              <text class="guess-new" wx:if="{{g.isNew}}">NEW</text>
+            </view>
+            <text class="guess-desc">{{g.description}}</text>
+            <view class="guess-tags">
+              <text class="guess-tag" wx:for="{{g.tags}}" wx:for-item="t" wx:key="*this">{{t}}</text>
+              <text class="guess-meta" wx:if="{{g.minutes}}">{{g.minutes}}分钟</text>
+            </view>
+          </view>
+          <view class="guess-cta-col">
+            <view class="guess-cta">
+              <text class="guess-cta-text">开始测试</text>
+            </view>
+            <text class="guess-cta-meta" wx:if="{{g.ctaMeta}}">{{g.ctaMeta}}</text>
           </view>
         </view>
       </view>
     </view>
+
+    <view class="load-state" wx:if="{{loading}}">
+      <view class="skeleton sk1"></view>
+      <view class="skeleton sk2"></view>
+      <view class="skeleton sk3"></view>
+    </view>
+
+    <view class="error-state" wx:if="{{errorText}}" bindtap="loadCatalog">
+      <text class="error-text">{{errorText}}</text>
+    </view>
+
+    <view class="safe-bottom"></view>
   </view>
-</view>
 </view>

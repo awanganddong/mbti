@@ -1,0 +1,49 @@
+<view class="effect-page">
+  <view class="container">
+    <view class="question-bar" wx:if="{{question}}">
+      <text class="question-label">你的问题</text>
+      <text class="question-text">{{question}}</text>
+    </view>
+
+    <view class="stage">
+      <view class="scene" bindtap="handleCardTap">
+        <view class="glow {{glowOn ? 'glow-on' : ''}}"></view>
+        <view class="halo {{haloOn ? 'halo-on' : ''}}"></view>
+        <view class="particle" wx:for="{{particles}}" wx:key="id" style="{{item.style}}"></view>
+
+        <view class="card {{stage === 'idle' ? 'card-breath' : ''}}">
+          <view class="card-overlay"></view>
+          <view class="tap-hint" wx:if="{{stage === 'idle' && showTapHint}}">
+            <text class="tap-hint-text">点击卡牌抽卡</text>
+          </view>
+          <view class="card-inner {{isFlipped ? 'card-flipped' : ''}}">
+            <view class="card-side card-front">
+              <view class="card-front-inner">
+                <text class="card-front-title">{{result ? result.cardTitle : ''}}</text>
+                <text class="card-front-sub">{{result ? result.orientation : ''}}</text>
+                <text class="card-front-kw" wx:if="{{result && result.keywords}}">{{result.keywords}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="result-card" wx:if="{{stage === 'done' && result}}">
+      <view class="result-head">
+        <text class="result-head-title">解读</text>
+        <button class="mini-btn mini-btn-cta" bindtap="openResultPage">查看完整解读</button>
+      </view>
+
+      <view class="section" wx:for="{{result.sections}}" wx:key="title">
+        <text class="section-title">{{item.title}}</text>
+        <text class="section-text">{{item.text}}</text>
+      </view>
+    </view>
+
+    <view class="actions" wx:if="{{stage === 'done'}}">
+      <button class="action-btn action-secondary" open-type="share">分享</button>
+      <button class="action-btn action-primary" bindtap="goTarotTab">返回塔罗</button>
+    </view>
+  </view>
+</view>

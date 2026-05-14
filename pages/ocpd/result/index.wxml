@@ -1,0 +1,24 @@
+<view class="ocpdr-page">
+  <view class="ocpdr-bg"></view>
+  <view class="ocpdr-inner">
+    <view class="ocpdr-hero">
+      <text class="ocpdr-label">强迫性人格倾向 · 16题筛查</text>
+      <text class="ocpdr-tier">{{tierLabel}}</text>
+      <text class="ocpdr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="ocpdr-note">自测筛查 · 不构成医学诊断</text>
+    </view>
+    <view class="ocpdr-card">
+      <text class="ocpdr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="ocpdr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="ocpdr-btn ocpdr-btn-primary" bindtap="goRetest">
+        <text class="ocpdr-btn-text">再测一次</text>
+      </view>
+      <view class="ocpdr-btn ocpdr-btn-ghost" bindtap="goHome">
+        <text class="ocpdr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,17 +1,18 @@
-import { sdsTest, computeSdsScores } from '../../data/sds';
+import { fetchQuizConfig } from '../../services/quizBackend';
+import { computeSdsScores } from '../../services/quizCompute';
 
 Page({
   data: {
     currentQuestionIndex: 0,
     selectedOptionIndex: -1,
     answers: [],
-    currentQuestion: sdsTest.questions[0],
-    totalQuestions: sdsTest.questions.length,
+    currentQuestion: null,
+    totalQuestions: 0,
     progress: 0,
     progressText: '0%',
     isLastQuestion: false,
-    instruction: sdsTest.instruction,
-    optionLabels: sdsTest.optionLabels,
+    instruction: '',
+    optionLabels: [],
   },
 
   onLoad() {
@@ -19,7 +20,26 @@ Page({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
-    this.setQuestion(0, []);
+    wx.showLoading({ title: '加载中', mask: true });
+    fetchQuizConfig('sds')
+      .then((cfg) => {
+        const questions = cfg && Array.isArray(cfg.questions) ? cfg.questions : [];
+        if (questions.length === 0) throw new Error('题库为空');
+        this._quizConfig = cfg;
+        wx.hideLoading();
+        this.setData({
+          instruction: String(cfg.instruction || ''),
+          optionLabels: Array.isArray(cfg.optionLabels) ? cfg.optionLabels : []
+        });
+        this.setQuestion(0, []);
+      })
+      .catch((err) => {
+        wx.hideLoading();
+        wx.showToast({
+          title: err && err.message ? err.message : '题库加载失败',
+          icon: 'none'
+        });
+      });
   },
 
   onShareAppMessage() {
@@ -39,11 +59,12 @@ Page({
   },
 
   setQuestion(questionIndex, answers) {
-    const total = sdsTest.questions.length;
+    const list = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions : [];
+    const total = list.length;
     const percent = total <= 1 ? 100 : Math.round((questionIndex / (total - 1)) * 100);
     this.setData({
       currentQuestionIndex: questionIndex,
-      currentQuestion: sdsTest.questions[questionIndex],
+      currentQuestion: list[questionIndex],
       answers,
       selectedOptionIndex: typeof answers[questionIndex] === 'number' ? answers[questionIndex] : -1,
       totalQuestions: total,
@@ -72,7 +93,8 @@ Page({
     const nextAnswers = [...this.data.answers];
     nextAnswers[this.data.currentQuestionIndex] = this.data.selectedOptionIndex;
 
-    if (this.data.currentQuestionIndex === sdsTest.questions.length - 1) {
+    const total = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions.length : 0;
+    if (this.data.currentQuestionIndex === total - 1) {
       this.finish(nextAnswers);
       return;
     }
@@ -81,7 +103,8 @@ Page({
   },
 
   finish(answers) {
-    const { raw, standardInt, result } = computeSdsScores(answers);
+    const cfg = this._quizConfig || {};
+    const { raw, standardInt, result } = computeSdsScores(cfg, answers);
     const timestamp = Date.now();
 
     const history = wx.getStorageSync('sdsTestHistory') || [];
@@ -89,8 +112,8 @@ Page({
       timestamp,
       rawScore: raw,
       standardScore: standardInt,
-      resultTitle: result.title,
-      resultDescription: result.description,
+      resultTitle: result ? result.title : '',
+      resultDescription: result ? result.description : '',
     });
     wx.setStorageSync('sdsTestHistory', history);
 

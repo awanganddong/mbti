@@ -1,0 +1,20 @@
+@import "../bpd/index.wxss";
+
+.ppd-page .test-bg.ppd-bg {
+  background:
+    radial-gradient(720rpx 320rpx at 8% 0%, rgba(245, 158, 11, 0.2) 0%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(640rpx 300rpx at 100% 16%, rgba(120, 113, 108, 0.14) 0%, rgba(255, 255, 255, 0) 55%);
+}
+
+.ppd-page .ppd-bar-fill {
+  background: linear-gradient(90deg, #f59e0e 0%, #78716c 100%);
+}
+
+.ppd-page .test-opt-type {
+  color: #92400e;
+}
+
+.ppd-page .test-opt-hover {
+  border-color: #fcd34d;
+  background: #fffbeb;
+}

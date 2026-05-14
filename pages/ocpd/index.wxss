@@ -1,0 +1,20 @@
+@import "../bpd/index.wxss";
+
+.ocpd-page .test-bg.ocpd-bg {
+  background:
+    radial-gradient(720rpx 320rpx at 8% 0%, rgba(56, 189, 248, 0.2) 0%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(640rpx 300rpx at 100% 16%, rgba(71, 85, 105, 0.14) 0%, rgba(255, 255, 255, 0) 55%);
+}
+
+.ocpd-page .ocpd-bar-fill {
+  background: linear-gradient(90deg, #0ea5e9 0%, #64748b 100%);
+}
+
+.ocpd-page .test-opt-type {
+  color: #0369a1;
+}
+
+.ocpd-page .test-opt-hover {
+  border-color: #bae6fd;
+  background: #f0f9ff;
+}

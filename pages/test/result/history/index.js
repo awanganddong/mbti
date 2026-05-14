@@ -1,43 +1,36 @@
+function formatTime(ts) {
+  const n = Number(ts);
+  if (!n) return '';
+  const d = new Date(n);
+  const y = d.getFullYear();
+  const m = `${d.getMonth() + 1}`.padStart(2, '0');
+  const day = `${d.getDate()}`.padStart(2, '0');
+  const hh = `${d.getHours()}`.padStart(2, '0');
+  const mm = `${d.getMinutes()}`.padStart(2, '0');
+  return `${y}-${m}-${day} ${hh}:${mm}`;
+}
+
 Page({
   data: {
-    history: []
-  },
-
-  onLoad() {
-    this.loadHistory();
+    list: [],
   },
 
   onShow() {
-    this.loadHistory();
+    let raw = wx.getStorageSync('testHistory') || [];
+    if (!Array.isArray(raw)) raw = [];
+    const list = raw.map((x) => ({
+      ...x,
+      timeText: formatTime(x && x.timestamp),
+    }));
+    this.setData({ list });
   },
 
-  loadHistory() {
-    const history = wx.getStorageSync('testHistory') || [];
-    this.setData({
-      history
-    });
-  },
-
-  formatDate(timestamp) {
-    const date = new Date(timestamp);
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    const hour = date.getHours().toString().padStart(2, '0');
-    const minute = date.getMinutes().toString().padStart(2, '0');
-    return `${year}-${month}-${day} ${hour}:${minute}`;
-  },
-
-  viewResult(e) {
+  openResult(e) {
     const type = e.currentTarget.dataset.type;
+    const id = e.currentTarget.dataset.id;
+    if (!type || !id) return;
     wx.navigateTo({
-      url: `/pages/test/result/index?type=${type}`
+      url: `/pages/test/result/index?type=${encodeURIComponent(type)}&testResultId=${id}`,
     });
   },
-
-  goTest() {
-    wx.navigateTo({
-      url: '/pages/test/index'
-    });
-  }
-})
+});

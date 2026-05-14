@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "MBTI 测试",
-  "navigationBarBackgroundColor": "#0B1220",
-  "navigationBarTextStyle": "white",
-  "backgroundColor": "#0B1220"
+  "navigationBarBackgroundColor": "#f4f6fb",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#f4f6fb"
 }

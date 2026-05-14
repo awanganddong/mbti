@@ -1,9 +1,33 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/tarot/index",
+    "pages/me/index",
     "pages/test/index",
     "pages/test/result/index",
     "pages/test/result/history/index",
+    "pages/holland/index",
+    "pages/holland/result/index",
+    "pages/eq/index",
+    "pages/eq/result/index",
+    "pages/attachment/index",
+    "pages/attachment/result/index",
+    "pages/avpd/index",
+    "pages/avpd/result/index",
+    "pages/bpd/index",
+    "pages/bpd/result/index",
+    "pages/ocpd/index",
+    "pages/ocpd/result/index",
+    "pages/ppd/index",
+    "pages/ppd/result/index",
+    "pages/dpd/index",
+    "pages/dpd/result/index",
+    "pages/depd/index",
+    "pages/depd/result/index",
+    "pages/hpd/index",
+    "pages/hpd/result/index",
+    "pages/npd/index",
+    "pages/npd/result/index",
     "pages/love/index",
     "pages/love/result/index",
     "pages/man/index",
@@ -31,7 +55,9 @@
     "pages/breakup/index",
     "pages/breakup/result/index",
     "pages/likeLevel/index",
-    "pages/likeLevel/result/index"
+    "pages/likeLevel/result/index",
+    "pages/tarot/effect/index",
+    "pages/tarot/result/index"
   ],
   "subPackages": [
     {
@@ -43,11 +69,31 @@
       ]
     }
   ],
+  "tabBar": {
+    "color": "#64748b",
+    "selectedColor": "#7c3aed",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tarot/index",
+        "text": "塔罗牌"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的"
+      }
+    ]
+  },
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0B1220",
-    "navigationBarTitleText": "甜甜mbti人格测试",
-    "navigationBarTextStyle": "white"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f4f6fb",
+    "navigationBarTitleText": "人格探索",
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
 }

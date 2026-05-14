@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "需要独自生活一周（无亲友陪伴），你的感受：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "基本能适应",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略孤单但可自理",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显焦虑，很多事难开始",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎无法独自应对日常",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "日常小事（如午饭吃什么）独自做决定时：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很轻松",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略犹豫",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "常想找人商量",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎必须他人替你做主才安心",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "做重要决定前，你征求他人意见的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "参考关键建议即可",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "会多问几人",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很难在无人同意下拍板",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "没有他人点头就不敢决定",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "被亲近的长辈或伴侣否定后，你的情绪强度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能消化并沟通",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "难过一阵子",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "强烈害怕被抛弃",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "觉得天塌了、难以自我安抚",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "开始一项新任务或项目时，你对「有人陪着一起做」的需要：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不需要",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔希望",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常希望有人带",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎必须有他人在旁才安心",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "伴侣出差一周，你的状态更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "照常生活",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略想念",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显不安、频繁联系",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈恐惧关系会结束",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "一段亲密关系结束后，你恢复独立生活的速度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "相对快",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很慢、仍强烈依赖回忆",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很快投入下一段以免独处",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "认识不久的人面前，你自我暴露（讲私事）的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "保守适度",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略开放",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏快、易依附",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很快把对方当「唯一依靠」",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "当你不同意他人意见时，表达反对的难易度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能清楚表达",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略拘谨",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很难开口怕冲突",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是顺从以免被讨厌",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "「如果我做错，别人就会不再喜欢我」这类想法的出现频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "有时",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "经常或总是",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "生活琐事（购物、路线、时间安排）找人商量的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "有时",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎事事都要问他人",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "听说公司可能裁员或变动，你的反应：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "理性准备",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "焦虑但能行动",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "强烈需要他人安慰与指示",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "觉得自己无法独自面对",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "搬到新城市独自开始生活，你的信心：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "较有信心",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "一般",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏低、强烈想有人陪",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "极低，觉得离不开旧关系",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "对方迟回消息几小时，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "理解等待",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略焦虑",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "反复查看、担心被抛弃",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "情绪崩溃或不断追问",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "别人替你拿主意、安排日程时，你的舒适度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "适度即可",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "有时省心",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很依赖、很安心",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "过度依赖到失去自我边界",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

@@ -27,9 +27,18 @@
   "simulatorPluginLibVersion": {},
   "packOptions": {
     "ignore": [
-      { "type": "file", "value": "data/sbti-reference.html" },
-      { "type": "folder", "value": "public/images/sbti" },
-      { "type": "folder", "value": "scripts" }
+      {
+        "value": "data/sbti-reference.html",
+        "type": "file"
+      },
+      {
+        "value": "public/images/sbti",
+        "type": "folder"
+      },
+      {
+        "value": "scripts",
+        "type": "folder"
+      }
     ],
     "include": []
   },

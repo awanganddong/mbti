@@ -1,18 +1,25 @@
-<view class="container">
-  <text class="page-title">测试历史</text>
-  
-  <view wx:if="{{history.length === 0}}" class="empty-history">
-    <text>暂无测试记录</text>
-    <button class="btn btn-primary" bindtap="goTest">开始测试</button>
-  </view>
-  
-  <view wx:else class="history-list">
-    <view wx:for="{{history}}" wx:key="{{index}}" class="history-item">
-      <text class="history-date">{{formatDate(item.timestamp)}}</text>
-      <text class="history-result">{{item.type}}型</text>
-      <button class="btn btn-default" bindtap="viewResult" data-type="{{item.type}}" data-scores="{{item.scores}}">
-        查看详情
-      </button>
+<view class="hist-page">
+  <view class="hist-bg"></view>
+  <view class="hist-inner">
+    <view class="hist-empty" wx:if="{{!list.length}}">
+      <text class="hist-empty-text">暂无记录，去完成一次 MBTI 吧</text>
+    </view>
+    <view class="hist-list" wx:else>
+      <view
+        class="hist-item"
+        wx:for="{{list}}"
+        wx:key="timestamp"
+        hover-class="hist-item-hover"
+        data-type="{{item.type}}"
+        data-id="{{item.timestamp}}"
+        bindtap="openResult"
+      >
+        <view class="hist-main">
+          <text class="hist-title">{{item.title || 'MBTI'}}</text>
+          <text class="hist-sub">{{item.type}} · {{item.timeText}}</text>
+        </view>
+        <text class="hist-arrow">›</text>
+      </view>
     </view>
   </view>
 </view>

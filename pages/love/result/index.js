@@ -1,9 +1,10 @@
-import { loveTest } from '../../../data/love';
+import { fetchQuizConfig } from '../../../services/quizBackend';
+import { pickRangeResult } from '../../../services/quizCompute';
 
 Page({
   data: {
     score: 0,
-    maxScore: loveTest.maxScore,
+    maxScore: 0,
     resultTitle: '',
     resultDescriptionParagraphs: [],
     currentTestResultId: ''
@@ -18,30 +19,46 @@ Page({
     this.setData({
       currentTestResultId: testResultId || ''
     });
-    const history = wx.getStorageSync('loveTestHistory') || [];
-    let record = null;
-    if (testResultId) {
-      record = history.find(item => item.timestamp.toString() === testResultId) || null;
-    } else {
-      record = history.length > 0 ? history[0] : null;
-    }
+    fetchQuizConfig('love')
+      .then((cfg) => {
+        this.setData({ maxScore: Number(cfg.maxScore || 0) });
 
-    if (!record) {
-      const fallback = loveTest.results[0];
-      this.setData({
-        score: 0,
-        resultTitle: fallback.title,
-        resultDescriptionParagraphs: this.splitIntoParagraphs(fallback.description),
+        const history = wx.getStorageSync('loveTestHistory') || [];
+        let record = null;
+        if (testResultId) {
+          record = history.find(item => item.timestamp.toString() === testResultId) || null;
+        } else {
+          record = history.length > 0 ? history[0] : null;
+        }
+
+        if (!record) {
+          const fallback = pickRangeResult(cfg.results, 0);
+          this.setData({
+            score: 0,
+            resultTitle: fallback ? fallback.title : '',
+            resultDescriptionParagraphs: this.splitIntoParagraphs(fallback ? fallback.description : ''),
+          });
+          return;
+        }
+
+        this.setData({
+          score: record.score,
+          resultTitle: record.resultTitle,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
+        });
+      })
+      .catch(() => {
+        const history = wx.getStorageSync('loveTestHistory') || [];
+        const record = history.length > 0 ? history[0] : null;
+        if (record) {
+          this.setData({
+            score: record.score,
+            resultTitle: record.resultTitle,
+            resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          });
+        }
       });
-      return;
-    }
-
-    this.setData({
-      score: record.score,
-      resultTitle: record.resultTitle,
-      resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
-      currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
-    });
   },
 
   onShareAppMessage() {

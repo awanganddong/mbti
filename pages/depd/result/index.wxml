@@ -1,0 +1,24 @@
+<view class="depdr-page">
+  <view class="depdr-bg"></view>
+  <view class="depdr-inner">
+    <view class="depdr-hero">
+      <text class="depdr-label">抑郁型人格倾向 · 15题筛查</text>
+      <text class="depdr-tier">{{tierLabel}}</text>
+      <text class="depdr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="depdr-note">自测筛查 · 非重性抑郁障碍诊断 · 不构成医学诊断</text>
+    </view>
+    <view class="depdr-card">
+      <text class="depdr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="depdr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="depdr-btn depdr-btn-primary" bindtap="goRetest">
+        <text class="depdr-btn-text">再测一次</text>
+      </view>
+      <view class="depdr-btn depdr-btn-ghost" bindtap="goHome">
+        <text class="depdr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

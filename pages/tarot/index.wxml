@@ -1,0 +1,43 @@
+<view class="tarot-page">
+  <view class="container">
+    <view class="hero-card">
+      <image class="hero-image" src="{{tarotImageUrl}}" mode="aspectFill"></image>
+      <view class="hero-header">
+        <text class="hero-title">塔罗抽牌</text>
+        <text class="hero-subtitle">抽一张牌，获取今天的指引</text>
+      </view>
+      <view class="hero-desc">
+        <text class="hero-hint">仅供娱乐与自我觉察参考</text>
+      </view>
+    </view>
+
+    <view class="question-card">
+      <text class="question-label">你想问什么？</text>
+      <textarea
+        class="question-input"
+        placeholder="例如：我该不该换工作？我和TA还有可能吗？"
+        placeholder-class="question-placeholder"
+        value="{{question}}"
+        maxlength="120"
+        bindinput="onQuestionInput"
+      ></textarea>
+
+      <view class="login-tip" wx:if="{{!isLoggedIn}}">
+        <text class="login-tip-text">登录后才可以抽卡并保存记录</text>
+        <button class="mini-btn mini-btn-cta" bindtap="goLogin">去登录</button>
+      </view>
+    </view>
+
+    <view class="last-card" wx:if="{{lastRecord}}">
+      <view class="last-row">
+        <text class="last-label">上次抽到</text>
+        <text class="last-title">{{lastRecord.cardTitle}} · {{lastRecord.orientation}}</text>
+      </view>
+      <button class="action-btn action-secondary" bindtap="viewLast">查看上次结果</button>
+    </view>
+
+    <view class="actions">
+      <button class="action-btn action-primary" bindtap="drawOne" disabled="{{!canDraw}}">抽卡</button>
+    </view>
+  </view>
+</view>

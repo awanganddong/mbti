@@ -1,0 +1,20 @@
+<view class="me-page">
+  <view class="container">
+    <view class="section">
+      <view class="profile">
+        <image class="avatar" wx:if="{{isLoggedIn}}" src="{{avatarUrl}}" mode="aspectFill"></image>
+        <view class="avatar avatar-placeholder" wx:else>
+          <text class="avatar-placeholder-text">?</text>
+        </view>
+        <view class="profile-main">
+          <text class="profile-name">{{nickName}}</text>
+          <text class="profile-sub">{{isLoggedIn ? '已授权登录' : '未授权登录'}}</text>
+        </view>
+        <view class="profile-actions">
+          <button class="mini-btn" wx:if="{{!isLoggedIn}}" bindtap="authorizeLogin">授权登录</button>
+          <button class="mini-btn mini-btn-danger" wx:if="{{isLoggedIn}}" bindtap="logout">退出</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

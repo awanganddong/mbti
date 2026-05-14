@@ -15,13 +15,8 @@
     </view>
 
     <view class="actions">
-      <button class="action-btn action-secondary" open-type="share">分享好友</button>
-      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
-    </view>
-
-    <view class="actions">
-      <button class="action-btn action-secondary" open-type="share">分享好友</button>
-      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享朋友圈</button>
+      <button class="action-btn action-secondary" open-type="share">分享给好友</button>
+      <button class="action-btn action-secondary" bindtap="shareTimelineTip">分享到朋友圈</button>
     </view>
 
     <view class="actions">

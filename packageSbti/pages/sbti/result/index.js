@@ -1,8 +1,6 @@
-import {
-  buildDimListItems,
-  sbtiShareImageUrl,
-  sbtiTypeImageUrl,
-} from "../../../../data/sbti";
+import { buildDimListItems } from "../../../../services/sbtiCompute";
+import { sbtiShareImageUrl, sbtiTypeImageUrl } from "../../../../services/sbtiImages";
+import { fetchQuizConfig } from "../../../../services/quizBackend";
 
 Page({
   data: {
@@ -43,26 +41,50 @@ Page({
       return;
     }
 
-    const { officialResult } = record;
-    const ft = officialResult.finalType;
-    const dimList = buildDimListItems(officialResult.levels, officialResult.rawScores);
-    const funNote = officialResult.special
-      ? "本测试仅供娱乐。隐藏人格和傻乐兜底都属于作者故意埋的损招，请勿把它当成医学、心理学、相学、命理学或灵异学依据。"
-      : "本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、招魂、算命或人生判决书。你可以笑，但别太当真。";
+    fetchQuizConfig('sbti')
+      .then((cfg) => {
+        const { officialResult } = record;
+        const ft = officialResult.finalType;
+        const dimList = buildDimListItems(cfg || {}, officialResult.levels, officialResult.rawScores);
+        const funNote = officialResult.special
+          ? "本测试仅供娱乐。隐藏人格和傻乐兜底都属于作者故意埋的损招，请勿把它当成医学、心理学、相学、命理学或灵异学依据。"
+          : "本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、招魂、算命或人生判决书。你可以笑，但别太当真。";
 
-    this.setData({
-      empty: false,
-      modeKicker: officialResult.modeKicker,
-      resultTypeLine: ft.code && ft.cn ? `${ft.code}（${ft.cn}）` : "",
-      matchBadge: officialResult.badge,
-      typeSub: officialResult.sub,
-      posterCaption: ft.intro || "",
-      resultImageUrl: sbtiTypeImageUrl(ft.code) || sbtiShareImageUrl,
-      resultDescriptionParagraphs: this.splitIntoParagraphs(ft.desc || ""),
-      dimList,
-      funNote,
-      currentTestResultId: record.timestamp ? String(record.timestamp) : testResultId || "",
-    });
+        this.setData({
+          empty: false,
+          modeKicker: officialResult.modeKicker,
+          resultTypeLine: ft.code && ft.cn ? `${ft.code}（${ft.cn}）` : "",
+          matchBadge: officialResult.badge,
+          typeSub: officialResult.sub,
+          posterCaption: ft.intro || "",
+          resultImageUrl: sbtiTypeImageUrl(ft.code) || sbtiShareImageUrl,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(ft.desc || ""),
+          dimList,
+          funNote,
+          currentTestResultId: record.timestamp ? String(record.timestamp) : testResultId || "",
+        });
+      })
+      .catch(() => {
+        const { officialResult } = record;
+        const ft = officialResult.finalType;
+        const funNote = officialResult.special
+          ? "本测试仅供娱乐。隐藏人格和傻乐兜底都属于作者故意埋的损招，请勿把它当成医学、心理学、相学、命理学或灵异学依据。"
+          : "本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、招魂、算命或人生判决书。你可以笑，但别太当真。";
+
+        this.setData({
+          empty: false,
+          modeKicker: officialResult.modeKicker,
+          resultTypeLine: ft.code && ft.cn ? `${ft.code}（${ft.cn}）` : "",
+          matchBadge: officialResult.badge,
+          typeSub: officialResult.sub,
+          posterCaption: ft.intro || "",
+          resultImageUrl: sbtiTypeImageUrl(ft.code) || sbtiShareImageUrl,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(ft.desc || ""),
+          dimList: [],
+          funNote,
+          currentTestResultId: record.timestamp ? String(record.timestamp) : testResultId || "",
+        });
+      });
   },
 
   splitIntoParagraphs(text) {

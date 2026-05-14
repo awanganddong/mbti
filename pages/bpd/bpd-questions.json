@@ -1,0 +1,238 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "情绪从平静到强烈起伏的速度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很慢或很平稳",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "有时较快",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常快速起伏",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是非常剧烈",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "害怕被重要的人抛弃或离开的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "几乎不担心",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔担心",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "经常担心",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "强烈恐惧并影响行为",
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "对「自己是谁、想要什么」的清晰感：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "比较清晰",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "有时模糊",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "经常困惑",
+          "score": "0"
+        },
+        {
+          "type": "D",
+          "answer": "长期很不稳定",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "冲动做事（消费、关系、言行）后后悔的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "0"
+        },
+        {
+          "type": "C",
+          "answer": "多次",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "很频繁",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "感到内心空虚或「缺了一块」的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "有时",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎每天",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "愤怒时难以控制自己言行的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能控制住",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔失控",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "经常难以控制",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "经常爆发伤人或自伤冲动",
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "压力极大时，出现「不想活了」一类念头：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "从未",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔一闪而过",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "有时出现",
+          "score": "0"
+        },
+        {
+          "type": "D",
+          "answer": "较频繁需要重视",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "关系里理想化对方又突然失望、疏远的波动：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少这样",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "0"
+        },
+        {
+          "type": "C",
+          "answer": "比较明显",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "反复出现且影响关系",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "在压力下觉得「不像自己」或与现实脱节的体验：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "几乎没有",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "有时",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "较频繁",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

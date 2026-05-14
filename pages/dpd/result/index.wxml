@@ -1,0 +1,24 @@
+<view class="dpdr-page">
+  <view class="dpdr-bg"></view>
+  <view class="dpdr-inner">
+    <view class="dpdr-hero">
+      <text class="dpdr-label">依赖型人格倾向 · 15题筛查</text>
+      <text class="dpdr-tier">{{tierLabel}}</text>
+      <text class="dpdr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="dpdr-note">自测筛查 · 不构成医学诊断</text>
+    </view>
+    <view class="dpdr-card">
+      <text class="dpdr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="dpdr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="dpdr-btn dpdr-btn-primary" bindtap="goRetest">
+        <text class="dpdr-btn-text">再测一次</text>
+      </view>
+      <view class="dpdr-btn dpdr-btn-ghost" bindtap="goHome">
+        <text class="dpdr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

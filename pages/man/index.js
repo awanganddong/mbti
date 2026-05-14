@@ -1,12 +1,13 @@
-import { manTest } from '../../data/man';
+import { fetchQuizConfig } from '../../services/quizBackend';
+import { pickRangeResult, sumScoreAnswers } from '../../services/quizCompute';
 
 Page({
   data: {
     currentQuestionIndex: 0,
     selectedOptionIndex: -1,
     answers: [],
-    currentQuestion: manTest.questions[0],
-    totalQuestions: manTest.questions.length,
+    currentQuestion: null,
+    totalQuestions: 0,
     progress: 0,
     progressText: '0%',
     isLastQuestion: false,
@@ -17,7 +18,22 @@ Page({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
-    this.setQuestion(0, []);
+    wx.showLoading({ title: '加载中', mask: true });
+    fetchQuizConfig('man')
+      .then((cfg) => {
+        const questions = cfg && Array.isArray(cfg.questions) ? cfg.questions : [];
+        if (questions.length === 0) throw new Error('题库为空');
+        this._quizConfig = cfg;
+        wx.hideLoading();
+        this.setQuestion(0, []);
+      })
+      .catch((err) => {
+        wx.hideLoading();
+        wx.showToast({
+          title: err && err.message ? err.message : '题库加载失败',
+          icon: 'none'
+        });
+      });
   },
 
   onShareAppMessage() {
@@ -37,11 +53,12 @@ Page({
   },
 
   setQuestion(questionIndex, answers) {
-    const total = manTest.questions.length;
+    const list = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions : [];
+    const total = list.length;
     const percent = total <= 1 ? 100 : Math.round((questionIndex / (total - 1)) * 100);
     this.setData({
       currentQuestionIndex: questionIndex,
-      currentQuestion: manTest.questions[questionIndex],
+      currentQuestion: list[questionIndex],
       answers,
       selectedOptionIndex: typeof answers[questionIndex] === 'number' ? answers[questionIndex] : -1,
       totalQuestions: total,
@@ -70,7 +87,8 @@ Page({
     const nextAnswers = [...this.data.answers];
     nextAnswers[this.data.currentQuestionIndex] = this.data.selectedOptionIndex;
 
-    if (this.data.currentQuestionIndex === manTest.questions.length - 1) {
+    const total = this._quizConfig && Array.isArray(this._quizConfig.questions) ? this._quizConfig.questions.length : 0;
+    if (this.data.currentQuestionIndex === total - 1) {
       this.finish(nextAnswers);
       return;
     }
@@ -79,14 +97,9 @@ Page({
   },
 
   finish(answers) {
-    const score = manTest.questions.reduce((acc, q, idx) => {
-      const optionIndex = answers[idx];
-      if (typeof optionIndex !== 'number') return acc;
-      const option = q.options[optionIndex];
-      return acc + (option ? option.score : 0);
-    }, 0);
-
-    const result = manTest.results.find(r => score >= r.min && score <= r.max) || manTest.results[manTest.results.length - 1];
+    const cfg = this._quizConfig || {};
+    const score = sumScoreAnswers(cfg, answers);
+    const result = pickRangeResult(cfg.results, score);
     const timestamp = Date.now();
 
     const history = wx.getStorageSync('manTestHistory') || [];

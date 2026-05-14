@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "想到未来一个月时，你的默认感受更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "有期待也有计划",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "平淡但可接受",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏悲观、提不起劲",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "灰暗、觉得难有好事",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "你对自己的长期评价基调：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "总体认可",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "有好有坏",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏苛责、常盯缺点",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈自我否定",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "经历一件开心事后，好心情通常能维持：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "较久",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "一般",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "较短、很快回落",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎转瞬即逝",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "被人真诚夸奖时，你内化（相信「我值得」）的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能相信",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "半信半疑",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "多当作客套",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎不相信",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "独处一段时间，你的心情更容易：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "稳定或放松",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略低落",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显下沉、反复想负面事",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "被空虚或绝望感占据",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "回顾一天，你更容易注意到：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "完成的事与小确幸",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "好坏差不多",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "没做好的细节",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎全是遗憾与失败",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "愉快活动结束后的「回落」速度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平缓",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略快",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很快回到低落",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "立刻感到空虚或无意义",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "向他人求助、示弱时，你的心理负担：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "较小",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "较大、怕麻烦别人",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "极大、几乎开不了口",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "面对失误，你对自己的说话方式更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "对事不对人",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "会自责但能停",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "长时间自责反刍",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "认定自己不行",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "面对新机会（新工作、新社交），你的第一反应：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "愿意尝试",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "犹豫但可行动",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "预设会失败",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈回避、觉得不配",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "主观上「精力不足、做什么都累」的体验频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎每天",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "在社交场合里，你笑容或热情的「真实度」：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "大多真实",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "有时勉强",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常勉强应付",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎都在撑",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "一件小错之后，你在脑海里反刍（反复想）的时长：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很短",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "几小时",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "好几天",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "数周难以放下",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "对「纯粹放松享乐」的配得感：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "觉得理所当然",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略内疚可调整",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "常觉得浪费或不该",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎不允许自己享受",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "被安慰后，你内心「真的被安慰到」的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "较高",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "一般",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏低",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很低，仍觉得没人真正懂",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

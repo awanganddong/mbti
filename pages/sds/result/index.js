@@ -1,14 +1,14 @@
-import { sdsTest } from '../../../data/sds';
+import { fetchQuizConfig } from '../../../services/quizBackend';
 
 Page({
   data: {
     rawScore: 0,
-    rawMax: sdsTest.rawMax,
+    rawMax: 0,
     standardScore: 0,
-    standardMax: sdsTest.standardMax,
+    standardMax: 0,
     resultTitle: '',
     resultDescriptionParagraphs: [],
-    disclaimerText: sdsTest.disclaimer,
+    disclaimerText: '',
     currentTestResultId: ''
   },
 
@@ -21,31 +21,52 @@ Page({
     this.setData({
       currentTestResultId: testResultId || ''
     });
-    const history = wx.getStorageSync('sdsTestHistory') || [];
-    let record = null;
-    if (testResultId) {
-      record = history.find(item => item.timestamp.toString() === testResultId) || null;
-    } else {
-      record = history.length > 0 ? history[0] : null;
-    }
+    fetchQuizConfig('sds')
+      .then((cfg) => {
+        this.setData({
+          rawMax: Number(cfg.rawMax || 0),
+          standardMax: Number(cfg.standardMax || 0),
+          disclaimerText: cfg.disclaimer || '',
+        });
 
-    if (!record) {
-      this.setData({
-        rawScore: 0,
-        standardScore: 0,
-        resultTitle: '暂无测评记录',
-        resultDescriptionParagraphs: ['请先完成 SDS 抑郁自评量表。'],
+        const history = wx.getStorageSync('sdsTestHistory') || [];
+        let record = null;
+        if (testResultId) {
+          record = history.find(item => item.timestamp.toString() === testResultId) || null;
+        } else {
+          record = history.length > 0 ? history[0] : null;
+        }
+
+        if (!record) {
+          this.setData({
+            rawScore: 0,
+            standardScore: 0,
+            resultTitle: '暂无测评记录',
+            resultDescriptionParagraphs: ['请先完成 SDS 抑郁自评量表。'],
+          });
+          return;
+        }
+
+        this.setData({
+          rawScore: record.rawScore,
+          standardScore: record.standardScore,
+          resultTitle: record.resultTitle,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
+        });
+      })
+      .catch(() => {
+        const history = wx.getStorageSync('sdsTestHistory') || [];
+        const record = history.length > 0 ? history[0] : null;
+        if (record) {
+          this.setData({
+            rawScore: record.rawScore,
+            standardScore: record.standardScore,
+            resultTitle: record.resultTitle,
+            resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          });
+        }
       });
-      return;
-    }
-
-    this.setData({
-      rawScore: record.rawScore,
-      standardScore: record.standardScore,
-      resultTitle: record.resultTitle,
-      resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
-      currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
-    });
   },
 
   onShareAppMessage() {

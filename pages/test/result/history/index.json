@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "测试历史",
-  "navigationBarBackgroundColor": "#0B1220",
-  "navigationBarTextStyle": "white",
-  "backgroundColor": "#0B1220"
+  "navigationBarTitleText": "测试记录",
+  "navigationBarBackgroundColor": "#f4f6fb",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#f4f6fb"
 }

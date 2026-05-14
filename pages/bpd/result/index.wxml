@@ -1,0 +1,24 @@
+<view class="bpdr-page">
+  <view class="bpdr-bg"></view>
+  <view class="bpdr-inner">
+    <view class="bpdr-hero">
+      <text class="bpdr-label">边缘型人格障碍倾向 · 9题筛查</text>
+      <text class="bpdr-tier">{{tierLabel}}</text>
+      <text class="bpdr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="bpdr-note">极简筛查 · 不构成医学诊断</text>
+    </view>
+    <view class="bpdr-card">
+      <text class="bpdr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="bpdr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="bpdr-btn bpdr-btn-primary" bindtap="goRetest">
+        <text class="bpdr-btn-text">再测一次</text>
+      </view>
+      <view class="bpdr-btn bpdr-btn-ghost" bindtap="goHome">
+        <text class="bpdr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

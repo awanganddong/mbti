@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "你是否常觉得自己「理应」比多数人更受优待或尊重？",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "有时",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "经常或总是",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "听到他人分享成就时，你内心的第一反应更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "真诚高兴",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略比较",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "不舒服或嫉妒",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈不服或贬低对方",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "被当众指出错误时，你的第一反应：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "接受并修正",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略尴尬",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "强烈辩解或推责",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "愤怒、觉得对方针对你",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "你需要他人赞美、认可的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "正常",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略高",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很高",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎持续需要",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "面对他人痛苦，你设身处地「心疼」的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能共情",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "一般",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏弱",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很弱、更在意对自己影响",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "为实现自己的目标，利用他人好感或内疚感的倾向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "几乎没有",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "很少",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "有时",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "较常见",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "在群体里，你认为自己「理应站在什么位置」：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平等一员",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略希望靠前",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "常觉得自己应更核心",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈觉得自己应最高位",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "看到比自己更成功的人，你嫉妒或不服的强度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "低",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏高",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很高",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "幻想中的成功、权力或名望对你情绪的影响：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很小",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔提神",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常影响心情",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很强、现实落差难接受",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "团队失败时，你把责任归给他人的倾向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "低",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏高",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很高、很少反思自己",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "打断别人讲话、把话题拉回自己的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "礼尚往来中，你认为谁应获得更多赞美与让步：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "基本对等",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略偏自己",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显偏自己",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎只应是自己",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "他人不按你的安排或期待行事时，你的反应：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "协商调整",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "不满但克制",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显愤怒或贬低对方",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈愤怒、难以妥协",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "面对批评，你推断对方「动机不纯」的倾向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "低",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏高",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很高",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "帮助他人后，你期待回报或感恩的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平常心",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略期待",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很期待",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈期待否则觉得被亏欠",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

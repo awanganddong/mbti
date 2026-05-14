@@ -1,0 +1,472 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "在社交场合，你担心被批评或拒绝的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "几乎不担心",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔担心",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常担心",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是非常担心",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "面对需要认识陌生人的活动，你通常会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很期待或轻松参加",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "会去但略紧张",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "常找借口不去",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是回避",
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "当别人可能对你有负面评价时，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不太在意",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "会想一想",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "反复琢磨很久",
+          "score": "0"
+        },
+        {
+          "type": "D",
+          "answer": "强烈不安并回避类似情境",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "你觉得自己在社交上「不够好」的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "有时",
+          "score": "0"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "几乎每天",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "需要公开发言或展示自己时，你的紧张程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "轻微紧张",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中度紧张",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很强紧张",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈恐惧并尽量逃避",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "被拒绝或冷落后，你恢复信心的速度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很快恢复",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "需要几天",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "需要很久",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "长期影响自我评价",
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "你回避冒险或新尝试，主要因为：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不太会因此退缩",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔犹豫",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "经常因害怕失败而放弃",
+          "score": "0"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是回避",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "与权威或「更重要的人」交谈时：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "较自然",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "略拘谨",
+          "score": "0"
+        },
+        {
+          "type": "C",
+          "answer": "明显紧张少说话",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "极力回避或简短应付",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "你认为自己「无趣、不受欢迎」的想法：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少出现",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "别人邀请你参加聚会，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "乐意去",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "看心情",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "常推掉",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是拒绝",
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "工作中需要主动争取机会时：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能主动争取",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "需要准备很久",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "常让别人先上",
+          "score": "0"
+        },
+        {
+          "type": "D",
+          "answer": "基本不争取",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "恋爱里表达真实需求与脆弱：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能较自然表达",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "需要勇气",
+          "score": "0"
+        },
+        {
+          "type": "C",
+          "answer": "很难说出口",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是隐藏",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "被指出小错误时，你的反应强度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平静接受",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略尴尬",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很受伤很久",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈羞耻想躲开",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "独处与社交，你更常选择：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平衡两者",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "略偏独处",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "明显偏好独处",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "强烈偏好独处并减少社交",
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "想到可能被否定，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不太影响行动",
+          "score": "2"
+        },
+        {
+          "type": "B",
+          "answer": "会犹豫",
+          "score": "3"
+        },
+        {
+          "type": "C",
+          "answer": "常因此放弃",
+          "score": "0"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是退缩",
+          "score": "1"
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "question": "你回避冲突或争论的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能面对并沟通",
+          "score": "3"
+        },
+        {
+          "type": "B",
+          "answer": "有时回避",
+          "score": "0"
+        },
+        {
+          "type": "C",
+          "answer": "经常回避",
+          "score": "1"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是回避",
+          "score": "2"
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "question": "对亲密关系「靠得太近」的担忧：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不太担心",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔担心",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常担心被伤害",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈害怕依赖",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "question": "回顾过去，因害怕丢脸而放弃的机会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "1"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔几次",
+          "score": "2"
+        },
+        {
+          "type": "C",
+          "answer": "多次",
+          "score": "3"
+        },
+        {
+          "type": "D",
+          "answer": "很多次因害怕而放弃",
+          "score": "0"
+        }
+      ]
+    }
+  ]
+}

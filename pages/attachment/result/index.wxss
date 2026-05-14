@@ -1,0 +1,157 @@
+.atr-page {
+  min-height: 100vh;
+  position: relative;
+  background: #f4f6fb;
+}
+
+.atr-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(720rpx 320rpx at 10% 0%, rgba(244, 114, 182, 0.16) 0%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(640rpx 300rpx at 100% 18%, rgba(167, 139, 250, 0.18) 0%, rgba(255, 255, 255, 0) 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.atr-inner {
+  position: relative;
+  z-index: 1;
+  padding: 32rpx 28rpx 48rpx;
+}
+
+.atr-hero {
+  text-align: center;
+  padding: 16rpx 0 8rpx;
+}
+
+.atr-label {
+  display: block;
+  font-size: 24rpx;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.atr-type {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 38rpx;
+  font-weight: 900;
+  color: #9d174d;
+}
+
+.atr-code {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.atr-note {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #94a3b8;
+}
+
+.atr-card {
+  margin-top: 24rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+  border: 1rpx solid #e2e8f0;
+  padding: 22rpx 20rpx;
+  box-shadow: 0 12rpx 40rpx rgba(15, 23, 42, 0.06);
+}
+
+.atr-card-title {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 16rpx;
+}
+
+.atr-row {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 14rpx;
+}
+
+.atr-row:last-child {
+  margin-bottom: 0;
+}
+
+.atr-row-label {
+  width: 200rpx;
+  flex-shrink: 0;
+  font-size: 22rpx;
+  color: #475569;
+}
+
+.atr-row-bar {
+  flex: 1;
+  height: 14rpx;
+  border-radius: 999rpx;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.atr-row-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  background: linear-gradient(90deg, #c084fc 0%, #ec4899 100%);
+}
+
+.atr-row-num {
+  width: 48rpx;
+  text-align: right;
+  font-size: 22rpx;
+  font-weight: 800;
+  color: #334155;
+}
+
+.atr-desc {
+  font-size: 28rpx;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.atr-actions {
+  margin-top: 32rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.atr-btn {
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  font-weight: 700;
+  padding: 22rpx 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.atr-btn-text {
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.atr-btn-primary {
+  background: linear-gradient(90deg, #c084fc 0%, #ec4899 48%, #a855f7 100%);
+}
+
+.atr-btn-primary .atr-btn-text {
+  color: #ffffff;
+}
+
+.atr-btn-ghost {
+  background: #ffffff;
+  border: 1rpx solid #fbcfe8;
+}
+
+.atr-btn-ghost .atr-btn-text {
+  color: #9d174d;
+}

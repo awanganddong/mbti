@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "聚会里你不是焦点时，你的空缺感：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "几乎无",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略有一点",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显不舒服",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈难受、想抢回注意",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "你表达情绪的外显程度（语气、表情、肢体）：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "克制适度",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略外放",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很外放",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "非常戏剧化",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "讲故事或描述经历时，「夸张渲染」的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "经常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎总是",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "用外表、穿着或言行吸引他人目光的倾向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少刻意",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "较常",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "非常依赖被关注的感觉",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "长时间安静独处（无手机娱乐）你能忍受：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很久",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "一阵子",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "较短",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很难忍受",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "描述自己的痛苦或压力时，你的方式更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平实具体",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略情绪化",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很戏剧化",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "像舞台表演般强烈",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "几天没发朋友圈/动态，你的感受：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "无所谓",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略想发",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显焦虑怕被遗忘",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈需要用动态换关注",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "打趣时若感觉被忽视，你的反应强度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "几乎不在意",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略失落",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "明显委屈或生气",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈反应、要对方立刻回应",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "聊天中把话题引向自己的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "低",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏高",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很高、常打断他人讲自己",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "初见陌生人时，你的热情与亲密表达：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "礼貌克制",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "友好自然",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很快很热络",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "过度亲密像多年老友",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "你对「我和某人已经很铁」的判断，相比对方实际投入：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "基本匹配",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略高估",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "常高估",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "经常明显高估",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "无聊时，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "自得其乐",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "找事做",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "找人陪或发动态",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "用夸张言行打破无聊",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "恋爱中吸引伴侣注意的行为强度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "适度",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略主动",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很主动戏剧化",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "非常戏剧化甚至试探底线",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "身体轻微不适时，你告知他人、寻求关注的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "低调处理",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "正常告知",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "偏高",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很夸张、怕不被重视",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "被批评后，你情绪波动与「当场反应」的强度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "较平稳",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "中等",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "较强",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很强、戏剧化",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

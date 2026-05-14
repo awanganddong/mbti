@@ -1,0 +1,1084 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "业余时间，你更愿意投入精力在：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "B",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "C",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "E",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "F",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "如果参加社团或志愿活动，你更想负责：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "B",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "E",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "F",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "面对一门新课程，哪种学习方式更吸引你：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "D",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "E",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "F",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "你更欣赏的工作节奏更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "C",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "D",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "E",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "F",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "在团队项目里，你通常更愿意：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "B",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "C",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "D",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "E",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "F",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "下列哪种任务让你更有成就感：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "B",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "C",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "D",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "E",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "F",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "你更喜欢的办公/学习空间氛围是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "B",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "C",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "E",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "F",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "解决一个问题时，你更常从哪类路径入手：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "B",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "E",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "F",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "你更可能被哪种奖励激励：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "D",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "E",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "F",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "如果可以自由换岗，你更想尝试：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "C",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "D",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "E",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "F",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "你更擅长也更有耐心的是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "B",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "C",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "D",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "E",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "F",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "面对大量信息，你更愿意：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "B",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "C",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "D",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "E",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "F",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "你更认同的职业价值观偏向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "B",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "C",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "E",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "F",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "你更想把自己的优势用在：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "B",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "E",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "F",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "长期发展上，你更看重：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "D",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "E",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "F",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "question": "你更享受与他人互动的形式是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "C",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "D",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "E",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "F",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "question": "你更想参与的项目类型是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "B",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "C",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "D",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "E",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "F",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "question": "你更喜欢的反馈方式是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "B",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "C",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "D",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "E",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "F",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        }
+      ]
+    },
+    {
+      "no": 19,
+      "question": "你更想提升的能力方向是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "B",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "C",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "E",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "F",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "question": "你更偏好的工作成果形态是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "B",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "E",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "F",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        }
+      ]
+    },
+    {
+      "no": 21,
+      "question": "你更想避免的工作内容是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "D",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "E",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "F",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        }
+      ]
+    },
+    {
+      "no": 22,
+      "question": "你更认同的“专业感”来自：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "C",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "D",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "E",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "F",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 23,
+      "question": "你更想参与的行业场景是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "B",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "C",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "D",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "E",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "F",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 24,
+      "question": "你更喜欢的学习材料是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "B",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "C",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "D",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "E",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "F",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        }
+      ]
+    },
+    {
+      "no": 25,
+      "question": "你更想承担的角色是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "B",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "C",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "E",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "F",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        }
+      ]
+    },
+    {
+      "no": 26,
+      "question": "你更想解决的社会/组织问题是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "B",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "E",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "F",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        }
+      ]
+    },
+    {
+      "no": 27,
+      "question": "你更想获得的认可来自：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "D",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "E",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "F",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        }
+      ]
+    },
+    {
+      "no": 28,
+      "question": "你更想花整块时间做的事是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "C",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "D",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "E",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "F",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 29,
+      "question": "你更想建立的职业形象是：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        },
+        {
+          "type": "B",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "C",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "D",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "E",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "F",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 30,
+      "question": "回顾过去，让你最有满足感的事更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "流程规范、数据整理或标准执行",
+          "score": "C"
+        },
+        {
+          "type": "B",
+          "answer": "动手操作、工具设备或现场实务",
+          "score": "R"
+        },
+        {
+          "type": "C",
+          "answer": "观察分析、实验验证或理论研究",
+          "score": "I"
+        },
+        {
+          "type": "D",
+          "answer": "创意表达、审美设计或自由创作",
+          "score": "A"
+        },
+        {
+          "type": "E",
+          "answer": "倾听陪伴、辅导支持或人际协调",
+          "score": "S"
+        },
+        {
+          "type": "F",
+          "answer": "说服影响、资源整合或目标推进",
+          "score": "E"
+        }
+      ]
+    }
+  ]
+}

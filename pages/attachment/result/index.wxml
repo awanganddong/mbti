@@ -1,0 +1,37 @@
+<view class="atr-page">
+  <view class="atr-bg"></view>
+  <view class="atr-inner">
+    <view class="atr-hero">
+      <text class="atr-label">成人依恋 · 主导类型</text>
+      <text class="atr-type">{{typeLabel}}</text>
+      <text class="atr-code">代码 {{code}}（S安全 A焦虑 D回避 F恐惧-回避）</text>
+      <text class="atr-note">趣味自测 · 不构成心理诊断</text>
+    </view>
+
+    <view class="atr-card">
+      <text class="atr-card-title">四维倾向（答题次数）</text>
+      <view class="atr-row" wx:for="{{scoreRows}}" wx:for-item="row" wx:key="key">
+        <text class="atr-row-label">{{row.label}}</text>
+        <view class="atr-row-bar">
+          <view class="atr-row-fill" style="width: {{row.pct}}%;"></view>
+        </view>
+        <text class="atr-row-num">{{row.count}}</text>
+      </view>
+    </view>
+
+    <view class="atr-card" wx:if="{{typeDesc}}">
+      <text class="atr-desc">{{typeDesc}}</text>
+    </view>
+
+    <view class="atr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="atr-btn atr-btn-primary" bindtap="goRetest">
+        <text class="atr-btn-text">再测一次</text>
+      </view>
+      <view class="atr-btn atr-btn-ghost" bindtap="goHome">
+        <text class="atr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

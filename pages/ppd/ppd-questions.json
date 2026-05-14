@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "听到「有人在议论你」这类说法时，你通常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "先核实事实，不太往心里去",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "会多留意，但能保持理性",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "较易联想到敌意或不信任",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎会认定对方在针对或算计自己",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "同事或朋友没有立刻回复你的消息，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "理解对方在忙",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略有点在意",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "反复琢磨是否得罪对方",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈怀疑对方故意冷落或隐瞒",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "伴侣与异性同事正常聊天，你的感受：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "基本放心",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略有不快但能沟通",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "常怀疑关系或忠诚",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "很难相信「只是工作」",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "会议上有人笑了一声（未必与你有关），你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "当作氛围正常",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略好奇但不多想",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑是否在嘲笑自己",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈觉得与自己有关",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "当别人指出你的小错误时，你的第一反应：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "感谢提醒并改正",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略尴尬但能接受",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "觉得对方在挑刺",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "觉得对方看不起或想打压自己",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "朋友临时改约会地点，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "觉得正常",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略不爽但能配合",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑是否有隐情",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "怀疑对方与他人串通",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "关于自己的私事，你愿意向他人坦露的程度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "视信任度正常分享",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偏谨慎但可深谈",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很少深谈，怕留下把柄",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "几乎不透露，怕被利用",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "曾被你信任的人伤害过后，你对「原谅」的态度：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "视情况可释怀",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "需要较长时间",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "很难真正原谅",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "长期记恨，难以翻篇",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "没有明确证据时，你感到「被轻视或被针对」的频率：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "很少",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "有时",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "经常甚至每天",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "团队里功劳归属有分歧，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "就事论事协商",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "会争取但可妥协",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑他人抢功",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "认定他人恶意侵占",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "陌生人多看你两眼，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "不太在意",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略不自在",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑对方意图",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "怀疑对方监视或议论自己",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "借钱给熟人对方逾期，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "先沟通了解原因",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "不满但先观察",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑对方故意拖欠",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "怀疑对方从一开始就想骗你",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "上司在会上表扬别人却没点名表扬你，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "平常心",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略失落",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑自己被边缘化",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "认定上司对自己有意见",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "对「巧合」的解释，你更偏向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "多数只是巧合",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "偶尔会多想",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "常觉得背后有人安排",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "常觉得被设计或跟踪",
+          "score": "3"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "别人称赞你时，你的第一反应：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "开心并接受",
+          "score": "0"
+        },
+        {
+          "type": "B",
+          "answer": "略害羞但相信善意",
+          "score": "1"
+        },
+        {
+          "type": "C",
+          "answer": "怀疑是否客套或有目的",
+          "score": "2"
+        },
+        {
+          "type": "D",
+          "answer": "强烈怀疑动机不纯",
+          "score": "3"
+        }
+      ]
+    }
+  ]
+}

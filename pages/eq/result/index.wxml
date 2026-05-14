@@ -1,0 +1,24 @@
+<view class="eqr-page">
+  <view class="eqr-bg"></view>
+  <view class="eqr-inner">
+    <view class="eqr-hero">
+      <text class="eqr-label">你的情商自测结果</text>
+      <text class="eqr-tier">{{tierLabel}}</text>
+      <text class="eqr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="eqr-note">趣味自测 · 不构成心理诊断</text>
+    </view>
+    <view class="eqr-card">
+      <text class="eqr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="eqr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="eqr-btn eqr-btn-primary" bindtap="goRetest">
+        <text class="eqr-btn-text">再测一次</text>
+      </view>
+      <view class="eqr-btn eqr-btn-ghost" bindtap="goHome">
+        <text class="eqr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

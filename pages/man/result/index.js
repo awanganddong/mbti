@@ -1,9 +1,9 @@
-import { manTest } from '../../../data/man';
+import { fetchQuizConfig } from '../../../services/quizBackend';
 
 Page({
   data: {
     score: 0,
-    maxScore: manTest.max_score,
+    maxScore: 0,
     resultTitle: '',
     resultDescriptionParagraphs: [],
     traits: [],
@@ -22,38 +22,58 @@ Page({
     this.setData({
       currentTestResultId: testResultId || ''
     });
+    fetchQuizConfig('man')
+      .then((cfg) => {
+        const maxScore = Number(cfg.maxScore || cfg.max_score || 0);
+        this.setData({ maxScore });
 
-    const history = wx.getStorageSync('manTestHistory') || [];
-    let record = null;
-    if (testResultId) {
-      record = history.find(item => item.timestamp.toString() === testResultId) || null;
-    } else {
-      record = history.length > 0 ? history[0] : null;
-    }
+        const history = wx.getStorageSync('manTestHistory') || [];
+        let record = null;
+        if (testResultId) {
+          record = history.find(item => item.timestamp.toString() === testResultId) || null;
+        } else {
+          record = history.length > 0 ? history[0] : null;
+        }
 
-    if (!record) {
-      const fallback = manTest.results[0];
-      this.setData({
-        score: 0,
-        resultTitle: fallback.title,
-        resultDescriptionParagraphs: this.splitIntoParagraphs(fallback.description),
-        traits: fallback.traits || [],
-        analysisParagraphs: this.splitIntoParagraphs(fallback.analysis || ''),
-        suggestions: fallback.suggestions || [],
+        if (!record) {
+          const fallback = cfg && Array.isArray(cfg.results) && cfg.results.length > 0 ? cfg.results[0] : null;
+          this.setData({
+            score: 0,
+            resultTitle: fallback ? fallback.title : '',
+            resultDescriptionParagraphs: this.splitIntoParagraphs(fallback ? fallback.description : ''),
+            traits: fallback ? (fallback.traits || []) : [],
+            analysisParagraphs: this.splitIntoParagraphs(fallback ? (fallback.analysis || '') : ''),
+            suggestions: fallback ? (fallback.suggestions || []) : [],
+          });
+          return;
+        }
+
+        const result = record.result || {};
+        this.setData({
+          score: record.score || 0,
+          resultTitle: result.title || '',
+          resultDescriptionParagraphs: this.splitIntoParagraphs(result.description || ''),
+          traits: result.traits || [],
+          analysisParagraphs: this.splitIntoParagraphs(result.analysis || ''),
+          suggestions: result.suggestions || [],
+          currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
+        });
+      })
+      .catch(() => {
+        const history = wx.getStorageSync('manTestHistory') || [];
+        const record = history.length > 0 ? history[0] : null;
+        if (record) {
+          const result = record.result || {};
+          this.setData({
+            score: record.score || 0,
+            resultTitle: result.title || '',
+            resultDescriptionParagraphs: this.splitIntoParagraphs(result.description || ''),
+            traits: result.traits || [],
+            analysisParagraphs: this.splitIntoParagraphs(result.analysis || ''),
+            suggestions: result.suggestions || [],
+          });
+        }
       });
-      return;
-    }
-
-    const result = record.result || {};
-    this.setData({
-      score: record.score || 0,
-      resultTitle: result.title || '',
-      resultDescriptionParagraphs: this.splitIntoParagraphs(result.description || ''),
-      traits: result.traits || [],
-      analysisParagraphs: this.splitIntoParagraphs(result.analysis || ''),
-      suggestions: result.suggestions || [],
-      currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
-    });
   },
 
   splitIntoParagraphs(text) {

@@ -1,0 +1,24 @@
+<view class="avpdr-page">
+  <view class="avpdr-bg"></view>
+  <view class="avpdr-inner">
+    <view class="avpdr-hero">
+      <text class="avpdr-label">回避型人格障碍倾向 · 筛查结果</text>
+      <text class="avpdr-tier">{{tierLabel}}</text>
+      <text class="avpdr-score">{{totalScore}} / {{maxScore}} 分</text>
+      <text class="avpdr-note">简版自测 · 不构成医学或司法诊断</text>
+    </view>
+    <view class="avpdr-card">
+      <text class="avpdr-desc">{{tierDesc}}</text>
+    </view>
+    <view class="avpdr-actions">
+      <button class="result-share-native" open-type="share">分享给好友</button>
+      <button class="result-share-native" bindtap="shareTimelineTip">分享到朋友圈</button>
+      <view class="avpdr-btn avpdr-btn-primary" bindtap="goRetest">
+        <text class="avpdr-btn-text">再测一次</text>
+      </view>
+      <view class="avpdr-btn avpdr-btn-ghost" bindtap="goHome">
+        <text class="avpdr-btn-text">返回首页</text>
+      </view>
+    </view>
+  </view>
+</view>

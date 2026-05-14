@@ -1,10 +1,7 @@
-import {
-  coupleValuesTest,
-  computeCoupleMatch,
-  sumVectors,
-  vectorToPercent,
-  CV_DIMENSIONS,
-} from '../../../data/coupleValues';
+import { fetchQuizConfig } from '../../../services/quizBackend';
+import { computeCoupleMatch, sumVectors, vectorToPercent } from '../../../services/quizCompute';
+
+const { SHARE_IMG, shareTimelineTip } = require('../../../utils/resultShare');
 
 const STORAGE_SELF = 'coupleValuesAnswersSelf';
 const STORAGE_PARTNER = 'coupleValuesAnswersPartner';
@@ -33,7 +30,7 @@ Page({
     dimAvg: 0,
     dimensionRows: [],
     narrative: '',
-    disclaimerText: coupleValuesTest.disclaimer,
+    disclaimerText: '',
   },
 
   onLoad(options) {
@@ -42,64 +39,95 @@ Page({
       menus: ['shareAppMessage', 'shareTimeline']
     });
     const mode = options.mode === 'match' ? 'match' : 'self';
+    fetchQuizConfig('coupleValues')
+      .then((cfg) => {
+        this._quizConfig = cfg;
+        this.setData({ disclaimerText: String(cfg.disclaimer || '') });
 
-    if (mode === 'match') {
-      const a = wx.getStorageSync(STORAGE_SELF);
-      const b = wx.getStorageSync(STORAGE_PARTNER);
-      if (!a || !b || a.length !== coupleValuesTest.questions.length || b.length !== coupleValuesTest.questions.length) {
-        wx.showModal({
-          title: '提示',
-          content: '需要两份完整答卷才能计算匹配度。请先完成「我自己」，再完成「另一半」。',
-          showCancel: false,
-          success: () => {
-            wx.redirectTo({ url: '/pages/coupleValues/index' });
+        if (mode === 'match') {
+          const a = wx.getStorageSync(STORAGE_SELF);
+          const b = wx.getStorageSync(STORAGE_PARTNER);
+          if (!a || !b || !Array.isArray(a) || !Array.isArray(b) || a.length === 0 || b.length === 0 || a.length !== b.length) {
+            wx.showModal({
+              title: '提示',
+              content: '需要两份完整答卷才能计算匹配度。请先完成「我自己」，再完成「另一半」。',
+              showCancel: false,
+              success: () => {
+                wx.redirectTo({ url: '/pages/coupleValues/index' });
+              }
+            });
+            return;
           }
-        });
-        return;
-      }
-      const m = computeCoupleMatch(a, b);
-      const dimensionRows = m.dimDetails.map((d) => ({
-        label: d.label,
-        similarity: d.similarity,
-        you: m.percentA[d.key],
-        ta: m.percentB[d.key],
-      }));
-      this.setData({
-        mode: 'match',
-        overall: m.overall,
-        choiceAvg: m.choiceAvg,
-        dimAvg: m.dimAvg,
-        dimensionRows,
-        narrative: matchNarrative(m.overall),
-      });
-      return;
-    }
+          const m = computeCoupleMatch(cfg, a, b);
+          const dimensionRows = m.dimDetails.map((d) => ({
+            label: d.label,
+            similarity: d.similarity,
+            you: m.percentA[d.key],
+            ta: m.percentB[d.key],
+          }));
+          this.setData({
+            mode: 'match',
+            overall: m.overall,
+            choiceAvg: m.choiceAvg,
+            dimAvg: m.dimAvg,
+            dimensionRows,
+            narrative: matchNarrative(m.overall),
+          });
+          return;
+        }
 
-    const a = wx.getStorageSync(STORAGE_SELF);
-    if (!a || a.length !== coupleValuesTest.questions.length) {
-      wx.redirectTo({ url: '/pages/coupleValues/index' });
-      return;
-    }
-    const sums = sumVectors(a);
-    const pct = vectorToPercent(sums);
-    const profileRows = CV_DIMENSIONS.map((d) => ({
-      label: d.label,
-      key: d.key,
-      value: pct[d.key],
-    }));
-    this.setData({
-      mode: 'self',
-      profileRows,
-    });
+        const a = wx.getStorageSync(STORAGE_SELF);
+        if (!a || !Array.isArray(a) || a.length === 0) {
+          wx.redirectTo({ url: '/pages/coupleValues/index' });
+          return;
+        }
+        const sums = sumVectors(cfg, a);
+        const pct = vectorToPercent(sums);
+        const dims = cfg && Array.isArray(cfg.dimensions) ? cfg.dimensions : [];
+        const profileRows = dims.map((d) => ({
+          label: d.label,
+          key: d.key,
+          value: pct[d.key],
+        }));
+        this.setData({
+          mode: 'self',
+          profileRows,
+        });
+      })
+      .catch(() => {
+        wx.showToast({ title: '题库加载失败', icon: 'none' });
+      });
   },
 
   onShareAppMessage() {
+    const mode = this.data.mode;
+    const title =
+      mode === 'match'
+        ? `三观匹配度：${this.data.overall} 分（情侣三观测试）`
+        : '我的三观画像（情侣三观测试）';
+    const path = mode === 'match' ? '/pages/coupleValues/result/index?mode=match' : '/pages/coupleValues/index';
     return {
-      title: '情侣三观匹配测试',
-      path: '/pages/coupleValues/index',
-      imageUrl: '/public/images/mbti.jpg'
+      title,
+      path,
+      imageUrl: SHARE_IMG,
     };
   },
+
+  onShareTimeline() {
+    const mode = this.data.mode;
+    const title =
+      mode === 'match'
+        ? `三观匹配 ${this.data.overall} 分`
+        : '情侣三观测试';
+    const query = mode === 'match' ? 'mode=match' : '';
+    return {
+      title,
+      query,
+      imageUrl: SHARE_IMG,
+    };
+  },
+
+  shareTimelineTip,
 
   goPartnerQuiz() {
     wx.navigateTo({

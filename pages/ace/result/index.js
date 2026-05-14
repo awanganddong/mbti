@@ -1,12 +1,12 @@
-import { aceTest } from '../../../data/ace';
+import { fetchQuizConfig } from '../../../services/quizBackend';
 
 Page({
   data: {
     score: 0,
-    maxScore: aceTest.maxScore,
+    maxScore: 0,
     resultTitle: '',
     resultDescriptionParagraphs: [],
-    disclaimerText: aceTest.disclaimer,
+    disclaimerText: '',
     currentTestResultId: '',
   },
 
@@ -19,29 +19,49 @@ Page({
     this.setData({
       currentTestResultId: testResultId || ''
     });
-    const history = wx.getStorageSync('aceOrientationTestHistory') || [];
-    let record = null;
-    if (testResultId) {
-      record = history.find(item => item.timestamp.toString() === testResultId) || null;
-    } else {
-      record = history.length > 0 ? history[0] : null;
-    }
+    fetchQuizConfig('ace')
+      .then((cfg) => {
+        const maxScore = Number(cfg.maxScore || cfg.max_score || 0);
+        this.setData({
+          maxScore,
+          disclaimerText: cfg.disclaimer || '',
+        });
 
-    if (!record) {
-      this.setData({
-        score: 0,
-        resultTitle: '暂无测评记录',
-        resultDescriptionParagraphs: ['请先完成无性恋性取向自测。'],
+        const history = wx.getStorageSync('aceOrientationTestHistory') || [];
+        let record = null;
+        if (testResultId) {
+          record = history.find(item => item.timestamp.toString() === testResultId) || null;
+        } else {
+          record = history.length > 0 ? history[0] : null;
+        }
+
+        if (!record) {
+          this.setData({
+            score: 0,
+            resultTitle: '暂无测评记录',
+            resultDescriptionParagraphs: ['请先完成无性恋性取向自测。'],
+          });
+          return;
+        }
+
+        this.setData({
+          score: record.score,
+          resultTitle: record.resultTitle,
+          resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
+        });
+      })
+      .catch(() => {
+        const history = wx.getStorageSync('aceOrientationTestHistory') || [];
+        const record = history.length > 0 ? history[0] : null;
+        if (record) {
+          this.setData({
+            score: record.score,
+            resultTitle: record.resultTitle,
+            resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
+          });
+        }
       });
-      return;
-    }
-
-    this.setData({
-      score: record.score,
-      resultTitle: record.resultTitle,
-      resultDescriptionParagraphs: this.splitIntoParagraphs(record.resultDescription),
-      currentTestResultId: record.timestamp ? String(record.timestamp) : (testResultId || ''),
-    });
   },
 
   onShareAppMessage() {

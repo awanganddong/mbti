@@ -1,0 +1,602 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "伴侣长时间没回消息，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "相信TA在忙，稍后自然会联系",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "反复看手机，担心关系出问题",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "不主动联系，把注意力转走",
+          "score": "D"
+        },
+        {
+          "type": "D",
+          "answer": "既焦虑又装作不在意",
+          "score": "F"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "吵架后谁先低头，你更倾向：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "愿意先道歉缓和气氛",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "等对方先示好才肯沟通",
+          "score": "D"
+        },
+        {
+          "type": "C",
+          "answer": "用沉默或疏远保护自己",
+          "score": "F"
+        },
+        {
+          "type": "D",
+          "answer": "想和好又怕再次被伤",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "对方需要独处空间时，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "尊重并安排自己的活动",
+          "score": "D"
+        },
+        {
+          "type": "B",
+          "answer": "表面答应内心不安",
+          "score": "F"
+        },
+        {
+          "type": "C",
+          "answer": "松一口气享受个人空间",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "担心疏远又不敢追问",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "谈到未来承诺，你的感受更接近：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "踏实但也想慢慢推进",
+          "score": "F"
+        },
+        {
+          "type": "B",
+          "answer": "渴望尽快确定关系走向",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "害怕被绑住想保留余地",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "既想要承诺又害怕受伤",
+          "score": "D"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "感到被冷落时，你更可能：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "直接表达需要陪伴",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "生闷气或试探对方",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "退缩到自己的世界",
+          "score": "D"
+        },
+        {
+          "type": "D",
+          "answer": "反复纠结说不出口",
+          "score": "F"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "亲密关系里，你更难忍受：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "被忽视或不被重视",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "被控制或失去自我",
+          "score": "D"
+        },
+        {
+          "type": "C",
+          "answer": "被过度黏人或没有边界",
+          "score": "F"
+        },
+        {
+          "type": "D",
+          "answer": "既怕被管又怕被丢下",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "对方查看你手机，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "坦然给看或一起制定边界",
+          "score": "D"
+        },
+        {
+          "type": "B",
+          "answer": "不舒服但勉强答应",
+          "score": "F"
+        },
+        {
+          "type": "C",
+          "answer": "反感并强调隐私",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "担心不给看会被怀疑",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "约会临时被取消，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "理解并改约其他时间",
+          "score": "F"
+        },
+        {
+          "type": "B",
+          "answer": "失落并追问原因",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "无所谓正好休息",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "怀疑对方是否变心",
+          "score": "D"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "发现对方有小秘密，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "希望坦诚沟通清楚",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "反复追问细节",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "不想追问怕知道太多",
+          "score": "D"
+        },
+        {
+          "type": "D",
+          "answer": "既想知道又怕面对",
+          "score": "F"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "自己脆弱时，向对方求助：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "能开口但会选时机",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "很难说出口怕被拒绝",
+          "score": "D"
+        },
+        {
+          "type": "C",
+          "answer": "倾向自己消化",
+          "score": "F"
+        },
+        {
+          "type": "D",
+          "answer": "想说又撤回反复内耗",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "对方表达强烈依赖，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "感到被需要很温暖",
+          "score": "D"
+        },
+        {
+          "type": "B",
+          "answer": "压力变大想逃开一点",
+          "score": "F"
+        },
+        {
+          "type": "C",
+          "answer": "保持适度距离",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "既想靠近又想推开",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "异地一段时间，你更担心：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "担心感情变淡",
+          "score": "F"
+        },
+        {
+          "type": "B",
+          "answer": "享受稳定也保持独立",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "偶尔想拉开距离",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "害怕太近又害怕太远",
+          "score": "D"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "关系稳定后，你更常：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "直接表达边界与感受",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "暗自比较和吃醋",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "不太在意专注自己",
+          "score": "D"
+        },
+        {
+          "type": "D",
+          "answer": "心里不舒服但不说",
+          "score": "F"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "对方和异性单独吃饭，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "失望但会说出感受",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "冷战或翻旧账",
+          "score": "D"
+        },
+        {
+          "type": "C",
+          "answer": "装作没事",
+          "score": "F"
+        },
+        {
+          "type": "D",
+          "answer": "爆发又后悔",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "生日被忘记，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "沟通需要见面的频率",
+          "score": "D"
+        },
+        {
+          "type": "B",
+          "answer": "抱怨或指责",
+          "score": "F"
+        },
+        {
+          "type": "C",
+          "answer": "减少期待降低投入",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "委屈但压抑不说",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "question": "对方工作忙疏于陪伴，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "反复确认对方心意",
+          "score": "F"
+        },
+        {
+          "type": "B",
+          "answer": "转移注意力忙自己的事",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "先拉开距离观察",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "胡思乱想难以入睡",
+          "score": "D"
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "question": "想到可能被抛弃，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "追问原因想挽回",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "先同意再想对策",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "迅速抽离保护自己",
+          "score": "D"
+        },
+        {
+          "type": "D",
+          "answer": "纠缠又自我厌恶",
+          "score": "F"
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "question": "分手话题被提起，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "谨慎评估是否值得",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "很快想再给机会",
+          "score": "D"
+        },
+        {
+          "type": "C",
+          "answer": "倾向不再回头",
+          "score": "F"
+        },
+        {
+          "type": "D",
+          "answer": "渴望又害怕重蹈覆辙",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 19,
+      "question": "复合机会出现，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "主动联系对方",
+          "score": "D"
+        },
+        {
+          "type": "B",
+          "answer": "等对方来找自己",
+          "score": "F"
+        },
+        {
+          "type": "C",
+          "answer": "享受独处不着急",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "想联系又怕打扰",
+          "score": "A"
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "question": "独处一天后，你更想：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "给空间但约定沟通时间",
+          "score": "F"
+        },
+        {
+          "type": "B",
+          "answer": "忍不住频繁发消息",
+          "score": "S"
+        },
+        {
+          "type": "C",
+          "answer": "顺势减少互动",
+          "score": "A"
+        },
+        {
+          "type": "D",
+          "answer": "焦虑到失眠或回避见面",
+          "score": "D"
+        }
+      ]
+    },
+    {
+      "no": 21,
+      "question": "对方说需要冷静一下，你会：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "总体安全被支持",
+          "score": "S"
+        },
+        {
+          "type": "B",
+          "answer": "常担心不够好",
+          "score": "A"
+        },
+        {
+          "type": "C",
+          "answer": "习惯自己扛不太依赖",
+          "score": "D"
+        },
+        {
+          "type": "D",
+          "answer": "既渴望亲密又害怕依赖",
+          "score": "F"
+        }
+      ]
+    },
+    {
+      "no": 22,
+      "question": "回忆童年被照顾的体验，你更觉得：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "温和具体说感受",
+          "score": "A"
+        },
+        {
+          "type": "B",
+          "answer": "情绪激动说狠话",
+          "score": "D"
+        },
+        {
+          "type": "C",
+          "answer": "冷处理或敷衍过去",
+          "score": "F"
+        },
+        {
+          "type": "D",
+          "answer": "想说却变成指责或沉默",
+          "score": "S"
+        }
+      ]
+    },
+    {
+      "no": 23,
+      "question": "在关系中表达不满，你更：",
+      "answerOptions": [
+        {
+          "type": "A",
+          "answer": "相信TA在忙，稍后自然会联系",
+          "score": "D"
+        },
+        {
+          "type": "B",
+          "answer": "反复看手机，担心关系出问题",
+          "score": "F"
+        },
+        {
+          "type": "C",
+          "answer": "不主动联系，把注意力转走",
+          "score": "S"
+        },
+        {
+          "type": "D",
+          "answer": "既焦虑又装作不在意",
+          "score": "A"
+        }
+      ]
+    }
+  ]
+}

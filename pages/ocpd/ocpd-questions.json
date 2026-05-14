@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "对工作或任务的完成标准，你通常：",
+      "answerOptions": [
+        { "type": "A", "answer": "标准务实即可", "score": "0" },
+        { "type": "B", "answer": "偏高但可调整", "score": "1" },
+        { "type": "C", "answer": "很高常反复修改", "score": "2" },
+        { "type": "D", "answer": "极高难以满意", "score": "3" }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "计划被打乱时，你的难受程度：",
+      "answerOptions": [
+        { "type": "A", "answer": "几乎不受影响", "score": "0" },
+        { "type": "B", "answer": "略不舒服", "score": "1" },
+        { "type": "C", "answer": "明显焦虑", "score": "2" },
+        { "type": "D", "answer": "强烈不适难专注其他", "score": "3" }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "把任务交给他人代办时，你的放心程度：",
+      "answerOptions": [
+        { "type": "A", "answer": "较放心", "score": "0" },
+        { "type": "B", "answer": "会抽查", "score": "1" },
+        { "type": "C", "answer": "很难放手常插手", "score": "2" },
+        { "type": "D", "answer": "几乎不信任他人标准", "score": "3" }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "细节与「大局」相比，你更常：",
+      "answerOptions": [
+        { "type": "A", "answer": "能抓大放小", "score": "0" },
+        { "type": "B", "answer": "略偏细节", "score": "1" },
+        { "type": "C", "answer": "很在意细节", "score": "2" },
+        { "type": "D", "answer": "常被细节拖住忽略整体", "score": "3" }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "道德或规则被违反时，你的反应强度：",
+      "answerOptions": [
+        { "type": "A", "answer": "视情况而定", "score": "0" },
+        { "type": "B", "answer": "会指出", "score": "1" },
+        { "type": "C", "answer": "很难接受", "score": "2" },
+        { "type": "D", "answer": "强烈不适或愤怒", "score": "3" }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "休闲或娱乐时，你「必须有用」的感觉：",
+      "answerOptions": [
+        { "type": "A", "answer": "能纯粹放松", "score": "0" },
+        { "type": "B", "answer": "偶尔觉得应做点事", "score": "1" },
+        { "type": "C", "answer": "常觉得浪费时间", "score": "2" },
+        { "type": "D", "answer": "几乎无法无目的休息", "score": "3" }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "做决定时反复确认、难以定稿的频率：",
+      "answerOptions": [
+        { "type": "A", "answer": "很少", "score": "0" },
+        { "type": "B", "answer": "有时", "score": "1" },
+        { "type": "C", "answer": "经常", "score": "2" },
+        { "type": "D", "answer": "几乎总是", "score": "3" }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "丢弃旧物（哪怕很少用）的难度：",
+      "answerOptions": [
+        { "type": "A", "answer": "容易丢弃", "score": "0" },
+        { "type": "B", "answer": "略犹豫", "score": "1" },
+        { "type": "C", "answer": "很难扔", "score": "2" },
+        { "type": "D", "answer": "囤积或强烈不舍", "score": "3" }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "他人做事方式与你不同，你包容度：",
+      "answerOptions": [
+        { "type": "A", "answer": "较包容", "score": "0" },
+        { "type": "B", "answer": "会建议改进", "score": "1" },
+        { "type": "C", "answer": "常想纠正", "score": "2" },
+        { "type": "D", "answer": "难以忍受", "score": "3" }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "列清单、排序、整理的依赖程度：",
+      "answerOptions": [
+        { "type": "A", "answer": "偶尔用", "score": "0" },
+        { "type": "B", "answer": "有时", "score": "1" },
+        { "type": "C", "answer": "经常依赖", "score": "2" },
+        { "type": "D", "answer": "没有清单就不安", "score": "3" }
+      ]
+    },
+    {
+      "no": 11,
+      "question": "表达情感（示弱、撒娇）的舒适度：",
+      "answerOptions": [
+        { "type": "A", "answer": "较自然", "score": "0" },
+        { "type": "B", "answer": "略拘谨", "score": "1" },
+        { "type": "C", "answer": "很难表达脆弱", "score": "2" },
+        { "type": "D", "answer": "几乎总是克制", "score": "3" }
+      ]
+    },
+    {
+      "no": 12,
+      "question": "被批评「太较真」或「太死板」的频率：",
+      "answerOptions": [
+        { "type": "A", "answer": "很少", "score": "0" },
+        { "type": "B", "answer": "偶尔", "score": "1" },
+        { "type": "C", "answer": "有时", "score": "2" },
+        { "type": "D", "answer": "经常被这样说", "score": "3" }
+      ]
+    },
+    {
+      "no": 13,
+      "question": "花钱时犹豫、反复权衡的程度：",
+      "answerOptions": [
+        { "type": "A", "answer": "果断", "score": "0" },
+        { "type": "B", "answer": "略犹豫", "score": "1" },
+        { "type": "C", "answer": "很纠结", "score": "2" },
+        { "type": "D", "answer": "极难决定", "score": "3" }
+      ]
+    },
+    {
+      "no": 14,
+      "question": "亲密关系里对「秩序与分工」的坚持：",
+      "answerOptions": [
+        { "type": "A", "answer": "灵活商量", "score": "0" },
+        { "type": "B", "answer": "有偏好可妥协", "score": "1" },
+        { "type": "C", "answer": "较坚持分工", "score": "2" },
+        { "type": "D", "answer": "非常强调规则与对错", "score": "3" }
+      ]
+    },
+    {
+      "no": 15,
+      "question": "空闲时完全放空、不安排事情的能力：",
+      "answerOptions": [
+        { "type": "A", "answer": "很容易", "score": "0" },
+        { "type": "B", "answer": "偶尔难", "score": "1" },
+        { "type": "C", "answer": "常要安排事填满", "score": "2" },
+        { "type": "D", "answer": "几乎无法空白安排", "score": "3" }
+      ]
+    },
+    {
+      "no": 16,
+      "question": "完成度未到 100% 就交付，你的接受度：",
+      "answerOptions": [
+        { "type": "A", "answer": "可以接受", "score": "0" },
+        { "type": "B", "answer": "略别扭", "score": "1" },
+        { "type": "C", "answer": "很难接受", "score": "2" },
+        { "type": "D", "answer": "几乎不能接受", "score": "3" }
+      ]
+    }
+  ]
+}
