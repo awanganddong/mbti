@@ -102,7 +102,7 @@ Page({
   },
 
   goTarot() {
-    wx.switchTab({
+    wx.navigateTo({
       url: '/pages/tarot/index'
     });
   },

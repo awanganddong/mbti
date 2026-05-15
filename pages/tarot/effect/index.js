@@ -232,13 +232,13 @@ Page({
   },
 
   goTarotTab() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '/pages/tarot/index'
     });
   },
 
   drawAgain() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '/pages/tarot/index'
     });
   },

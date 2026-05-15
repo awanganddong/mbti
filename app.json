@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/tarot/index",
     "pages/me/index",
     "pages/test/index",
     "pages/test/result/index",
@@ -56,6 +55,7 @@
     "pages/breakup/result/index",
     "pages/likeLevel/index",
     "pages/likeLevel/result/index",
+    "pages/tarot/index",
     "pages/tarot/effect/index",
     "pages/tarot/result/index"
   ],
@@ -78,10 +78,6 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页"
-      },
-      {
-        "pagePath": "pages/tarot/index",
-        "text": "塔罗牌"
       },
       {
         "pagePath": "pages/me/index",

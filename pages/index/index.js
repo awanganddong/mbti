@@ -414,7 +414,7 @@ Page({
     const url = e.currentTarget.dataset.url;
     if (!url) return;
 
-    const tabUrls = ['/pages/index/index', '/pages/tarot/index', '/pages/me/index'];
+    const tabUrls = ['/pages/index/index', '/pages/me/index'];
     if (tabUrls.includes(url)) {
       wx.switchTab({ url });
       return;

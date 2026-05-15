@@ -270,7 +270,7 @@ Page({
   },
 
   drawAgain() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '/pages/tarot/index'
     });
   }
