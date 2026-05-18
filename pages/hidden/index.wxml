@@ -2,10 +2,7 @@
   <view class="soft-bg"></view>
 
   <view class="home-screen" wx:if="{{step === 'home'}}">
-    <view class="home-top">
-      <view class="menu-icon"><view></view><view></view><view></view></view>
-      <view class="coin-pill"><text>💎</text><text>12</text><text class="plus">＋</text></view>
-    </view>
+    <view class="home-top"></view>
 
     <view class="hero-copy">
       <text class="brand"><text class="brand-ai">AI</text> Vibe Scanner</text>
@@ -75,7 +72,11 @@
     <view class="note-card">{{result.note}} 🦋</view>
     <block wx:if="{{!isDemo}}">
       <button class="primary-btn" bindtap="showDetail">查看详细分析</button>
-      <button class="ghost-btn" bindtap="saveCard">保存结果卡片</button>
+      <view class="result-actions">
+        <button class="action-btn action-share" open-type="share">分享好友</button>
+        <button class="action-btn action-share" bindtap="shareTimelineTip">分享朋友圈</button>
+      </view>
+      <button class="ghost-btn" loading="{{savingCard}}" bindtap="saveCard">保存带水印卡片</button>
     </block>
   </view>
 
@@ -114,4 +115,6 @@
       </view>
     </view>
   </view>
+
+  <canvas canvas-id="hiddenPosterCanvas" class="poster-canvas"></canvas>
 </view>

@@ -96,5 +96,10 @@
     "navigationBarTitleText": "人格探索",
     "navigationBarTextStyle": "black"
   },
+  "permission": {
+    "scope.writePhotosAlbum": {
+      "desc": "用于保存你的隐藏人格结果卡片"
+    }
+  },
   "sitemapLocation": "sitemap.json"
 }

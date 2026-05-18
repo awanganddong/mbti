@@ -156,7 +156,11 @@
           data-url="{{g.url}}"
           bindtap="handleNavigate"
         >
-          <view class="guess-thumb guess-{{g.art}}"></view>
+          <view class="guess-thumb guess-{{g.art}}">
+            <view class="guess-thumb-glow"></view>
+            <text class="guess-thumb-icon">{{g.thumbIcon}}</text>
+            <text class="guess-thumb-label">{{g.thumbLabel}}</text>
+          </view>
           <view class="guess-main">
             <view class="guess-topline">
               <text class="guess-pill">{{g.pill}}</text>

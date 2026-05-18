@@ -213,6 +213,36 @@ const TEST_PRESENTATION = {
   },
 };
 
+const THUMB_ICON_BY_ID = {
+  mbti: 'MB',
+  jung8: 'J8',
+  ace: 'ACE',
+  love: '心',
+  ideal: '梦',
+  likeLevel: '%',
+  loveQuirk: '癖',
+  breakup: '离',
+  coupleValues: '合',
+  man: '直',
+  shady: '暧',
+  nen: '倾',
+  animal: '塑',
+  plant: '植',
+  sds: 'SDS',
+  holland: '职',
+  eq: 'EQ',
+  attachment: '依',
+  avpd: '避',
+  bpd: '边',
+  ocpd: '序',
+  ppd: '疑',
+  dpd: '依',
+  depd: '郁',
+  hpd: '演',
+  npd: '恋',
+  sbti: 'S',
+};
+
 function safeStr(v) {
   return String(v || '').trim();
 }
@@ -244,6 +274,22 @@ function inferCategory(card) {
   if (tags.includes('健康') || tags.includes('科普') || tags.includes('性取向') || tags.includes('情绪')) return '深度';
   if (tags.includes('趣味') || tags.includes('恶搞') || tags.includes('社交')) return '趣味';
   return '更多';
+}
+
+function getCategoryPill(category) {
+  if (category === '深度') return '深度';
+  if (category === '恋爱') return '恋爱';
+  if (category === 'MBTI') return 'MBTI';
+  if (category === '趣味') return '趣味';
+  if (category === '职场') return '职场';
+  if (category === '性格') return '性格';
+  return '更多';
+}
+
+function getThumbIcon(id, category) {
+  const key = safeStr(id);
+  if (THUMB_ICON_BY_ID[key]) return THUMB_ICON_BY_ID[key];
+  return getCategoryPill(category).slice(0, 2);
 }
 
 function pickRandomN(list, n, excludeIds) {
@@ -392,13 +438,18 @@ Page({
     }
 
     const picked = pickRandomN(pool, 3, hotIds);
-    const guessCards = picked.map((x) => ({
-      ...x,
-      pill: x.category === '深度' ? '深度' : (x.category === '恋爱' ? '恋爱' : (x.category === 'MBTI' ? 'MBTI' : (x.category === '趣味' ? '趣味' : (x.category === '职场' ? '职场' : (x.category === '性格' ? '性格' : '更多'))))),
-      isNew: x.badge === 'NEW',
-      art: x.id,
-      ctaMeta: x.minutes ? `约 ${x.minutes} 分钟 · 报告可存` : '报告可保存',
-    }));
+    const guessCards = picked.map((x) => {
+      const pill = getCategoryPill(x.category);
+      return {
+        ...x,
+        pill,
+        isNew: x.badge === 'NEW',
+        art: x.id,
+        thumbIcon: getThumbIcon(x.id, x.category),
+        thumbLabel: pill,
+        ctaMeta: x.minutes ? `约 ${x.minutes} 分钟 · 报告可存` : '报告可保存',
+      };
+    });
     this.setData({ guessCards });
   },
 

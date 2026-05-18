@@ -113,6 +113,12 @@ Page({
     });
   },
 
+  goHidden() {
+    wx.switchTab({
+      url: '/pages/hidden/index'
+    });
+  },
+
   clearTarotHistory() {
     wx.showModal({
       title: '清除记录',

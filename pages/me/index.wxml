@@ -1,20 +1,91 @@
 <view class="me-page">
+  <view class="soft-bg"></view>
+  <view class="star-field">
+    <view class="star s1"></view>
+    <view class="star s2"></view>
+    <view class="star s3"></view>
+    <view class="star s4"></view>
+    <view class="star s5"></view>
+    <view class="star s6"></view>
+  </view>
+
   <view class="container">
-    <view class="section">
-      <view class="profile">
-        <image class="avatar" wx:if="{{isLoggedIn}}" src="{{avatarUrl}}" mode="aspectFill"></image>
-        <view class="avatar avatar-placeholder" wx:else>
-          <text class="avatar-placeholder-text">?</text>
-        </view>
-        <view class="profile-main">
-          <text class="profile-name">{{nickName}}</text>
-          <text class="profile-sub">{{isLoggedIn ? '已授权登录' : '未授权登录'}}</text>
-        </view>
-        <view class="profile-actions">
-          <button class="mini-btn" wx:if="{{!isLoggedIn}}" bindtap="authorizeLogin">授权登录</button>
-          <button class="mini-btn mini-btn-danger" wx:if="{{isLoggedIn}}" bindtap="logout">退出</button>
+    <view class="profile-card">
+      <view class="profile-avatar-wrap">
+        <image class="profile-avatar-img" wx:if="{{isLoggedIn}}" src="{{avatarUrl}}" mode="aspectFill"></image>
+        <text class="profile-avatar-mark" wx:else>?</text>
+      </view>
+      <view class="profile-main">
+        <text class="profile-name">{{nickName}}</text>
+        <text class="profile-sub">{{isLoggedIn ? '已授权登录' : '未授权登录'}}</text>
+      </view>
+      <button class="login-btn" wx:if="{{!isLoggedIn}}" bindtap="authorizeLogin">
+        <text>授权登录</text>
+        <text class="login-arrow">›</text>
+      </button>
+      <button class="login-btn logout-btn" wx:else bindtap="logout">
+        <text>退出登录</text>
+        <text class="login-arrow">›</text>
+      </button>
+    </view>
+
+    <view class="hero">
+      <text class="hello">👋 你好，{{isLoggedIn ? nickName : '陌生人'}}</text>
+      <view class="hero-title">
+        <text>AI 正在等待与你</text>
+        <text class="hero-title-pink">相遇</text>
+      </view>
+      <text class="hero-subtitle">探索你的隐藏人格，发现未曾察觉的自己</text>
+    </view>
+
+    <view class="universe">
+      <view class="orbit-line orbit-a"></view>
+      <view class="orbit-line orbit-b"></view>
+      <view class="planet-dot dot-a"></view>
+      <view class="planet-dot dot-b"></view>
+      <view class="planet-dot dot-c"></view>
+
+      <view class="feature-bubble feature-left-top" bindtap="goHidden">
+        <view class="feature-icon icon-heart">♥</view>
+        <text class="feature-text">读懂内心</text>
+      </view>
+      <view class="feature-bubble feature-right-top" bindtap="goHidden">
+        <view class="feature-icon icon-moon">☾</view>
+        <text class="feature-text">情绪分析</text>
+      </view>
+      <view class="feature-bubble feature-left-bottom" bindtap="goHidden">
+        <view class="feature-icon icon-star">✦</view>
+        <text class="feature-text">探索未知</text>
+      </view>
+      <view class="feature-bubble feature-right-bottom" bindtap="goHidden">
+        <view class="feature-icon icon-flower">✤</view>
+        <text class="feature-text">人格解读</text>
+      </view>
+
+      <view class="core-orb" bindtap="goHidden">
+        <view class="core-glow"></view>
+        <view class="core-ring ring-a"></view>
+        <view class="core-ring ring-b"></view>
+        <view class="core-face">
+          <view class="face-head"></view>
+          <view class="face-neck"></view>
         </view>
       </view>
+    </view>
+
+    <view class="quote-row">
+      <text class="quote-mark">“</text>
+      <text class="quote-text">每个人都有不为人知的一面，AI 帮你找到答案</text>
+      <text class="quote-mark">”</text>
+    </view>
+
+    <view class="people-pill">
+      <view class="mini-avatars">
+        <image class="mini-avatar" src="/public/images/mbti.jpg" mode="aspectFill"></image>
+        <image class="mini-avatar" src="/public/images/mbti.jpg" mode="aspectFill"></image>
+        <image class="mini-avatar" src="/public/images/mbti.jpg" mode="aspectFill"></image>
+      </view>
+      <text class="people-text">2,413,822 人正在探索自己 ✨</text>
     </view>
   </view>
 </view>

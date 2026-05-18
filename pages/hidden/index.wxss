@@ -34,21 +34,10 @@
   justify-content: space-between;
 }
 
-.menu-icon {
-  width: 52rpx;
-  display: flex;
-  flex-direction: column;
-  gap: 8rpx;
+.home-top {
+  min-height: 56rpx;
 }
 
-.menu-icon view {
-  width: 36rpx;
-  height: 4rpx;
-  border-radius: 99rpx;
-  background: #2b2448;
-}
-
-.coin-pill,
 .done-pill,
 .share-btn {
   display: flex;
@@ -60,11 +49,6 @@
   box-shadow: 0 12rpx 34rpx rgba(190, 128, 214, 0.16);
   font-size: 24rpx;
   color: #5b5278;
-}
-
-.plus {
-  color: #ff78b2;
-  font-weight: 900;
 }
 
 .hero-copy {
@@ -341,6 +325,29 @@ button::after {
   color: #6f6487;
 }
 
+.result-actions {
+  width: 520rpx;
+  margin: 22rpx auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18rpx;
+}
+
+.action-btn {
+  height: 78rpx;
+  line-height: 78rpx;
+  border-radius: 999rpx;
+  padding: 0;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.action-share {
+  color: #fff;
+  background: linear-gradient(90deg, #f9a8d4 0%, #c084fc 100%);
+  box-shadow: 0 14rpx 34rpx rgba(192, 132, 252, 0.18);
+}
+
 .tabs-card {
   margin-top: 36rpx;
   display: grid;
@@ -441,4 +448,13 @@ button::after {
 
 .spacer {
   width: 56rpx;
+}
+
+.poster-canvas {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 750px;
+  height: 1120px;
+  pointer-events: none;
 }
