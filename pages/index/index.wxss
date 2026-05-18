@@ -254,7 +254,7 @@
 
 .hero-right {
   width: 210rpx;
-  height: 176rpx;
+  height: 188rpx;
   position: relative;
   flex-shrink: 0;
 }
@@ -273,22 +273,25 @@
   top: 0;
   padding: 18rpx 16rpx;
   width: 190rpx;
+  z-index: 1;
 }
 
 .ft-a {
   left: 0;
-  top: 118rpx;
+  top: 102rpx;
   padding: 10rpx 14rpx;
   opacity: 0.55;
   transform: scale(0.92);
+  z-index: 3;
 }
 
 .ft-b {
-  right: 0;
-  top: 118rpx;
-  padding: 10rpx 14rpx;
+  right: 8rpx;
+  top: 10rpx;
+  padding: 5rpx 10rpx;
   opacity: 0.45;
-  transform: scale(0.88);
+  transform: scale(0.82);
+  z-index: 2;
 }
 
 .ft-code {
@@ -309,6 +312,10 @@
   font-size: 22rpx;
   color: #6366f1;
   font-weight: 700;
+}
+
+.ft-b .ft-mini {
+  font-size: 20rpx;
 }
 
 .hero-footer {

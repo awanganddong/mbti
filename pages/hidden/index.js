@@ -1,4 +1,4 @@
-import { analyzeHiddenPersona } from '../../services/hiddenBackend';
+import { analyzeHiddenPersona, isRemoteImageURL } from '../../services/hiddenBackend';
 
 const SAMPLE_IMAGE = '/public/images/mbti.jpg';
 
@@ -97,6 +97,7 @@ Page({
       wx.chooseMedia({
         count: 1,
         mediaType: ['image'],
+        sizeType: ['compressed'],
         sourceType: ['album', 'camera'],
         success: (res) => {
           const item = res && res.tempFiles && res.tempFiles[0];
@@ -108,6 +109,7 @@ Page({
 
     wx.chooseImage({
       count: 1,
+      sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
       success: (res) => done(res && res.tempFilePaths && res.tempFilePaths[0]),
     });
@@ -148,7 +150,7 @@ Page({
     analyzeHiddenPersona({
       description: this.data.description,
       filePath: this.data.photoPath,
-      imageUrl: this.data.photoPath.indexOf('http') === 0 ? this.data.photoPath : '',
+      imageUrl: isRemoteImageURL(this.data.photoPath) ? this.data.photoPath : '',
       hasPhoto: !!this.data.photoPath,
     })
       .then((result) => {
