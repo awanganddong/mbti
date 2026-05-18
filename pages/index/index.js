@@ -1,6 +1,7 @@
 import { fetchTestCatalog } from '../../services/appBackend';
 
 const TABS = ['恋爱', '性格', '职场', '趣味', '深度', '更多'];
+const HOME_EXCLUDED_IDS = ['hidden'];
 
 /** 与 assets/mbti/test-catalog.json 对齐；接口未更新时仍保证小程序内可发现 */
 const BUNDLED_TEST_ENTRIES = [
@@ -232,6 +233,7 @@ function inferCategory(card) {
   if (tags.includes('职场')) return '职场';
   if (id === 'eq') return '趣味';
   if (id === 'sbti') return '趣味';
+  if (id === 'hidden') return '趣味';
   if (id === 'mbti' || id === 'jung8') return 'MBTI';
   if (id === 'attachment') return '性格';
   if (id === 'avpd') return '性格';
@@ -320,12 +322,13 @@ Page({
 
   rebuildSections() {
     const raw = Array.isArray(this._catalog) ? this._catalog : [];
+    const homeExcluded = new Set(HOME_EXCLUDED_IDS);
     const seen = new Set();
     raw.forEach((c) => {
       const id = safeStr(c && c.id);
-      if (id) seen.add(id);
+      if (id && !homeExcluded.has(id)) seen.add(id);
     });
-    const list = [...raw];
+    const list = raw.filter((c) => !homeExcluded.has(safeStr(c && c.id)));
     BUNDLED_TEST_ENTRIES.forEach((entry) => {
       const id = safeStr(entry && entry.id);
       if (!id || seen.has(id)) return;
@@ -353,6 +356,8 @@ Page({
         tags: preset.tags || safeArr(card && card.tags),
         info: preset.info || (sub && sub.description ? safeStr(sub.description) : ''),
         people: preset.people || '',
+        peopleText: preset.peopleText || '',
+        peopleLabel: preset.peopleText || `${preset.people || ''} 人测过`,
         art: preset.art || id,
       };
     }).filter((x) => x && x.url);
@@ -414,7 +419,7 @@ Page({
     const url = e.currentTarget.dataset.url;
     if (!url) return;
 
-    const tabUrls = ['/pages/index/index', '/pages/me/index'];
+    const tabUrls = ['/pages/index/index', '/pages/hidden/index', '/pages/me/index'];
     if (tabUrls.includes(url)) {
       wx.switchTab({ url });
       return;

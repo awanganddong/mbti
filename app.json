@@ -55,6 +55,7 @@
     "pages/breakup/result/index",
     "pages/likeLevel/index",
     "pages/likeLevel/result/index",
+    "pages/hidden/index",
     "pages/tarot/index",
     "pages/tarot/effect/index",
     "pages/tarot/result/index"
@@ -78,6 +79,10 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/hidden/index",
+        "text": "隐藏人格"
       },
       {
         "pagePath": "pages/me/index",

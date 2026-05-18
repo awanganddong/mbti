@@ -121,7 +121,7 @@
             <text class="hot-sub">{{item.info}}</text>
 
             <view class="hot-foot">
-              <text class="hot-people">{{item.people}} 人测过</text>
+              <text class="hot-people">{{item.peopleLabel}}</text>
               <text class="hot-arrow">›</text>
             </view>
 

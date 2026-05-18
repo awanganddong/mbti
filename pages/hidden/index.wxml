@@ -1,0 +1,117 @@
+<view class="hidden-page">
+  <view class="soft-bg"></view>
+
+  <view class="home-screen" wx:if="{{step === 'home'}}">
+    <view class="home-top">
+      <view class="menu-icon"><view></view><view></view><view></view></view>
+      <view class="coin-pill"><text>💎</text><text>12</text><text class="plus">＋</text></view>
+    </view>
+
+    <view class="hero-copy">
+      <text class="brand"><text class="brand-ai">AI</text> Vibe Scanner</text>
+      <text class="subtitle">上传照片 + 描述，AI 读懂你的隐藏人格</text>
+    </view>
+
+    <view class="photo-stack" bindtap="choosePhoto">
+      <image class="main-photo" src="{{photoPath || sampleImage}}" mode="aspectFill"></image>
+      <view class="bubble b1"><text>💗 温柔?</text></view>
+      <view class="bubble b2"><text>🌸 高冷?</text></view>
+      <view class="bubble b3"><text>🪐 神秘?</text></view>
+    </view>
+
+    <button class="primary-btn" bindtap="goInput">⌘ 上传照片</button>
+    <button class="ghost-btn" bindtap="useSample">查看示例</button>
+  </view>
+
+  <view class="input-screen" wx:elif="{{step === 'input'}}">
+    <view class="nav-row">
+      <view class="back" bindtap="reset">‹</view>
+    </view>
+    <view class="input-head">
+      <text class="input-title">告诉 AI 你的近况💕</text>
+      <text class="input-sub">描述越多，分析越准确哦～</text>
+    </view>
+    <view class="preview-card" bindtap="choosePhoto">
+      <image class="preview-img" src="{{photoPath || sampleImage}}" mode="aspectFill"></image>
+      <text class="preview-text">{{photoPath ? '点击更换照片' : '点击上传照片'}}</text>
+    </view>
+    <textarea
+      class="desc-box"
+      maxlength="200"
+      value="{{description}}"
+      placeholder="最近的你在想什么、遇到什么困扰或开心的事？"
+      bindinput="updateDescription"
+    ></textarea>
+    <text class="counter">{{descCount}}/200</text>
+    <view class="prompt-title">✨ 试试这些描述方式</view>
+    <view class="prompt-list">
+      <view class="prompt" wx:for="{{prompts}}" wx:key="*this" data-text="{{item}}" bindtap="fillPrompt">{{item}}</view>
+    </view>
+    <button class="primary-btn bottom-btn" loading="{{analyzing}}" bindtap="startAnalyze">✧ 开始分析</button>
+  </view>
+
+  <view class="result-screen" wx:elif="{{step === 'result'}}">
+    <view class="nav-row">
+      <view class="back" wx:if="{{isDemo}}" bindtap="reset">‹</view>
+      <view class="back" wx:elif="{{!isDemo}}" bindtap="goInput">‹</view>
+      <text class="page-title">你的隐藏人格</text>
+      <button class="share-btn" wx:if="{{!isDemo}}" open-type="share">分享</button>
+      <view class="spacer" wx:else></view>
+    </view>
+    <view class="avatar-orbit">
+      <image class="avatar-img" src="{{photoPath || sampleImage}}" mode="aspectFill"></image>
+    </view>
+    <view class="done-pill">✓ 分析完成</view>
+    <text class="impression">{{result.impression}}</text>
+    <text class="result-title">“{{result.title}}”</text>
+    <text class="result-summary">{{result.summary}}</text>
+    <view class="stat-row">
+      <view class="stat-card" wx:for="{{result.stats}}" wx:key="label">
+        <text class="stat-icon">{{item.icon}}</text>
+        <text class="stat-label">{{item.label}}</text>
+        <text class="stat-value">{{item.value}}%</text>
+      </view>
+    </view>
+    <view class="note-card">{{result.note}} 🦋</view>
+    <block wx:if="{{!isDemo}}">
+      <button class="primary-btn" bindtap="showDetail">查看详细分析</button>
+      <button class="ghost-btn" bindtap="saveCard">保存结果卡片</button>
+    </block>
+  </view>
+
+  <view class="detail-screen" wx:else>
+    <view class="nav-row">
+      <view class="back" bindtap="backToResult">‹</view>
+      <text class="page-title">你的详细分析</text>
+      <view class="spacer"></view>
+    </view>
+    <view class="tabs-card">
+      <view
+        class="detail-tab {{activeTab === item ? 'detail-tab-on' : ''}}"
+        wx:for="{{tabs}}"
+        wx:key="*this"
+        data-tab="{{item}}"
+        bindtap="setDetailTab"
+      >{{item}}</view>
+    </view>
+    <view class="analysis-card">
+      <text class="card-title">性格关键词</text>
+      <view class="keyword-grid">
+        <text class="keyword" wx:for="{{result.traits}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+    <view class="analysis-card">
+      <text class="card-title">{{activeTab}}</text>
+      <text class="paragraph">{{result.summary}}</text>
+      <view class="planet">💜</view>
+    </view>
+    <view class="analysis-card">
+      <text class="card-title">你的能量画像</text>
+      <view class="axis" wx:for="{{result.axes}}" wx:key="left">
+        <text class="axis-name">{{item.left}} {{item.leftValue}}%</text>
+        <view class="axis-track"><view class="axis-dot" style="left: {{item.leftValue}}%"></view></view>
+        <text class="axis-name right">{{item.right}} {{item.rightValue}}%</text>
+      </view>
+    </view>
+  </view>
+</view>
